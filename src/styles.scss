@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    border: unset;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+$cream: #fffcf3;
+$orange: #f90;
+$red: #e61c40;
+$dark-grey: #bbb;
+
+html {
+    scroll-behavior: smooth;
+    font-size: 0.625em;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0rem;
+    padding: 0rem;
+    background-color: $cream;
+}
+
+app-root {
+    max-width: 192rem;
+    width: inherit;
+}

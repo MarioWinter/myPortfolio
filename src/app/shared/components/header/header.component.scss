@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    max-width: 192rem;
+    padding: 3rem 10rem;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 3rem;
+        width: 6.6667rem;
+    }
+}
+.burger-menu {
+    background-image: url("../../../../assets/img/burger-menu/burger-menu-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 4rem;
+    width: 3.2rem;
+}
