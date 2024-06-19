@@ -1,7 +1,14 @@
-* {
-    border: unset;
+@import "./styles/fonts.scss";
+
+*,
+*:before,
+*:after {
     box-sizing: border-box;
+}
+
+* {
     text-decoration: none;
+    border: unset;
 }
 
 $cream: #fffcf3;
@@ -24,6 +31,7 @@ body {
     margin: 0rem;
     padding: 0rem;
     background-color: $cream;
+    font-family: Overpass;
 }
 
 app-root {
