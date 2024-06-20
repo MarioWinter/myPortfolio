@@ -67,6 +67,15 @@ body {
 app-root {
     max-width: 192rem;
     width: inherit;
+    padding: 0rem 3rem;
+}
+
+h1 {
+    margin: 0rem;
+}
+
+h2 {
+    margin: 0rem;
 }
 
 @mixin dflex($jc: center, $ai: center, $gap: 0rem) {
