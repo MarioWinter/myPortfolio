@@ -1,4 +1,5 @@
 @import "./styles/fonts.scss";
+// @import "./../../../styles.scss";
 
 *,
 *:before,
@@ -14,7 +15,36 @@
 $cream: #fffcf3;
 $orange: #f90;
 $red: #e61c40;
+$black: #000;
 $dark-grey: #bbb;
+
+@mixin syne($clr: $black, $txtal: center, $fz: 12.8rem, $fw: 800, $lh: 0rem, $ls: 0rem) {
+    color: $clr;
+    text-align: $txtal; //center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Syne;
+    font-size: $fz; //12.8rem;
+    font-style: normal;
+    font-weight: $fw;
+    line-height: $lh; //100%;
+    letter-spacing: $ls; //-0.32rem;
+}
+
+.title-font {
+    @include syne($clr: $black, $txtal: center, $fz: 12.8rem, $fw: 800, $lh: 100%, $ls: -0.32rem);
+}
+
+.section-header-font {
+    @include syne($clr: $black, $txtal: center, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+}
+
+.portfolio-counter-font {
+    @include syne($clr: $black, $txtal: right, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
+}
+
+.footer-header-font {
+    @include syne($clr: $cream, $txtal: center, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+}
 
 html {
     scroll-behavior: smooth;
@@ -37,4 +67,11 @@ body {
 app-root {
     max-width: 192rem;
     width: inherit;
+}
+
+@mixin dflex($jc: center, $ai: center, $gap: 0rem) {
+    display: flex;
+    justify-content: $jc;
+    aline-items: $ai;
+    gap: $gap;
 }
