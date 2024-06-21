@@ -1,6 +1,6 @@
 @import "../../../styles.scss";
 
-.header-container {
+.header-box {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,15 +20,107 @@
 }
 
 .name {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
     color: $orange;
-    text-align: center;
-    font-family: Overpass;
+    font-family: $text-font;
     font-size: 4.8rem;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -0.12rem;
+}
+
+.more-info-box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14rem;
+    .link-box {
+        transform: rotate(-90deg) translateY(-1rem);
+    }
+}
+
+.scroll-down-box {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.6rem;
+    width: 11.6rem;
+    height: 23.2rem;
+}
+
+.arrow-slideshow {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 9.6rem;
+    height: 16rem;
+    // animation: slideshow 1s linear infinite;
+    animation: slideshow 2s steps(14) infinite;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: -0.575px;
+    text-align: center;
+}
+
+@keyframes slideshow {
+    0%,
+    6% {
+        background-image: url("../../../assets/img/arrows/arrow-0.png");
+    }
+    7%,
+    13% {
+        background-image: url("../../../assets/img/arrows/arrow-1.png");
+    }
+    14%,
+    20% {
+        background-image: url("../../../assets/img/arrows/arrow-2.png");
+    }
+    21%,
+    27% {
+        background-image: url("../../../assets/img/arrows/arrow-3.png");
+    }
+    28%,
+    34% {
+        background-image: url("../../../assets/img/arrows/arrow-4.png");
+    }
+    35%,
+    41% {
+        background-image: url("../../../assets/img/arrows/arrow-5.png");
+    }
+    42%,
+    48% {
+        background-image: url("../../../assets/img/arrows/arrow-6.png");
+    }
+    49%,
+    55% {
+        background-image: url("../../../assets/img/arrows/arrow-0.png");
+    }
+    56%,
+    62% {
+        background-image: url("../../../assets/img/arrows/arrow-1.png");
+    }
+    63%,
+    69% {
+        background-image: url("../../../assets/img/arrows/arrow-2.png");
+    }
+    70%,
+    76% {
+        background-image: url("../../../assets/img/arrows/arrow-3.png");
+    }
+    77%,
+    83% {
+        background-image: url("../../../assets/img/arrows/arrow-4.png");
+    }
+    84%,
+    90% {
+        background-image: url("../../../assets/img/arrows/arrow-5.png");
+    }
+    91%,
+    100% {
+        background-image: url("../../../assets/img/arrows/arrow-6.png");
+    }
 }
