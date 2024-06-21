@@ -1,0 +1,54 @@
+@import "../../../styles.scss";
+h2 {
+    display: flex;
+    padding-bottom: 5.2rem;
+}
+
+.about-me-box {
+    display: flex;
+    justify-content: space-between;
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        width: 61rem;
+    }
+    img {
+        width: 39.3rem;
+        height: 53.3rem;
+        flex-shrink: 0;
+    }
+}
+
+.button-box {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.img-frame {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    overflow: hidden;
+    img {
+        position: absolute;
+        top: -5rem;
+        width: 40rem;
+        height: 60rem;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.black-frame-box {
+    position: absolute;
+    z-index: 2;
+    right: 1rem;
+    margin-top: 2rem;
+    width: 40rem;
+    height: 40rem;
+    border: 0.4rem solid $black;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
+}
