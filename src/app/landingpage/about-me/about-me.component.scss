@@ -25,6 +25,10 @@ h2 {
     justify-content: center;
 }
 
+.profile-img-box {
+    position: relative;
+}
+
 .img-frame {
     position: relative;
     width: 40rem;
@@ -42,8 +46,7 @@ h2 {
 .black-frame-box {
     position: absolute;
     z-index: 2;
-    right: 1rem;
-    margin-top: 2rem;
+    margin: 2rem 0rem 0rem 2rem;
     width: 40rem;
     height: 40rem;
     border: 0.4rem solid $black;
