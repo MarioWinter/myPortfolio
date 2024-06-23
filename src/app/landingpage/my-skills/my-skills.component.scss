@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+
+.my-skills-frame {
+    position: relative;
+    display: inline-flex;
+    padding: 16.1rem 8.6rem 16rem 14.1rem;
+    margin-top: 9.2rem;
+    justify-content: center;
+    align-items: center;
+    border: 0.4rem solid $black;
+    width: 100%;
+}
+
+.header-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: -4.7rem;
+    z-index: 2;
+    background-color: $cream;
+    padding: 0rem 1.2rem 0rem 1.3rem;
+    width: auto;
+}
