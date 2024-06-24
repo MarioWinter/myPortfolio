@@ -21,3 +21,38 @@
     padding: 0rem 1.2rem 0rem 1.3rem;
     width: auto;
 }
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 7.8rem 12.8rem;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 101.2rem;
+}
+.skill-box {
+    display: flex;
+    width: 10rem;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 6.4rem 0rem 6.4rem;
+    img {
+        height: 7.5rem;
+        width: auto;
+    }
+    div {
+        color: $black;
+        text-align: center;
+        font-family: Overpass;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        width: inherit;
+    }
+}

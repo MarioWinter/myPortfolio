@@ -29,11 +29,11 @@ export class AppComponent implements OnInit {
             <style>
                 [data-aos="custom-arrow-move"] {
                     transition-property: transform;
-                    transform: translate3d(50px, -50px, 0);
+                    transform: translate3d(5.0rem, -5.0rem, 0);
 					animation: arrowAnimation 1s steps(6) forwards;
                 }
                 [data-aos="custom-arrow-move"].aos-animate {
-                    transform: translate3d(0, 0, 0);
+                    transform: translate3d(-2rem, 2rem, 0);
                 }
             </style>
             `

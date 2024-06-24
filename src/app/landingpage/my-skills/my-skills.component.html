@@ -2,4 +2,12 @@
     <div class="header-box">
         <h2 class="section-header-font">My skills</h2>
     </div>
+    <div class="skills-container">
+        @for (skill of skillList.mySkills; track skillList; let i = $index) {
+        <div class="skill-box">
+            <img src="assets/icons/skills/{{ skill.path }}" alt="Skill Icon" />
+            <div>{{ skill.name }}</div>
+        </div>
+        }
+    </div>
 </div>
