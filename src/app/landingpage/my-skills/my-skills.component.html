@@ -5,8 +5,8 @@
     <div class="skills-container">
         @for (skill of skillList.mySkills; track skillList; let i = $index) {
         <div class="skill-box">
-            <img src="assets/icons/skills/{{ skill.path }}" alt="Skill Icon" />
-            <div>{{ skill.name }}</div>
+            <img class="skill-icon" src="assets/icons/skills/{{ skill.path }}" alt="Skill Icon" />
+            <div class="skill-name">{{ skill.name }}</div>
         </div>
         }
     </div>

@@ -1,13 +1,20 @@
+@import "../../../../styles.scss";
 nav {
     display: flex;
+    position: fixed;
+    width: 144rem;
+    background-color: $cream;
     max-width: 192rem;
     padding: 3rem 0rem;
     justify-content: space-between;
+    justify-self: stretch;
     align-items: center;
     margin-bottom: 11.2rem;
+    z-index: 4;
 
     img {
         height: 3rem;
+        background-color: $cream;
         width: 6.6667rem;
     }
 }
@@ -15,6 +22,7 @@ nav {
     background-image: url("../../../../assets/img/burger-menu/burger-menu-1.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-color: $cream;
     height: 4rem;
     width: 3.2rem;
 }

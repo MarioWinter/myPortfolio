@@ -40,12 +40,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 0rem 6.4rem 0rem 6.4rem;
-    img {
-        height: 7.5rem;
-        width: auto;
-    }
-    div {
+    perspective: 100rem;
+    .skill-name {
         color: $black;
         text-align: center;
         font-family: Overpass;
@@ -54,5 +50,42 @@
         font-weight: 700;
         line-height: 120%;
         width: inherit;
+    }
+    .skill-icon {
+        height: 7.5rem;
+        width: auto;
+        transform-origin: center;
+        animation: none;
+    }
+    &:hover {
+        .skill-icon {
+            animation-name: iconAnimation;
+            animation-duration: 200ms;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 0ms;
+        }
+        .skill-name {
+            color: $orange;
+        }
+    }
+}
+
+@keyframes iconAnimation {
+    0% {
+        transform: translateX(0rem) rotateY(0deg) scale(1);
+    }
+    25% {
+        transform: translateX(3.5rem) rotateY(-30deg) scale(0.9);
+    }
+    50% {
+        transform: translateX(0rem) rotateY(15deg) scale(0.8);
+    }
+    75% {
+        transform: translateX(-3.5rem) rotateY(30deg) scale(0.9);
+    }
+    100% {
+        transform: translateX(0rem) rotateY(0deg) scale(1);
     }
 }

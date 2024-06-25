@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
             once: true,
             mirror: false,
             easing: "ease-out-cubic",
-            anchorPlacement: "top-bottom",
+            anchorPlacement: "center-center",
         });
 
         // Definieren Sie den benutzerdefinierten fade-left-down Effekt
@@ -29,11 +29,11 @@ export class AppComponent implements OnInit {
             <style>
                 [data-aos="custom-arrow-move"] {
                     transition-property: transform;
-                    transform: translate3d(5.0rem, -5.0rem, 0);
+                    transform: translate3d(6.0rem, -6.0rem, 0);
 					animation: arrowAnimation 1s steps(6) forwards;
                 }
                 [data-aos="custom-arrow-move"].aos-animate {
-                    transform: translate3d(-2rem, 2rem, 0);
+                    transform: translate3d(-4rem, 4rem, 0);
                 }
             </style>
             `
