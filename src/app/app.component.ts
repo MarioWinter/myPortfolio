@@ -25,18 +25,24 @@ export class AppComponent implements OnInit {
             easing: "ease-out-cubic",
             anchorPlacement: "center-center",
         });
-
-        // Definieren Sie den benutzerdefinierten fade-left-down Effekt
         AOS.refresh();
         let style = this.renderer.createElement("style");
         style.textContent = `
-				[data-aos="custom-arrow-move"] {
+				[data-aos="arrow-move-left"] {
                     transition-property: transform;
                     transform: translate3d(6.0rem, -6.0rem, 0);
 		 			animation: arrowAnimation 1s steps(6) forwards;
                 }
-                [data-aos="custom-arrow-move"].aos-animate {
+                [data-aos="arrow-move-left"].aos-animate {
                     transform: translate3d(-4rem, 4rem, 0);
+                }
+				[data-aos="arrow-move-right"] {
+                    transition-property: transform;
+                    transform: translate3d(-6.0rem, 6.0rem, 0);
+		 			animation: arrowAnimation 1s steps(6) forwards;
+                }
+                [data-aos="arrow-move-right"].aos-animate {
+                    transform: translate3d(4rem, -4rem, 0);
                 }
 		`;
         this.renderer.appendChild(this.document.head, style);

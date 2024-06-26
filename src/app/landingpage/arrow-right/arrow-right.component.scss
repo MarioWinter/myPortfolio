@@ -3,8 +3,8 @@
 .arrow-box {
     display: flex;
     height: 30rem;
-    padding: 5rem 18rem 0rem 0rem;
-    justify-content: flex-end;
+    padding: 5rem 0rem 0rem 5rem;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .arrow-animation {
-    background-image: url("../../../assets/img/arrows/arrow-left-0.svg");
+    background-image: url("../../../assets/img/arrows/arrow-right-0.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,26 +27,26 @@
 @keyframes arrowAnimation {
     0%,
     16.66% {
-        background-image: url("../../../assets/img/arrows/arrow-left-0.svg");
+        background-image: url("../../../assets/img/arrows/arrow-right-0.svg");
     }
     16.67%,
     33.33% {
-        background-image: url("../../../assets/img/arrows/arrow-left-0.svg");
+        background-image: url("../../../assets/img/arrows/arrow-right-0.svg");
     }
     33.34%,
     50% {
-        background-image: url("../../../assets/img/arrows/arrow-left-1.svg");
+        background-image: url("../../../assets/img/arrows/arrow-right-1.svg");
     }
     50.01%,
     66.66% {
-        background-image: url("../../../assets/img/arrows/arrow-left-1.svg");
+        background-image: url("../../../assets/img/arrows/arrow-right-1.svg");
     }
     66.67%,
     83.33% {
-        background-image: url("../../../assets/img/arrows/arrow-left-2.svg");
+        background-image: url("../../../assets/img/arrows/arrow-right-2.svg");
     }
     83.34%,
     100% {
-        background-image: url("../../../assets/img/arrows/arrow-left-2.svg");
+        background-image: url("../../../assets/img/arrows/arrow-right-2.svg");
     }
 }

@@ -4,13 +4,13 @@ import { AosDirective } from "../../directives/aos.directive";
 import AOS from "aos";
 
 @Component({
-    selector: "app-arrow-left",
+    selector: "app-arrow-right",
     standalone: true,
     imports: [CommonModule, AosDirective],
-    templateUrl: "./arrow-left.component.html",
-    styleUrl: "./arrow-left.component.scss",
+    templateUrl: "./arrow-right.component.html",
+    styleUrl: "./arrow-right.component.scss",
 })
-export class ArrowLeftComponent implements AfterViewInit {
+export class ArrowRightComponent implements AfterViewInit {
     ngAfterViewInit() {
         AOS.refresh();
     }
