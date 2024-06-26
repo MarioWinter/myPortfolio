@@ -21,14 +21,14 @@ $text-font: Overpass;
 
 @mixin syne($clr: $black, $txtal: center, $fz: 12.8rem, $fw: 800, $lh: 0rem, $ls: 0rem) {
     color: $clr;
-    text-align: $txtal; //center;
+    text-align: $txtal;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: $title-font;
-    font-size: $fz; //12.8rem;
+    font-size: $fz;
     font-style: normal;
     font-weight: $fw;
-    line-height: $lh; //100%;
-    letter-spacing: $ls; //-0.32rem;
+    line-height: $lh;
+    letter-spacing: $ls;
 }
 
 .title-font {

@@ -1,6 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Renderer2, Inject } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { HeaderComponent } from "./shared/components/header/header.component";
+import { DOCUMENT } from "@angular/common";
+
 import AOS from "aos";
 
 @Component({
@@ -12,6 +14,9 @@ import AOS from "aos";
 })
 export class AppComponent implements OnInit {
     title = "myportfolio";
+
+    constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+
     ngOnInit() {
         AOS.init({
             duration: 125,
@@ -23,20 +28,17 @@ export class AppComponent implements OnInit {
 
         // Definieren Sie den benutzerdefinierten fade-left-down Effekt
         AOS.refresh();
-        document.head.insertAdjacentHTML(
-            "beforeend",
-            `
-            <style>
-                [data-aos="custom-arrow-move"] {
+        let style = this.renderer.createElement("style");
+        style.textContent = `
+				[data-aos="custom-arrow-move"] {
                     transition-property: transform;
                     transform: translate3d(6.0rem, -6.0rem, 0);
-					animation: arrowAnimation 1s steps(6) forwards;
+		 			animation: arrowAnimation 1s steps(6) forwards;
                 }
                 [data-aos="custom-arrow-move"].aos-animate {
                     transform: translate3d(-4rem, 4rem, 0);
                 }
-            </style>
-            `
-        );
+		`;
+        this.renderer.appendChild(this.document.head, style);
     }
 }
