@@ -38,11 +38,11 @@ export class AppComponent implements OnInit {
                 }
 				[data-aos="arrow-move-right"] {
                     transition-property: transform;
-                    transform: translate3d(-6.0rem, 6.0rem, 0);
+                    transform: translate3d(6.0rem, -6.0rem, 0);
 		 			animation: arrowAnimation 1s steps(6) forwards;
                 }
                 [data-aos="arrow-move-right"].aos-animate {
-                    transform: translate3d(4rem, -4rem, 0);
+                    transform: translate3d(14rem, 0rem, 0);
                 }
 		`;
         this.renderer.appendChild(this.document.head, style);
