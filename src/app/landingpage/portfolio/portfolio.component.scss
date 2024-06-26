@@ -1,0 +1,13 @@
+.header-box {
+    display: flex;
+    padding: 0rem 4.1rem 0rem 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 3.5rem;
+    padding-bottom: 11.4rem;
+    p {
+        max-width: 52.5rem;
+    }
+}
