@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
-import { ProjektComponent } from "./projekt/projekt.component";
+import { projectComponent } from "./project/project.component";
 
 @Component({
     selector: "app-portfolio",
     standalone: true,
-    imports: [ProjektComponent],
+    imports: [projectComponent],
     templateUrl: "./portfolio.component.html",
     styleUrl: "./portfolio.component.scss",
 })

@@ -46,6 +46,10 @@ $text-font: Overpass;
     @include syne($clr: $black, $txtal: right, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
 }
 
+.project-header-font {
+    @include syne($clr: $black, $txtal: center, $fz: 4.5rem, $fw: 800, $lh: 100%, $ls: 0rem);
+}
+
 .footer-header-font {
     @include syne($clr: $cream, $txtal: center, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
 }
