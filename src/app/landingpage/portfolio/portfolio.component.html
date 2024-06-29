@@ -3,7 +3,14 @@
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 </div>
 <div>
-    @for (project of myprojectList.projectData; track $index) {
-    <app-project></app-project>
+    @for (project of myprojectList.projectData; track project; let i = $index) {
+    <app-project
+        [allProjects]="myprojectList.projectData.length"
+        [projectNr]="i + 1"
+        [name]="project.name"
+        [stack]="myprojectList.stackString[i]"
+        [description]="project.description"
+        [github]="project.github"
+    ></app-project>
     }
 </div>

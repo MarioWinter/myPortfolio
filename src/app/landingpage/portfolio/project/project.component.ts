@@ -12,4 +12,6 @@ export class projectComponent {
     @Input() stack: string = "";
     @Input() description: string = "";
     @Input() github: string = "";
+    @Input() allProjects: number = 0;
+    @Input() projectNr: number = 0;
 }

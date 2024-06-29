@@ -1,8 +1,19 @@
 @import "../../../../styles.scss";
+
+a {
+    &:hover {
+        color: $black;
+    }
+    &:active {
+        color: $cream;
+    }
+}
+
 .project-container {
     position: relative;
     width: 100%;
     height: 100%;
+    margin-bottom: 7rem;
     &:hover {
         .black-frame-box {
             opacity: 1;

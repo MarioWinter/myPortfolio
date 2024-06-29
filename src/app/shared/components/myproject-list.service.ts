@@ -39,7 +39,6 @@ export class MyprojectListService {
     prepareProjects(): void {
         this.projectData.forEach((project) => {
             this.stackString = project.stack.join(" | ");
-            console.log(this.stackString);
         });
     }
 }
