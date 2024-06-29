@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: "app-project",
@@ -7,4 +7,9 @@ import { Component } from "@angular/core";
     templateUrl: "./project.component.html",
     styleUrl: "./project.component.scss",
 })
-export class projectComponent {}
+export class projectComponent {
+    @Input() name: string = "";
+    @Input() stack: string = "";
+    @Input() description: string = "";
+    @Input() github: string = "";
+}

@@ -1,18 +1,11 @@
 import { Injectable } from "@angular/core";
 
-interface Project {
-    name: string;
-    stack: string[];
-    description: string;
-    github: string;
-    stackString?: string;
-}
-
 @Injectable({
     providedIn: "root",
 })
 export class MyprojectListService {
-    private projectList: Project[] = [
+    stackString: string = "";
+    projectData = [
         {
             name: "Portfolio Website",
             stack: ["Angular", "TypeScript", "SCSS", "HTML"],
@@ -43,9 +36,10 @@ export class MyprojectListService {
         this.prepareProjects();
     }
 
-    private prepareProjects(): void {
-        this.projectList.forEach((project) => {
-            project.stackString = project.stack.join(" | ");
+    prepareProjects(): void {
+        this.projectData.forEach((project) => {
+            this.stackString = project.stack.join(" | ");
+            console.log(this.stackString);
         });
     }
 }

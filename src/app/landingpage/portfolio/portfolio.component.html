@@ -3,5 +3,7 @@
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 </div>
 <div>
+    @for (project of myprojectList.projectData; track $index) {
     <app-project></app-project>
+    }
 </div>
