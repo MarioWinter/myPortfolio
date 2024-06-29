@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { projectComponent } from "./project/project.component";
+import { MyprojectListService } from "../../shared/components/myproject-list.service";
 
 @Component({
     selector: "app-portfolio",
@@ -8,4 +9,6 @@ import { projectComponent } from "./project/project.component";
     templateUrl: "./portfolio.component.html",
     styleUrl: "./portfolio.component.scss",
 })
-export class PortfolioComponent {}
+export class PortfolioComponent {
+    projectList = inject(MyprojectListService);
+}
