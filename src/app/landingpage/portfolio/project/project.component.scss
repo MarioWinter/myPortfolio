@@ -11,6 +11,12 @@
             animation: arrowAnimation 125ms ease-in-out forwards;
             transition: right;
         }
+        .project-img {
+            animation: greyImgAnimation 75ms ease-in-out forwards;
+        }
+        .disc-box {
+            animation: fadeInDescription 125ms ease-in-out forwards;
+        }
     }
 }
 
@@ -33,6 +39,7 @@
 
 .project-img {
     width: 62rem;
+    filter: grayscale(1);
 }
 
 .project-box {
@@ -56,6 +63,8 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
+    opacity: 0;
+    transform: translateX(-76.1rem);
 }
 
 @keyframes arrowAnimation {
@@ -66,5 +75,28 @@
     100% {
         right: -4.3rem;
         transform: scale(1.5) rotate(-135deg);
+    }
+}
+
+@keyframes greyImgAnimation {
+    0% {
+        filter: grayscale(1);
+    }
+    100% {
+        filter: grayscale(0);
+    }
+}
+
+@keyframes fadeInDescription {
+    0% {
+        opacity: 0;
+        transform: translateX(-76.1rem);
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
     }
 }
