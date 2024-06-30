@@ -8,9 +8,11 @@
         [allProjects]="myprojectList.projectData.length"
         [projectNr]="i + 1"
         [name]="project.name"
-        [stack]="myprojectList.stackString[i]"
+        [stack]="myprojectList.stackString"
+        [img]="project.img"
         [description]="project.description"
         [github]="project.github"
+        [isRight]="(i + 1) % 2 == 0"
     ></app-project>
     }
 </div>

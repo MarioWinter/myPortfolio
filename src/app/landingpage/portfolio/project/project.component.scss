@@ -12,7 +12,7 @@ a {
 .project-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 46rem;
     margin-bottom: 7rem;
     &:hover {
         .black-frame-box {
@@ -31,6 +31,18 @@ a {
     }
 }
 
+.project-container-r {
+    &:hover {
+        .arrow-box-r {
+            animation: arrowRightAnimation 125ms ease-in-out forwards !important;
+            transition: left !important;
+        }
+        .disc-box-r {
+            animation: fadeInRightDescription 125ms ease-in-out forwards !important;
+        }
+    }
+}
+
 .black-frame-box {
     position: absolute;
     display: flex;
@@ -39,7 +51,7 @@ a {
     z-index: 2;
     margin: 2rem 0rem 0rem 2rem;
     width: 62rem;
-    height: 34.9rem;
+    height: 39.3rem;
     border: 0.4rem solid $black;
     opacity: 0;
     .arrow-box {
@@ -48,8 +60,17 @@ a {
     }
 }
 
+.black-frame-box-r {
+    right: -2rem;
+    .arrow-box-r {
+        left: -2rem;
+        right: auto;
+    }
+}
+
 .project-img {
     width: 62rem;
+    height: 39.3rem;
     filter: grayscale(1);
 }
 
@@ -57,6 +78,7 @@ a {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     gap: 14rem;
     .disc-container {
         display: flex;
@@ -65,17 +87,31 @@ a {
         align-items: flex-end;
         flex: 1;
         width: auto;
-        height: auto;
+        height: 100%;
     }
 }
+
+.project-box-r {
+    flex-direction: row-reverse;
+    .disc-container-r {
+        align-items: flex-start;
+    }
+}
+
 .disc-box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: auto;
+    height: 100%;
     opacity: 0;
     transform: translateX(-76.1rem);
+    p {
+        margin-top: 1.5rem;
+        margin-bottom: 3.5rem;
+        font-size: 1.6rem;
+    }
 }
 
 @keyframes arrowAnimation {
@@ -85,6 +121,17 @@ a {
     }
     100% {
         right: -4.3rem;
+        transform: scale(1.5) rotate(-135deg);
+    }
+}
+
+@keyframes arrowRightAnimation {
+    0% {
+        left: -2rem;
+        transform: scale(1) rotate(0);
+    }
+    100% {
+        left: -3rem;
         transform: scale(1.5) rotate(-135deg);
     }
 }
@@ -102,6 +149,20 @@ a {
     0% {
         opacity: 0;
         transform: translateX(-76.1rem);
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes fadeInRightDescription {
+    0% {
+        opacity: 0;
+        transform: translateX(76.1rem);
     }
     60% {
         opacity: 0;

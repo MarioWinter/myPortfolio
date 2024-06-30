@@ -19,11 +19,11 @@ $dark-grey: #bbb;
 $title-font: Syne;
 $text-font: Overpass;
 
-@mixin syne($clr: $black, $txtal: center, $fz: 12.8rem, $fw: 800, $lh: 0rem, $ls: 0rem) {
+@mixin syne($clr: $black, $txtal: center, $ff: $title-font, $fz: 12.8rem, $fw: 800, $lh: 0rem, $ls: 0rem) {
     color: $clr;
     text-align: $txtal;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: $title-font;
+    font-family: $ff;
     font-size: $fz;
     font-style: normal;
     font-weight: $fw;
@@ -32,26 +32,31 @@ $text-font: Overpass;
 }
 
 .title-font {
-    @include syne($clr: $black, $txtal: center, $fz: 12.8rem, $fw: 800, $lh: 100%, $ls: -0.32rem);
+    @include syne($clr: $black, $txtal: center, $ff: $title-font, $fz: 12.8rem, $fw: 800, $lh: 100%, $ls: -0.32rem);
 }
 
 .section-header-font {
-    @include syne($clr: $black, $txtal: center, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+    @include syne($clr: $black, $txtal: center, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
     &:hover {
         color: $orange;
     }
 }
 
 .portfolio-counter-font {
-    @include syne($clr: $black, $txtal: right, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
+    @include syne($clr: $black, $txtal: right, $ff: $title-font, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
 }
 
 .project-header-font {
-    @include syne($clr: $black, $txtal: center, $fz: 4.5rem, $fw: 800, $lh: 100%, $ls: 0rem);
+    @include syne($clr: $black, $txtal: left, $ff: $title-font, $fz: 4.5rem, $fw: 800, $lh: 100%, $ls: 0rem);
+}
+
+.project-stack-font {
+    @include syne($clr: $orange, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+    margin-top: 1.5rem;
 }
 
 .footer-header-font {
-    @include syne($clr: $cream, $txtal: center, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+    @include syne($clr: $cream, $txtal: center, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
 }
 
 html {
@@ -85,6 +90,14 @@ h1 {
 }
 
 h2 {
+    margin: 0rem;
+}
+
+h3 {
+    margin: 0rem;
+}
+
+p {
     margin: 0rem;
 }
 
