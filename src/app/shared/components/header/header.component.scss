@@ -1,17 +1,23 @@
 @import "../../../../styles.scss";
 nav {
-    display: flex;
     position: fixed;
-    width: 144rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     background-color: $cream;
-    max-width: 192rem;
     padding: 3rem 0rem;
-    justify-content: space-between;
-    justify-self: stretch;
-    align-items: center;
     margin-bottom: 11.2rem;
     z-index: 4;
+}
 
+.navbar-container {
+    max-width: 192rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     img {
         height: 3rem;
         background-color: $cream;
@@ -25,4 +31,17 @@ nav {
     background-color: $cream;
     height: 4rem;
     width: 3.2rem;
+}
+
+@media (max-width: 1920px) {
+    .navbar-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        width: 100%;
+        padding: 0 10px;
+    }
 }
