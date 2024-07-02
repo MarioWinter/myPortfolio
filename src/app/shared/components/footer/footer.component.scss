@@ -1,0 +1,15 @@
+@import "../../../../styles.scss";
+footer {
+    background-image: url("../../../../assets/img/footer/backround.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 106.4rem;
+    width: 100%;
+    h2 {
+        padding: 15rem 0rem 0rem 10.4rem;
+        &:hover {
+            color: $orange;
+        }
+    }
+}

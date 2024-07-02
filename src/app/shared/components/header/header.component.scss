@@ -12,7 +12,7 @@ nav {
 }
 
 .navbar-container {
-    max-width: 192rem;
+    max-width: 144rem;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -33,7 +33,7 @@ nav {
     width: 3.2rem;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
     .navbar-container {
         width: 95%;
     }
