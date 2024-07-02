@@ -127,12 +127,12 @@ a {
 
 @keyframes arrowRightAnimation {
     0% {
-        left: -2rem;
+        left: -3rem;
         transform: scale(1) rotate(0);
     }
     100% {
-        left: -3rem;
-        transform: scale(1.5) rotate(-135deg);
+        left: -4rem;
+        transform: scale(1.5) rotate(135deg);
     }
 }
 
