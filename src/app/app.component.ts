@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2, Inject } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { HeaderComponent } from "./shared/components/header/header.component";
+import { FooterComponent } from "./shared/components/footer/footer.component";
 import { DOCUMENT } from "@angular/common";
 
 import AOS from "aos";
@@ -8,7 +9,7 @@ import AOS from "aos";
 @Component({
     selector: "app-root",
     standalone: true,
-    imports: [RouterOutlet, HeaderComponent],
+    imports: [RouterOutlet, HeaderComponent, FooterComponent],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
 })
