@@ -51,13 +51,17 @@ $text-font: Overpass;
     @include syne($clr: $black, $txtal: left, $ff: $title-font, $fz: 4.5rem, $fw: 800, $lh: 100%, $ls: 0rem);
 }
 
-.project-stack-font {
+.secondary-txt-font {
     @include syne($clr: $orange, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
     margin-top: 1.5rem;
 }
 
 .footer-header-font {
     @include syne($clr: $cream, $txtal: left, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+}
+
+.footer-sub-header-font {
+    @include syne($clr: $orange, $txtal: center, $ff: $text-font, $fz: 3.2rem, $fw: 700, $lh: 120%, $ls: 0rem);
 }
 
 html {
