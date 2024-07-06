@@ -18,7 +18,5 @@ export class projectComponent {
     @Input() projectNr: number = 0;
     @Input() isRight: boolean = true;
 
-    constructor() {
-        console.log(this.isRight);
-    }
+    constructor() {}
 }
