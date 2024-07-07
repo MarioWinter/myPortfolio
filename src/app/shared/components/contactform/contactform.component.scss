@@ -31,6 +31,20 @@
     line-height: 120%;
 }
 
+@mixin inputHeader() {
+    position: absolute;
+    top: -0.7rem;
+    left: 2rem;
+    padding: 0 0.5rem;
+    color: $cream;
+    font-family: Overpass;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    background-color: $black;
+}
+
 .forms-container {
     display: flex;
     flex-direction: column;
@@ -45,6 +59,14 @@
     }
 }
 
+.form-fild {
+    position: relative;
+    .input-header {
+        display: none;
+        @include inputHeader();
+    }
+}
+
 input[type="text"],
 [type="email"] {
     @include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 5rem, $ai: center, $gp: 1rem);
@@ -52,6 +74,9 @@ input[type="text"],
     outline: none;
     &:focus {
         border: 0.2rem solid $cream;
+        & + .input-header {
+            display: block;
+        }
     }
     &:hover {
         border: 0.4rem solid $cream;
@@ -66,6 +91,11 @@ input[type="text"]:valid,
     background-position: 95% center;
 }
 
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+
 textarea {
     @include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 20.2rem, $ai: flex-start, $gp: 1rem);
     max-width: 61.7rem;
@@ -73,9 +103,15 @@ textarea {
     position: relative;
     margin-bottom: 0.8rem;
     outline: none;
+    &:focus {
+        border: 0.2rem solid $cream;
+        & + .input-header {
+            display: block;
+        }
+    }
     &:hover {
         border: 0.4rem solid $cream;
-        padding: 1.5rem 2.5rem 1.3rem 2.5rem;
+        padding: 1.3rem 2.3rem 1.3rem 2.3rem;
     }
 }
 
@@ -85,22 +121,8 @@ textarea:valid {
     background-position: 95% 5%;
 }
 
-.form-fild {
-    position: relative;
-    .check-icon {
-        @include formIcon($pt: 50%);
-    }
-    .error-icon {
-        @include formIcon($pt: 50%);
-        display: none;
-    }
-    .check-icon-txt {
-        @include formIcon($pt: 10%);
-    }
-    .error-icon-txt {
-        @include formIcon($pt: 10%);
-        display: none;
-    }
+textarea:focus::placeholder {
+    opacity: 0;
 }
 
 .checkbox-wrapper {

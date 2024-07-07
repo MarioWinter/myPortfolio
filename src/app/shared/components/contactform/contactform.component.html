@@ -2,6 +2,7 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="form-fild">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="Your name" required />
+            <div class="input-header">Your name</div>
         </div>
         <div class="error-message">
             @if (!name.valid && name.touched) {
@@ -19,6 +20,7 @@
                 required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             />
+            <div class="input-header">Your email</div>
         </div>
         <div class="error-message">
             @if (!email.valid && email.touched) {
@@ -37,6 +39,7 @@
                 style="height: 200px"
                 required
             ></textarea>
+            <div class="input-header">Your message</div>
             <div class="error-message">
                 @if (!message.valid && message.touched) {
                 <span>Your message is empty</span>
