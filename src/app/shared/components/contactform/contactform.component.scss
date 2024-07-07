@@ -11,9 +11,9 @@
     display: flex;
     color: $cream;
     border-bottom: 0.2rem solid $cream;
-    border-left: 0.4rem solid $black;
-    border-right: 0.4rem solid $black;
-    border-top: 0.4rem solid $black;
+    border-left: 0.2rem solid $black;
+    border-right: 0.2rem solid $black;
+    border-top: 0.2rem solid $black;
     background: $black;
     width: 61.7rem;
     height: $h;
@@ -49,10 +49,21 @@ input[type="text"],
 [type="email"] {
     @include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 5rem, $ai: center, $gp: 1rem);
     margin-bottom: 0.8rem;
+    outline: none;
+    &:focus {
+        border: 0.2rem solid $cream;
+    }
     &:hover {
         border: 0.4rem solid $cream;
-        padding: 1.5rem 2.5rem 1.3rem 2.5rem;
+        padding: 1.3rem 2.3rem 1.3rem 2.3rem;
     }
+}
+
+input[type="text"]:valid,
+[type="email"]:valid {
+    background-image: url("../../../../assets/icons/contact-form/done.svg");
+    background-repeat: no-repeat;
+    background-position: 95% center;
 }
 
 textarea {
@@ -61,10 +72,17 @@ textarea {
     min-width: 61.7rem;
     position: relative;
     margin-bottom: 0.8rem;
+    outline: none;
     &:hover {
         border: 0.4rem solid $cream;
         padding: 1.5rem 2.5rem 1.3rem 2.5rem;
     }
+}
+
+textarea:valid {
+    background-image: url("../../../../assets/icons/contact-form/done.svg");
+    background-repeat: no-repeat;
+    background-position: 95% 5%;
 }
 
 .form-fild {
