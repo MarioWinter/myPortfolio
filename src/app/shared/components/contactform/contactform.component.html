@@ -35,9 +35,11 @@
             <label for="myCheckbox"></label>
             <div>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</div>
         </div>
-        @if (!isPrivacyAccepted) {
-        <div class="error-message">Please accept the privacy policy</div>
-        }
+        <div class="error-message">
+            @if (!isPrivacyAccepted) {
+            <div>Please accept the privacy policy</div>
+            }
+        </div>
 
         <input class="message-btn" type="submit" value="Send message" [disabled]="!isPrivacyAccepted" />
     </form>
