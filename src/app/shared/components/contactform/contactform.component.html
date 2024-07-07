@@ -1,10 +1,16 @@
 <div class="forms-container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="form-fild">
-            <input [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="Your name" required />
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="Your name" required />
+        </div>
+        <div class="error-message">
+            @if (!name.valid && name.touched) {
+            <span>Your name is required</span>
+            }
         </div>
         <div class="form-fild">
             <input
+                #email="ngModel"
                 [(ngModel)]="contactData.email"
                 type="email"
                 id="email"
@@ -13,6 +19,11 @@
                 required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             />
+        </div>
+        <div class="error-message">
+            @if (!email.valid && email.touched) {
+            <span>Your email is required</span>
+            }
         </div>
 
         <div class="form-fild">
@@ -26,9 +37,11 @@
                 style="height: 200px"
                 required
             ></textarea>
-            @if (!message.valid && message.touched) {
-            <span>Please enter a message</span>
-            }
+            <div class="error-message">
+                @if (!message.valid && message.touched) {
+                <span>Your message is empty</span>
+                }
+            </div>
         </div>
         <div class="checkbox-wrapper">
             <input type="checkbox" id="myCheckbox" class="custom-checkbox" [(ngModel)]="isPrivacyAccepted" name="privacyPolicy" required />
