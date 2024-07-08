@@ -4,12 +4,16 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 106.4rem;
+    height: auto;
     width: 100%;
-    h2 {
-        padding: 15rem 0rem 0rem 10.4rem;
-        &:hover {
-            color: $orange;
+    .footer-container {
+        padding: 15rem 10.4rem 0rem 10.4rem;
+        position: relative;
+        h2 {
+            width: fit-content;
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }
@@ -25,4 +29,99 @@ footer {
     .secondary-txt-font {
         color: $cream;
     }
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto;
+    padding: 0rem 0 4.8rem;
+    margin-top: -3rem;
+    width: 100%;
+
+    .logo-box {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+
+        img {
+            height: 3rem;
+            width: 6.6667rem;
+        }
+    }
+
+    .arrow-icon {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+
+        svg {
+            width: 35.852px;
+            height: 52.044px;
+        }
+    }
+
+    .social-media {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 4.2rem;
+        margin-top: 2rem;
+
+        img {
+            width: 3rem;
+        }
+    }
+
+    .legal-notice-box {
+        grid-column: 2;
+        grid-row: 3;
+        align-self: end;
+        justify-self: end;
+    }
+}
+
+// Media Query für Mobile Ansicht
+@media (max-width: 768px) {
+    .info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        justify-items: center;
+        text-align: center;
+
+        .logo-box {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .arrow-icon {
+            display: none;
+        }
+
+        .social-media {
+            grid-column: 1;
+            grid-row: 3;
+            justify-self: center;
+        }
+
+        .legal-notice-box {
+            grid-column: 1;
+            grid-row: 4;
+            justify-self: center;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.legal-notice {
+    @include syne($clr: $cream, $txtal: center, $ff: $text-font, $fz: 1.6rem, $fw: 400, $lh: 120%, $ls: 0rem);
+    margin-top: 2rem;
+}
+
+.secondary-txt-font {
+    @include syne($clr: $cream, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+    margin-top: 1.5rem;
 }
