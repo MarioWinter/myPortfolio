@@ -55,11 +55,19 @@ footer {
         grid-column: 2;
         grid-row: 1;
         justify-self: end;
-        align-self: start;
+        align-self: end;
 
         svg {
-            width: 35.852px;
-            height: 52.044px;
+            width: 3.58rem;
+            height: 7.6rem;
+        }
+        &:hover {
+            #morph_stroke {
+                animation: morphStrokeAnimation 125ms linear forwards;
+            }
+            #morph_arrowhead {
+                animation: moveArrowAnimation 125ms ease-out forwards;
+            }
         }
     }
 
@@ -81,7 +89,7 @@ footer {
 
     .git,
     .mail,
-    .linkedIn {
+    .linked-in {
         cursor: pointer;
         &:hover {
             animation: socialMediaHover 125ms ease-in-out forwards;
@@ -128,8 +136,26 @@ footer {
     opacity: 0;
 }
 
+@keyframes moveArrowAnimation {
+    0% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(-1.6rem);
+    }
+}
+
+@keyframes morphStrokeAnimation {
+    0% {
+        d: path("M20 55L20 3");
+    }
+    100% {
+        d: path("M20 55L20 -16");
+    }
+}
+
 @keyframes lnBorder {
-    1% {
+    0% {
         transform: translateX(-10rem);
         opacity: 0;
     }
