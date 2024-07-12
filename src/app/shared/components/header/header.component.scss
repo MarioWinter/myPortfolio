@@ -7,8 +7,19 @@ nav {
     width: 100%;
     background-color: $cream;
     padding: 3rem 0rem;
-    margin-bottom: 11.2rem;
+    //margin-bottom: 11.2rem;
     z-index: 4;
+}
+app-burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 96.9rem;
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 1;
 }
 
 .navbar-container {
@@ -31,6 +42,10 @@ nav {
     background-color: $cream;
     height: 4rem;
     width: 4rem;
+}
+
+.d-none {
+    display: none !important;
 }
 
 @media (max-width: 1440px) {

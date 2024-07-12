@@ -1,6 +1,7 @@
 <nav>
     <div class="navbar-container">
         <img src="assets/icons/mw-logo.svg" alt="Developer Logo" />
-        <div class="burger-menu"></div>
+        <div (click)="popMenu()" class="burger-menu"></div>
     </div>
+    <app-burger-menu [ngClass]="showMenu()"></app-burger-menu>
 </nav>
