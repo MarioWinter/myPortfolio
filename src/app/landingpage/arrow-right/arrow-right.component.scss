@@ -14,39 +14,22 @@
 }
 
 .arrow-animation {
-    background-image: url("../../../assets/img/arrows/arrow-right-0.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 23.6rem;
     height: 23.5rem;
-    animation: arrowAnimation 125ms steps(6) 0.5s forwards;
     opacity: 1;
 }
 
-@keyframes arrowAnimation {
-    0%,
-    16.66% {
-        background-image: url("../../../assets/img/arrows/arrow-right-0.svg");
+@keyframes lineGrow {
+    0% {
+        d: path("M41.6865 41.3125L193.894 193.52");
     }
-    16.67%,
-    33.33% {
-        background-image: url("../../../assets/img/arrows/arrow-right-0.svg");
+    45% {
+        d: path("M21.6865 21.3125L193.894 193.52");
     }
-    33.34%,
-    50% {
-        background-image: url("../../../assets/img/arrows/arrow-right-1.svg");
+    55% {
+        d: path("M21.6865 21.3125L193.894 193.52");
     }
-    50.01%,
-    66.66% {
-        background-image: url("../../../assets/img/arrows/arrow-right-1.svg");
-    }
-    66.67%,
-    83.33% {
-        background-image: url("../../../assets/img/arrows/arrow-right-2.svg");
-    }
-    83.34%,
     100% {
-        background-image: url("../../../assets/img/arrows/arrow-right-2.svg");
+        d: path("M41.6865 41.3125L193.894 193.52");
     }
 }
