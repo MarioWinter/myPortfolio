@@ -78,15 +78,35 @@ input[type="text"],
     }
 }
 
-input[type="text"]:valid,
-[type="email"]:valid {
-    background-image: url("../../../../assets/icons/contact-form/done.svg");
+input[type="text"],
+input[type="email"] {
     background-repeat: no-repeat;
     background-position: 95% center;
+    transition: background-image 125ms ease;
+
+    &:not(:placeholder-shown) {
+        &:valid {
+            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+        }
+
+        &:invalid {
+            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+        }
+    }
+
+    &:focus {
+        &:valid {
+            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+        }
+
+        &:invalid {
+            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+        }
+    }
 }
 
 input[type="text"]:focus::placeholder,
-input[type="email"]:focus::placeholder {
+[type="email"]:focus::placeholder {
     opacity: 0;
 }
 
@@ -110,7 +130,7 @@ textarea {
 }
 
 textarea:valid {
-    background-image: url("../../../../assets/icons/contact-form/done.svg");
+    background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
     background-repeat: no-repeat;
     background-position: 95% 5%;
 }
@@ -149,13 +169,13 @@ textarea:focus::placeholder {
         display: inline-block;
         margin-right: 0.4rem;
         cursor: pointer;
-        background-image: url("../../../../assets/img/contactform/input-default.svg");
+        background-image: url("../../../../assets/icons/contact-form/input-default.svg");
         background-size: cover;
         transition: background-image 75ms ease;
     }
 
     input:checked + label {
-        background-image: url("../../../../assets/img/contactform/input-checked.svg");
+        background-image: url("../../../../assets/icons/contact-form/input-checked.svg");
     }
 }
 
@@ -168,10 +188,10 @@ textarea:focus::placeholder {
             }
         }
         label {
-            background-image: url("../../../../assets/img/contactform/input-default-hover.svg");
+            background-image: url("../../../../assets/icons/contact-form/input-default-hover.svg");
         }
         input:checked + label {
-            background-image: url("../../../../assets/img/contactform/input-checked-hover.svg");
+            background-image: url("../../../../assets/icons/contact-form/input-checked-hover.svg");
         }
     }
 }
