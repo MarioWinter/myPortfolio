@@ -129,10 +129,29 @@ textarea {
     }
 }
 
-textarea:valid {
-    background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+textarea {
     background-repeat: no-repeat;
     background-position: 95% 5%;
+    transition: background-image 125ms ease;
+    &:not(:placeholder-shown) {
+        &:valid {
+            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+        }
+
+        &:invalid {
+            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+        }
+    }
+
+    &:focus {
+        &:valid {
+            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+        }
+
+        &:invalid {
+            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+        }
+    }
 }
 
 textarea:focus::placeholder {
