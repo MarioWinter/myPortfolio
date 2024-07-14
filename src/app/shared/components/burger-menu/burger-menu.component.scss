@@ -1,14 +1,91 @@
 @import "../../../../styles.scss";
 
+$border-width: 0.4rem;
+$initial-length: 5rem;
+$transition-duration: 0.3s;
+
 ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 3.6rem 3.8rem;
+    margin-bottom: 3.9rem;
+    max-width: 59rem;
+    text-align: center;
+    border: 0.4rem solid transparent;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: $black;
+    }
+    &::before {
+        left: -0.4rem;
+        bottom: -0.4rem;
+        width: $border-width;
+        height: $initial-length;
+    }
+    &::after {
+        left: -0.4rem;
+        bottom: -0.4rem;
+        width: $initial-length;
+        height: $border-width;
+    }
+
+    &:hover:not(:active) {
+        &::before {
+            animation: borderLeftAnimation 125ms ease forwards;
+        }
+        &::after {
+            animation: borderBottomAnimation 125ms ease 80ms forwards;
+        }
+    }
+
+    &:active {
+        border: 0.4rem solid $black;
+    }
+}
+
+a {
+    &:hover {
+        color: $black;
+    }
 }
 
 .menu-container {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     background-image: url("../../../../assets/img/burger-menu/backround.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: 0rem 65rem;
+}
+
+@keyframes borderBottomAnimation {
+    from {
+        left: -0.4rem;
+        width: 58.4rem;
+    }
+    to {
+        left: 33.6rem;
+        width: 24.4rem;
+    }
+}
+
+@keyframes borderLeftAnimation {
+    from {
+        height: $initial-length;
+    }
+    to {
+        height: 0rem;
+    }
 }

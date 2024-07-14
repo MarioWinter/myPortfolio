@@ -10,10 +10,10 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
     styleUrl: "./header.component.scss",
 })
 export class HeaderComponent {
-    isMenuOpen = false;
+    isMenuOpen = true;
 
     popMenu() {
-        this.isMenuOpen = !this.isMenuOpen ? true : false;
+        //this.isMenuOpen = !this.isMenuOpen ? true : false;
         console.log("click geht:" + this.isMenuOpen);
     }
 

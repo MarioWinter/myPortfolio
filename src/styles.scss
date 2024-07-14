@@ -56,6 +56,10 @@ $text-font: Overpass;
     margin-top: 1.5rem;
 }
 
+.menu-item-font {
+    @include syne($clr: $black, $txtal: center, $ff: $title-font, $fz: 9.6rem, $fw: 700, $lh: 100%, $ls: -0.24rem);
+}
+
 .footer-header-font {
     @include syne($clr: $cream, $txtal: left, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
 }
