@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
+import { MyprojectListService } from "../../shared/components/myproject-list.service";
 
 @Component({
     selector: "app-hero-section",
@@ -8,5 +9,5 @@ import { Component } from "@angular/core";
     styleUrl: "./hero-section.component.scss",
 })
 export class HeroSectionComponent {
-    emailAddress = "mariowinter.sg@gmail.com";
+    myprojectList = inject(MyprojectListService);
 }
