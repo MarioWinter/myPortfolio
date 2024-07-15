@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { trigger, state, style, transition, animate, keyframes } from "@angular/animations";
 import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
 
 @Component({
@@ -8,18 +9,73 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
     imports: [BurgerMenuComponent, CommonModule],
     templateUrl: "./header.component.html",
     styleUrl: "./header.component.scss",
+    animations: [
+        trigger("topBarAnimation", [
+            state("open", style({ width: "100%", transform: "translateY(0) rotate(0)" })),
+            state("close", style({ width: "50%", transform: "translateY(5px) translateX(8px) rotate(-45deg" })),
+            transition("open => close", [
+                animate(
+                    "0.125s",
+                    keyframes([
+                        style({ width: "50%", transform: "translateY(0) translateX(0px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(8px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(5px) translateX(8px) rotate(-45deg)" }),
+                    ])
+                ),
+            ]),
+            transition("close => open", [
+                animate(
+                    "0.125s",
+                    keyframes([
+                        style({ width: "50%", transform: "translateY(5px) translateX(8px) rotate(-45deg)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(10px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(0) rotate(0)" }),
+                    ])
+                ),
+            ]),
+        ]),
+        trigger("middleBarAnimation", [
+            state("open", style({ transform: "rotate(0)" })),
+            state("close", style({ transform: "rotate(45deg)" })),
+            transition("open => close", animate("0.125s")),
+            transition("close => open", animate("0.125s")),
+        ]),
+        trigger("bottomBarAnimation", [
+            state("open", style({ width: "100%", transform: "translateY(0) rotate(0)" })),
+            state("close", style({ width: "50%", transform: "translateY(-5px) translateX(-8px) rotate(-45deg)" })),
+            transition("open => close", [
+                animate(
+                    "0.125s",
+                    keyframes([
+                        style({ width: "50%", transform: "translateY(0) translateX(0px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(-8px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(-5px) translateX(-8px) rotate(-45deg)" }),
+                    ])
+                ),
+            ]),
+            transition("close => open", [
+                animate(
+                    "0.125s",
+                    keyframes([
+                        style({ width: "50%", transform: "translateY(-5px) translateX(-8px) rotate(-45deg)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(-8px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(0) rotate(0)" }),
+                    ])
+                ),
+            ]),
+        ]),
+    ],
 })
 export class HeaderComponent {
-    isMenuOpen = false;
+    isActive = false;
 
-    popMenu() {
-        this.isMenuOpen = !this.isMenuOpen ? true : false;
-        console.log("click geht:" + this.isMenuOpen);
+    toggleMenu() {
+        this.isActive = !this.isActive;
     }
 
     showMenu() {
         return {
-            "d-none": !this.isMenuOpen,
+            "d-none": !this.isActive,
         };
     }
 }

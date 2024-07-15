@@ -1,7 +1,11 @@
 <nav>
     <div class="navbar-container">
         <img src="assets/icons/mw-logo.svg" alt="Developer Logo" />
-        <div (click)="popMenu()" class="burger-menu"></div>
+        <div class="burger-menu" (click)="toggleMenu()">
+            <div class="bar top" [@topBarAnimation]="isActive ? 'close' : 'open'"></div>
+            <div class="bar middle" [@middleBarAnimation]="isActive ? 'close' : 'open'"></div>
+            <div class="bar bottom" [@bottomBarAnimation]="isActive ? 'close' : 'open'"></div>
+        </div>
     </div>
     <app-burger-menu [ngClass]="showMenu()"></app-burger-menu>
 </nav>
