@@ -12,14 +12,14 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
     animations: [
         trigger("topBarAnimation", [
             state("open", style({ width: "100%", transform: "translateY(0) rotate(0)" })),
-            state("close", style({ width: "50%", transform: "translateY(5px) translateX(8px) rotate(-45deg" })),
+            state("close", style({ width: "50%", transform: "translateY(0.5rem) translateX(0.8rem) rotate(-45deg" })),
             transition("open => close", [
                 animate(
                     "0.125s",
                     keyframes([
                         style({ width: "50%", transform: "translateY(0) translateX(0px) rotate(0)" }),
-                        style({ width: "50%", transform: "translateY(0) translateX(8px) rotate(0)" }),
-                        style({ width: "50%", transform: "translateY(5px) translateX(8px) rotate(-45deg)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(0.8rem) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(0.5rem) translateX(0.8rem) rotate(-45deg)" }),
                     ])
                 ),
             ]),
@@ -27,8 +27,8 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
                 animate(
                     "0.125s",
                     keyframes([
-                        style({ width: "50%", transform: "translateY(5px) translateX(8px) rotate(-45deg)" }),
-                        style({ width: "50%", transform: "translateY(0) translateX(10px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(0.5rem) translateX(0.8rem) rotate(-45deg)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(0.8rem) rotate(0)" }),
                         style({ width: "50%", transform: "translateY(0) translateX(0) rotate(0)" }),
                     ])
                 ),
@@ -42,14 +42,14 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
         ]),
         trigger("bottomBarAnimation", [
             state("open", style({ width: "100%", transform: "translateY(0) rotate(0)" })),
-            state("close", style({ width: "50%", transform: "translateY(-5px) translateX(-8px) rotate(-45deg)" })),
+            state("close", style({ width: "50%", transform: "translateY(-0.5rem) translateX(-0.8rem) rotate(-45deg)" })),
             transition("open => close", [
                 animate(
                     "0.125s",
                     keyframes([
                         style({ width: "50%", transform: "translateY(0) translateX(0px) rotate(0)" }),
-                        style({ width: "50%", transform: "translateY(0) translateX(-8px) rotate(0)" }),
-                        style({ width: "50%", transform: "translateY(-5px) translateX(-8px) rotate(-45deg)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(-0.8rem) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(-0.5rem) translateX(-0.8rem) rotate(-45deg)" }),
                     ])
                 ),
             ]),
@@ -57,8 +57,8 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
                 animate(
                     "0.125s",
                     keyframes([
-                        style({ width: "50%", transform: "translateY(-5px) translateX(-8px) rotate(-45deg)" }),
-                        style({ width: "50%", transform: "translateY(0) translateX(-8px) rotate(0)" }),
+                        style({ width: "50%", transform: "translateY(-0.5rem) translateX(-0.8rem) rotate(-45deg)" }),
+                        style({ width: "50%", transform: "translateY(0) translateX(-0.8rem) rotate(0)" }),
                         style({ width: "50%", transform: "translateY(0) translateX(0) rotate(0)" }),
                     ])
                 ),

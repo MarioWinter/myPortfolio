@@ -2,10 +2,10 @@
     <div class="navbar-container">
         <img src="assets/icons/mw-logo.svg" alt="Developer Logo" />
         <div class="burger-menu" (click)="toggleMenu()">
-            <div class="bar top" [@topBarAnimation]="isActive ? 'close' : 'open'"></div>
-            <div class="bar middle" [@middleBarAnimation]="isActive ? 'close' : 'open'"></div>
-            <div class="bar bottom" [@bottomBarAnimation]="isActive ? 'close' : 'open'"></div>
+            <div class="bar" [@topBarAnimation]="isActive ? 'close' : 'open'"></div>
+            <div class="bar" [@middleBarAnimation]="isActive ? 'close' : 'open'"></div>
+            <div class="bar" [@bottomBarAnimation]="isActive ? 'close' : 'open'"></div>
         </div>
     </div>
-    <app-burger-menu [ngClass]="showMenu()"></app-burger-menu>
+    <app-burger-menu [ngClass]="showMenu()" (menuToggled)="toggleMenu()"></app-burger-menu>
 </nav>
