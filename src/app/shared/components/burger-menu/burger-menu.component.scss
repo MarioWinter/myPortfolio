@@ -20,13 +20,17 @@ a {
     background-image: url("../../../../assets/img/burger-menu/backround.svg");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 0rem 65rem;
+    background-position: 0rem 93rem;
+    animation: menuBkrdAnimation 125ms ease-in-out 50ms forwards;
 }
 
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+    transform: translateY(23.5rem);
+    opacity: 0;
+    animation: LeadInUpwards 125ms ease-in-out 50ms forwards;
 }
 
 li {
@@ -78,6 +82,8 @@ li {
     padding: 0rem 10rem;
     margin-top: 10rem;
     width: 100%;
+    opacity: 0;
+    animation: LeadInUpwards 125ms ease-in-out 50ms forwards;
 }
 
 .email-box {
@@ -158,5 +164,25 @@ li {
     }
     100% {
         transform: translateY(-1rem);
+    }
+}
+
+@keyframes menuBkrdAnimation {
+    from {
+        background-position: 0rem 93rem;
+    }
+    to {
+        background-position: 0rem 65rem;
+    }
+}
+
+@keyframes LeadInUpwards {
+    from {
+        transform: translateY(23.5rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
     }
 }
