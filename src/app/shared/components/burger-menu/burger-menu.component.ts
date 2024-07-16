@@ -1,4 +1,4 @@
-import { Component, inject, Input, EventEmitter, Output } from "@angular/core";
+import { Component, inject, EventEmitter, Output } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MyprojectListService } from "../../../shared/components/myproject-list.service";
 
