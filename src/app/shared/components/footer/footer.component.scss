@@ -47,6 +47,7 @@ footer {
         img {
             height: 3rem;
             width: 6.6667rem;
+            cursor: pointer;
         }
     }
 
@@ -55,9 +56,11 @@ footer {
         grid-row: 1;
         justify-self: end;
         align-self: end;
+        cursor: pointer;
         svg {
             width: 3.58rem;
             height: 7.6rem;
+            cursor: pointer;
         }
         &:hover {
             #morph_stroke {
@@ -111,6 +114,9 @@ footer {
         gap: 0.5rem;
         overflow-x: hidden;
         &:hover {
+            a {
+                color: $cream;
+            }
             .legal-notice {
                 font-weight: 700;
             }

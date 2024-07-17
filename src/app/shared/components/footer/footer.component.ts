@@ -11,4 +11,11 @@ import { MyprojectListService } from "../../../shared/components/myproject-list.
 })
 export class FooterComponent {
     myprojectList = inject(MyprojectListService);
+
+    scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
 }
