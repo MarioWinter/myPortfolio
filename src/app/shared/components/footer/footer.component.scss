@@ -1,14 +1,13 @@
 @import "../../../../styles.scss";
-
 footer {
     background-image: url("../../../../assets/img/footer/backround.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
     width: 100%;
     .footer-container {
         padding: 15rem 10.4rem 0rem 10.4rem;
         position: relative;
+        width: 100%;
         h2 {
             width: fit-content;
             &:hover {

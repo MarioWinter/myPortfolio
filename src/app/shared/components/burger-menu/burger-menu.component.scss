@@ -14,12 +14,12 @@ a {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     background-image: url("../../../../assets/img/burger-menu/backround.svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: 0rem 93rem;
     animation: menuBkrdAnimation 125ms ease-in-out 50ms forwards;
 }
@@ -172,7 +172,7 @@ li {
         background-position: 0rem 93rem;
     }
     to {
-        background-position: 0rem 65rem;
+        background-position: 0rem 75rem;
     }
 }
 

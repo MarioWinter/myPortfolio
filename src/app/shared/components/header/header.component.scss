@@ -7,18 +7,23 @@ nav {
     width: 100%;
     background-color: $cream;
     padding: 3rem 0rem;
-    z-index: 4;
+    z-index: 3;
 }
 app-burger-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    height: 96.9rem;
-    max-width: 144rem;
-    width: 100%;
-    margin: 0 auto;
+    position: fixed;
+    top: 9rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // height: 96.9rem;
+
+    //margin: 0 auto;
     opacity: 1;
+    background-color: $cream;
+    z-index: 3;
 }
 
 .navbar-container {

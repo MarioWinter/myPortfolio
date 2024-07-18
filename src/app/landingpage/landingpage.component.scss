@@ -1,1 +1,12 @@
-
+@import "../../styles.scss";
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .max-width {
+        max-width: $max-width;
+        margin: 0 3rem;
+    }
+}
