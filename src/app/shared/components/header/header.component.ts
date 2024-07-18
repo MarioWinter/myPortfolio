@@ -71,6 +71,15 @@ export class HeaderComponent {
 
     toggleMenu() {
         this.isActive = !this.isActive;
+        this.toggleBodyScroll();
+    }
+
+    private toggleBodyScroll() {
+        if (this.isActive) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
     }
 
     showMenu() {
