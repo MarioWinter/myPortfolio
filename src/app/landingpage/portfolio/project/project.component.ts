@@ -14,6 +14,7 @@ export class projectComponent {
     @Input() img: string = "";
     @Input() description: string = "";
     @Input() github: string = "";
+    @Input() link: string = "";
     @Input() allProjects: number = 0;
     @Input() projectNr: number = 0;
     @Input() isRight: boolean = true;

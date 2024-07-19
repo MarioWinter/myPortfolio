@@ -114,6 +114,14 @@ a {
     }
 }
 
+.button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
 @keyframes arrowAnimation {
     0% {
         right: -3.7rem;

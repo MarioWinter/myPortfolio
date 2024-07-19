@@ -4,46 +4,32 @@ import { Injectable } from "@angular/core";
     providedIn: "root",
 })
 export class MyprojectListService {
-    emailAddress = "mariowinter.sg@gmail.com";
-    stackString: string = "";
+    emailAddress = "contact@mariowinter.com";
     projectData = [
         {
-            name: "Portfolio Website",
-            stack: ["Angular", "TypeScript", "SCSS", "HTML"],
-            img: "el-pollo-loco.png",
-            description: "Eine persönliche Portfolio-Website zur Präsentation meiner Projekte und Fähigkeiten.",
-            github: "https://github.com/username/portfolio-website",
+            name: "Join",
+            stack: "JavaScript | HTML | CSS | Git",
+            img: "join.png",
+            description:
+                "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. Developed in a team with Git version management.",
+            github: "https://github.com/MarioWinter/Join",
+            link: "",
         },
         {
-            name: "Task Manager App",
-            stack: ["React", "JavaScript", "CSS", "Node.js", "MongoDB"],
+            name: "El Pollo Loco",
+            stack: "JavaScript | HTML | CSS",
             img: "el-pollo-loco.png",
-            description: "Eine vollständige Task-Management-Anwendung mit Benutzerauthentifizierung und Datenbankintegration.",
-            github: "https://github.com/username/task-manager-app",
+            description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            github: "https://github.com/MarioWinter/El-pollo-loco",
+            link: "",
         },
         {
-            name: "E-Commerce Platform",
-            stack: ["Vue.js", "Vuex", "Firebase", "Stripe API"],
-            img: "el-pollo-loco.png",
-            description: "Eine E-Commerce-Plattform mit Produktkatalog, Warenkorb und sicherer Zahlungsabwicklung.",
-            github: "https://github.com/username/ecommerce-platform",
-        },
-        {
-            name: "Weather Forecast App",
-            stack: ["Angular", "RxJS", "OpenWeatherMap API", "Chart.js"],
-            img: "el-pollo-loco.png",
-            description: "Eine Wetter-App, die aktuelle Wetterdaten und Vorhersagen für verschiedene Standorte anzeigt.",
-            github: "https://github.com/username/weather-forecast-app",
+            name: "Pokedex",
+            stack: "JavaScript | HTML | CSS | API",
+            img: "pokedex.png",
+            description: "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
+            github: "https://github.com/MarioWinter/Pokedex",
+            link: "",
         },
     ];
-
-    constructor() {
-        this.prepareProjects();
-    }
-
-    prepareProjects(): void {
-        this.projectData.forEach((project) => {
-            this.stackString = project.stack.join(" | ");
-        });
-    }
 }

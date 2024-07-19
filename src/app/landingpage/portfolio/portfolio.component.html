@@ -1,6 +1,6 @@
 <div class="header-box">
     <h2 class="section-header-font">Portfolio</h2>
-    <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    <p>Discover my latest development projects. Try out the projects and explore the code to see my frontend skills in action.</p>
 </div>
 <div>
     @for (project of myprojectList.projectData; track project; let i = $index) {
@@ -8,10 +8,11 @@
         [allProjects]="myprojectList.projectData.length"
         [projectNr]="i + 1"
         [name]="project.name"
-        [stack]="myprojectList.stackString"
+        [stack]="project.stack"
         [img]="project.img"
         [description]="project.description"
         [github]="project.github"
+        [link]="project.link"
         [isRight]="(i + 1) % 2 == 0"
     ></app-project>
     }
