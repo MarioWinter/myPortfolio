@@ -13,21 +13,19 @@ a {
 .menu-container {
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.item-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background-image: url("../../../../assets/img/burger-menu/backround.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0rem 93rem;
-    animation: menuBkrdAnimation 125ms ease-in-out 50ms forwards;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
 }
 
 ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
     transform: translateY(23.5rem);
     opacity: 0;
     animation: LeadInUpwards 125ms ease-in-out 50ms forwards;
@@ -36,11 +34,10 @@ ul {
 li {
     cursor: pointer;
     position: relative;
-    display: inline-block;
+    text-align: left;
     padding: 3.6rem 3.8rem;
     margin-bottom: 3.9rem;
     max-width: 59rem;
-    text-align: center;
     border: 0.4rem solid transparent;
     &::before,
     &::after {
@@ -76,14 +73,22 @@ li {
 }
 
 .info-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0rem 10rem;
-    margin-top: 10rem;
+    padding: 5rem 10rem;
+    height: 43%;
     width: 100%;
     opacity: 0;
-    animation: LeadInUpwards 125ms ease-in-out 50ms forwards;
+    background-image: url("../../../../assets/img/burger-menu/backround.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0rem 93rem;
+    animation: menuBkrdAnimation 125ms ease-in-out 50ms forwards, LeadInUpwards 125ms ease-in-out 50ms forwards;
 }
 
 .email-box {
@@ -172,7 +177,7 @@ li {
         background-position: 0rem 93rem;
     }
     to {
-        background-position: 0rem 75rem;
+        background-position: 0rem 0rem;
     }
 }
 
@@ -184,5 +189,12 @@ li {
     to {
         transform: translateY(0rem);
         opacity: 1;
+    }
+}
+
+@media screen and (max-height: 1000px) {
+    .item-container {
+        overflow: auto;
+        height: 63%;
     }
 }
