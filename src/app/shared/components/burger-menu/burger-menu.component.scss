@@ -192,7 +192,7 @@ li {
     }
 }
 
-@media screen and (max-height: 1000px) {
+@media screen and (max-width: 140rem) and (max-height: 109.1rem) {
     .item-container {
         overflow: auto;
         height: 63%;
