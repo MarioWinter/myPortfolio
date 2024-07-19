@@ -29,22 +29,13 @@ h2 {
 
 .profile-img-box {
     position: relative;
-}
-
-.img-frame {
-    position: relative;
-    width: 40rem;
-    height: 40rem;
-    overflow: hidden;
+    transform: translateY(-2rem);
     img {
-        position: absolute;
-        top: -5rem;
         width: 40rem;
-        height: 60rem;
-        object-fit: cover;
-        object-position: center;
+        height: 40rem;
     }
 }
+
 .black-frame-box {
     position: absolute;
     z-index: 2;
