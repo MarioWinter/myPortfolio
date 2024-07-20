@@ -13,7 +13,7 @@ export class MyprojectListService {
             description:
                 "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. Developed in a team with Git version management.",
             github: "https://github.com/MarioWinter/Join",
-            link: "",
+            link: "https://join.mariowinter.com/index.html",
         },
         {
             name: "El Pollo Loco",
@@ -21,7 +21,7 @@ export class MyprojectListService {
             img: "el-pollo-loco.png",
             description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
             github: "https://github.com/MarioWinter/El-pollo-loco",
-            link: "",
+            link: "https://el-pollo-loco.mariowinter.com/index.html",
         },
         {
             name: "Pokedex",
@@ -29,7 +29,7 @@ export class MyprojectListService {
             img: "pokedex.png",
             description: "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
             github: "https://github.com/MarioWinter/Pokedex",
-            link: "",
+            link: "https://pokedex.mariowinter.com/index.html",
         },
     ];
 }
