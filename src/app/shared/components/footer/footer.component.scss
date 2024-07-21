@@ -129,7 +129,7 @@ footer {
 }
 
 .secondary-txt-font {
-    @include txt($clr: $cream, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+    @include txt($clr: $cream, $txtal: left, $ff: $text-font, $fz: 2rem, $fw: 400, $lh: 120%, $ls: 0rem);
     margin-top: 1.5rem;
 }
 
