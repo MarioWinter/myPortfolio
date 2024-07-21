@@ -71,6 +71,12 @@ app-burger-menu {
             &:hover {
                 border-bottom: 0.2rem solid $orange;
             }
+            &.active {
+                border-bottom: 0.2rem solid $black;
+                &:hover {
+                    border-bottom: 0.2rem solid $orange;
+                }
+            }
             &:active {
                 border-bottom: 0.2rem solid $black;
             }
