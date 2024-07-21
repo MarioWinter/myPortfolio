@@ -11,6 +11,7 @@ import { MyprojectListService } from "../../../shared/components/myproject-list.
 })
 export class BurgerMenuComponent {
     myprojectList = inject(MyprojectListService);
+
     @Output() menuToggled = new EventEmitter<void>();
 
     toggleMenu() {

@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { trigger, state, style, transition, animate, keyframes } from "@angular/animations";
 import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
+import { TranslationService } from "./../translation.service";
 
 @Component({
     selector: "app-header",
@@ -67,7 +68,9 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
     ],
 })
 export class HeaderComponent {
+    translationService = inject(TranslationService);
     isActive = false;
+    currentLang = "en";
 
     toggleMenu() {
         this.isActive = !this.isActive;
@@ -91,6 +94,20 @@ export class HeaderComponent {
     fixPosition(): { [key: string]: string } {
         return {
             "right.rem": this.isActive ? "1.1" : "0",
+        };
+    }
+
+    translate(key: string): string {
+        return this.translationService.getTranslation(this.currentLang, key);
+    }
+
+    setLanguage(lang: string) {
+        this.currentLang = lang;
+    }
+
+    active(lang: string) {
+        return {
+            "border-bottom": this.currentLang === lang ? "0.2rem solid black" : "0.2rem solid transparent",
         };
     }
 }
