@@ -1,10 +1,18 @@
-<nav>
+<nav [ngStyle]="fixPosition()">
     <div class="navbar-container">
         <a href=""><img src="assets/icons/mw-logo.svg" alt="Developer Logo" /></a>
-        <div class="burger-menu" (click)="toggleMenu()">
-            <div class="bar" [@topBarAnimation]="isActive ? 'close' : 'open'"></div>
-            <div class="bar" [@middleBarAnimation]="isActive ? 'close' : 'open'"></div>
-            <div class="bar" [@bottomBarAnimation]="isActive ? 'close' : 'open'"></div>
+        <div class="burger-menu-right">
+            <div class="translations">
+                <button>DE</button>
+                <button>EN</button>
+            </div>
+            <div class="burger-menu-box">
+                <div class="burger-menu" (click)="toggleMenu()">
+                    <div class="bar" [@topBarAnimation]="isActive ? 'close' : 'open'"></div>
+                    <div class="bar" [@middleBarAnimation]="isActive ? 'close' : 'open'"></div>
+                    <div class="bar" [@bottomBarAnimation]="isActive ? 'close' : 'open'"></div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

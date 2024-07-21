@@ -20,7 +20,7 @@ $dark-grey: #bbb;
 $title-font: Syne;
 $text-font: Overpass;
 $max-width: 144rem;
-
+$scroll-bar-fix: calc(auto + 3rem);
 @mixin syne($clr: $black, $txtal: center, $ff: $title-font, $fz: 12.8rem, $fw: 800, $lh: 0rem, $ls: 0rem) {
     color: $clr;
     text-align: $txtal;

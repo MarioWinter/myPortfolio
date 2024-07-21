@@ -82,9 +82,15 @@ export class HeaderComponent {
         }
     }
 
-    showMenu() {
+    showMenu(): { [key: string]: boolean } {
         return {
             "d-none": !this.isActive,
+        };
+    }
+
+    fixPosition(): { [key: string]: string } {
+        return {
+            "right.rem": this.isActive ? "1.1" : "0",
         };
     }
 }

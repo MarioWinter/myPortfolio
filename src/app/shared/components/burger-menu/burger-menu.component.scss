@@ -81,12 +81,12 @@ li {
     justify-content: space-between;
     align-items: flex-end;
     padding: 5rem 10rem;
-    height: 43%;
+    height: 43rem;
     width: 100%;
     opacity: 0;
     background-image: url("../../../../assets/img/burger-menu/backround.svg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: 0rem 93rem;
     animation: menuBkrdAnimation 125ms ease-in-out 50ms forwards, LeadInUpwards 125ms ease-in-out 50ms forwards;
 }
@@ -192,7 +192,7 @@ li {
     }
 }
 
-@media screen and (max-width: 140rem) and (max-height: 109.1rem) {
+@media screen and (max-width: 140rem) and (max-height: 109.4rem) {
     .item-container {
         overflow: auto;
         height: 63%;
