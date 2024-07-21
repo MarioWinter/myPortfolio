@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
+import { TranslationService } from "../../components/translation.service";
 
 @Component({
     selector: "app-contactform",
@@ -10,6 +11,7 @@ import { FormsModule, NgForm } from "@angular/forms";
     styleUrl: "./contactform.component.scss",
 })
 export class ContactformComponent {
+    translationService = inject(TranslationService);
     http = inject(HttpClient);
 
     contactData = {
@@ -46,5 +48,9 @@ export class ContactformComponent {
             console.log(this.contactData);
             ngForm.resetForm();
         }
+    }
+
+    translate(key: string): string {
+        return this.translationService.getTranslation(this.translationService.currentLang, key);
     }
 }

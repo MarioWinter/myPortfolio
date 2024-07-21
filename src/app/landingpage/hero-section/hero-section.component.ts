@@ -1,4 +1,5 @@
 import { Component, inject } from "@angular/core";
+import { TranslationService } from "../../shared/components/translation.service";
 import { MyprojectListService } from "../../shared/components/myproject-list.service";
 
 @Component({
@@ -10,4 +11,9 @@ import { MyprojectListService } from "../../shared/components/myproject-list.ser
 })
 export class HeroSectionComponent {
     myprojectList = inject(MyprojectListService);
+    translationService = inject(TranslationService);
+
+    translate(key: string): string {
+        return this.translationService.getTranslation(this.translationService.currentLang, key);
+    }
 }

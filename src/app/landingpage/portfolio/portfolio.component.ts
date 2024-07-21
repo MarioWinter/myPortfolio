@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { projectComponent } from "./project/project.component";
 import { MyprojectListService } from "../../shared/components/myproject-list.service";
+import { TranslationService } from "../../shared/components/translation.service";
 
 @Component({
     selector: "app-portfolio",
@@ -12,4 +13,9 @@ import { MyprojectListService } from "../../shared/components/myproject-list.ser
 })
 export class PortfolioComponent {
     myprojectList = inject(MyprojectListService);
+    translationService = inject(TranslationService);
+
+    translate(key: string): string {
+        return this.translationService.getTranslation(this.translationService.currentLang, key);
+    }
 }

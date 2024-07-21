@@ -1,6 +1,7 @@
 import { Component, inject, EventEmitter, Output } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MyprojectListService } from "../../../shared/components/myproject-list.service";
+import { TranslationService } from "../../../shared/components/translation.service";
 
 @Component({
     selector: "app-burger-menu",
@@ -11,10 +12,14 @@ import { MyprojectListService } from "../../../shared/components/myproject-list.
 })
 export class BurgerMenuComponent {
     myprojectList = inject(MyprojectListService);
+    translationService = inject(TranslationService);
 
     @Output() menuToggled = new EventEmitter<void>();
 
     toggleMenu() {
         this.menuToggled.emit();
+    }
+    translate(key: string): string {
+        return this.translationService.getTranslation(this.translationService.currentLang, key);
     }
 }

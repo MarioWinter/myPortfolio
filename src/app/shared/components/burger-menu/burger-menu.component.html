@@ -1,14 +1,18 @@
 <div class="menu-container">
     <div class="item-container">
         <ul>
-            <li (click)="toggleMenu()"><a href="#about_me" class="menu-item-font">About me</a></li>
-            <li (click)="toggleMenu()"><a href="#skills" class="menu-item-font">My skills</a></li>
+            <li (click)="toggleMenu()">
+                <a href="#about_me" class="menu-item-font">{{ translate("ABOUTME") }}</a>
+            </li>
+            <li (click)="toggleMenu()">
+                <a href="#skills" class="menu-item-font">{{ translate("SKILLS") }}</a>
+            </li>
             <li (click)="toggleMenu()"><a href="#portfolio" class="menu-item-font">Portfolio</a></li>
         </ul>
     </div>
     <div class="info-container">
         <div class="email-box">
-            <h2 class="footer-header-font">Say Hi!</h2>
+            <h2 class="footer-header-font">{{ translate("SAY_HI") }}</h2>
             <a class="email" href="'{{ myprojectList.emailAddress }}'" target="_blank">{{ myprojectList.emailAddress }}</a>
         </div>
         <div class="social-media">

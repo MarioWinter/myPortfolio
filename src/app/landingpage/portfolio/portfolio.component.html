@@ -1,6 +1,6 @@
 <div class="header-box">
     <h2 class="section-header-font">Portfolio</h2>
-    <p>Discover my latest development projects. Try out the projects and explore the code to see my frontend skills in action.</p>
+    <p>{{ translate("PORTFOLIO") }}</p>
 </div>
 <div>
     @for (project of myprojectList.projectData; track project; let i = $index) {
@@ -11,6 +11,7 @@
         [stack]="project.stack"
         [img]="project.img"
         [description]="project.description"
+        [description_de]="project.description_de"
         [github]="project.github"
         [link]="project.link"
         [isRight]="(i + 1) % 2 == 0"

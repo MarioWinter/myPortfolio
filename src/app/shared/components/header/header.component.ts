@@ -70,7 +70,7 @@ import { TranslationService } from "./../translation.service";
 export class HeaderComponent {
     translationService = inject(TranslationService);
     isActive = false;
-    currentLang = "en";
+    currentLang = this.translationService.currentLang;
 
     toggleMenu() {
         this.isActive = !this.isActive;
@@ -99,10 +99,6 @@ export class HeaderComponent {
 
     translate(key: string): string {
         return this.translationService.getTranslation(this.currentLang, key);
-    }
-
-    setLanguage(lang: string) {
-        this.currentLang = lang;
     }
 
     active(lang: string) {

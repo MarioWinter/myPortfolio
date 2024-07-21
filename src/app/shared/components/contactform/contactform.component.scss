@@ -9,6 +9,7 @@
     border-top: 0.2rem solid $black;
     background: $black;
     font-size: 1.6rem;
+    font-family: $text-font;
     width: 61.7rem;
     height: $h;
     padding: $pud $plr;
@@ -55,6 +56,7 @@
 
 .form-fild {
     position: relative;
+    margin-bottom: 1.2rem;
     .input-header {
         display: none;
         @include inputHeader();
@@ -164,7 +166,7 @@ textarea:focus::placeholder {
     position: relative;
     width: 100%;
     align-items: center;
-    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
     div {
         color: $cream;
         font-family: Overpass;

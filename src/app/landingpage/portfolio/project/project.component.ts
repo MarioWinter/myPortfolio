@@ -1,5 +1,6 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { TranslationService } from "../../../shared/components/translation.service";
 
 @Component({
     selector: "app-project",
@@ -9,10 +10,12 @@ import { CommonModule } from "@angular/common";
     styleUrl: "./project.component.scss",
 })
 export class projectComponent {
+    translationService = inject(TranslationService);
     @Input() name: string = "";
     @Input() stack: string = "";
     @Input() img: string = "";
     @Input() description: string = "";
+    @Input() description_de: string = "";
     @Input() github: string = "";
     @Input() link: string = "";
     @Input() allProjects: number = 0;

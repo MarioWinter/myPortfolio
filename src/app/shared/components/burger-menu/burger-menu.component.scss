@@ -37,7 +37,7 @@ li {
     text-align: left;
     padding: 3.6rem 3.8rem;
     margin-bottom: 3.9rem;
-    max-width: 59rem;
+    max-width: 102rem;
     border: 0.4rem solid transparent;
     &::before,
     &::after {
@@ -114,9 +114,33 @@ li {
     text-align: center;
     gap: 4.2rem;
     a {
-        width: 5rem;
+        margin: 1rem;
         img {
             width: 3rem;
+        }
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-self: center;
+    align-items: end;
+    text-align: center;
+    gap: 4.2rem;
+    a {
+        margin: 1rem;
+    }
+    .git,
+    .mail,
+    .linked-in {
+        width: 3rem;
+        cursor: pointer;
+        &:hover {
+            animation-name: socialMediaHover;
+            animation-duration: 125ms;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
     }
 }
@@ -126,20 +150,6 @@ li {
     width: fit-content;
     &:hover {
         color: $orange;
-    }
-}
-
-.git,
-.mail,
-.linked-in {
-    cursor: pointer;
-    &:hover {
-        animation-name: socialMediaHover;
-        animation-duration: 125ms;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-delay: 0ms;
     }
 }
 

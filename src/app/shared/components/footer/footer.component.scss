@@ -80,28 +80,24 @@ footer {
         gap: 4.2rem;
         margin-top: 2rem;
         a {
-            width: 5rem;
-            img {
-                width: 3rem;
+            margin: 1rem;
+        }
+        .git,
+        .mail,
+        .linked-in {
+            width: 3rem;
+            cursor: pointer;
+            &:hover {
+                animation-name: socialMediaHover;
+                animation-duration: 125ms;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
             }
         }
     }
 
-    .git,
-    .mail,
-    .linked-in {
-        cursor: pointer;
-        &:hover {
-            animation-name: socialMediaHover;
-            animation-duration: 125ms;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-            animation-delay: 0ms;
-        }
-    }
-
-    .legal-notice-box {
+    .imprint-box {
         grid-column: 2;
         grid-row: 3;
         align-self: end;
@@ -116,7 +112,7 @@ footer {
             a {
                 color: $cream;
             }
-            .legal-notice {
+            .imprint {
                 font-weight: 700;
             }
             .ln-border-buttom {
@@ -126,14 +122,14 @@ footer {
     }
 }
 
-.legal-notice {
-    @include syne($clr: $cream, $txtal: center, $ff: $text-font, $fz: 1.6rem, $fw: 400, $lh: 120%, $ls: 0rem);
+.imprint {
+    @include txt($clr: $cream, $txtal: center, $ff: $text-font, $fz: 1.6rem, $fw: 400, $lh: 120%, $ls: 0rem);
     margin-top: 2rem;
     cursor: pointer;
 }
 
 .secondary-txt-font {
-    @include syne($clr: $cream, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+    @include txt($clr: $cream, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
     margin-top: 1.5rem;
 }
 
@@ -174,10 +170,10 @@ footer {
 }
 
 @keyframes socialMediaHover {
-    0% {
+    from {
         transform: translateY(0rem);
     }
-    100% {
+    to {
         transform: translateY(-1rem);
     }
 }
