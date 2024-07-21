@@ -30,7 +30,7 @@ export class TranslationService {
             PRIVACY_2: "Datenschutzerklärung",
             PRIVACY_3: "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             ERROR_PRIVACY: "Bitte akzeptieren Sie die Datenschutzerklärung",
-            SEND: "Nachricht senden",
+            SEND: "Senden",
             IMPRINT: "Impressum",
         },
         en: {
