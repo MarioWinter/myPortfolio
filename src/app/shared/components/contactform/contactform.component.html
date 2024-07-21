@@ -57,6 +57,12 @@
             }
         </div>
 
-        <input class="message-btn" type="submit" value="Send message" [disabled]="!isPrivacyAccepted" />
+        <input
+            class="message-btn"
+            type="submit"
+            value="Send message"
+            [disabled]="!isPrivacyAccepted || contactForm.invalid"
+            [attr.aria-disabled]="!isPrivacyAccepted || contactForm.invalid"
+        />
     </form>
 </div>
