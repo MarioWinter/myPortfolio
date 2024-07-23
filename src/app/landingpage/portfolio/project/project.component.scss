@@ -43,25 +43,41 @@ a {
     }
 }
 
+.img-view {
+    width: 50%;
+    height: fit-content;
+    position: relative;
+}
+
 .black-frame-box {
     position: absolute;
+    top: 2rem;
+    left: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     z-index: 2;
-    margin: 2rem 0rem 0rem 2rem;
-    width: 62rem;
-    height: 39.3rem;
+    max-width: 62rem;
+    max-height: 39.3rem;
+    width: 100%;
+    height: 100%;
     border: 0.4rem solid $black;
     opacity: 0;
     .arrow-box {
+        > svg {
+            width: 100%;
+            height: 100%;
+            max-width: 6.8rem;
+            max-height: 6.8rem;
+        }
         position: absolute;
         right: -3.7rem;
     }
 }
 
 .black-frame-box-r {
-    right: -2rem;
+    left: -2rem;
+    right: none;
     .arrow-box-r {
         left: -2rem;
         right: auto;
@@ -69,8 +85,10 @@ a {
 }
 
 .project-img {
-    width: 62rem;
-    height: 39.3rem;
+    max-width: 62rem;
+    max-height: 39.3rem;
+    width: 100%;
+    height: auto;
     filter: grayscale(1);
 }
 
@@ -179,4 +197,34 @@ a {
         opacity: 1;
         transform: translateX(0rem);
     }
+}
+
+@media screen and (max-width: 1300px) {
+    .project-box {
+        gap: 6rem;
+    }
+    @keyframes arrowAnimation {
+        0% {
+            right: -3.7rem;
+            transform: scale(1) rotate(0);
+        }
+        100% {
+            right: -4.3rem;
+            transform: scale(1.3) rotate(-135deg);
+        }
+    }
+
+    @keyframes arrowRightAnimation {
+        0% {
+            left: -3rem;
+            transform: scale(1) rotate(0);
+        }
+        100% {
+            left: -4rem;
+            transform: scale(1.3) rotate(135deg);
+        }
+    }
+}
+
+@media screen and (max-width: 1204px) {
 }
