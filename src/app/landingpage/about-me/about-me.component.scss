@@ -9,16 +9,12 @@ h2 {
 .about-me-box {
     display: flex;
     justify-content: space-between;
+    gap: 5rem;
     .left-content {
         display: flex;
         flex-direction: column;
         gap: 5.8rem;
         width: 61rem;
-    }
-    img {
-        width: 39.3rem;
-        height: 53.3rem;
-        flex-shrink: 0;
     }
 }
 
@@ -31,9 +27,12 @@ h2 {
 .profile-img-box {
     position: relative;
     transform: translateY(-2rem);
+    max-width: 40rem;
+    max-height: 40rem;
     img {
-        width: 40rem;
-        height: 40rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -41,11 +40,43 @@ h2 {
     position: absolute;
     z-index: 2;
     margin: 2rem 0rem 0rem 2rem;
-    width: 40rem;
-    height: 40rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border: 0.4rem solid $black;
     opacity: 0;
     &:hover {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h2 {
+        font-size: 12rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    h2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-me-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 7rem;
+    }
+
+    .profile-img-box {
+        position: relative;
+        transform: translateY(0rem);
+    }
+
+    .button-box {
+        display: none;
     }
 }
