@@ -178,17 +178,19 @@ footer {
     }
 }
 
-// Media Query für Mobile Ansicht
 @media (max-width: 768px) {
     .info-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto;
         justify-items: center;
         text-align: center;
+        padding-top: 5rem;
+        gap: 1rem;
 
         .logo-box {
             grid-column: 1;
-            grid-row: 1;
+            grid-row: 2;
+            gap: 1rem;
         }
 
         .arrow-icon {
@@ -197,15 +199,15 @@ footer {
 
         .social-media {
             grid-column: 1;
-            grid-row: 3;
+            grid-row: 1;
             justify-self: center;
         }
 
-        .legal-notice-box {
+        .imprint-box {
             grid-column: 1;
             grid-row: 4;
             justify-self: center;
-            margin-top: 2rem;
+            margin-top: 0rem;
         }
     }
 }
