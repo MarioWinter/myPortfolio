@@ -18,3 +18,17 @@
     height: 23.5rem;
     opacity: 1;
 }
+@media screen and (max-width: 992px) {
+    .arrow-box {
+        padding: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrow-animation {
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

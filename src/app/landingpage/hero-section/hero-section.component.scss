@@ -3,6 +3,7 @@
 .header-box {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 1.6rem;
     margin-top: 11.2rem;
@@ -83,6 +84,18 @@
     }
     100% {
         transform: translateY(15rem);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .title-font {
+        font-size: 10.5rem;
+    }
+    .title-underline {
+        width: 49.8rem;
+    }
+    .name {
+        font-size: 3.7rem;
     }
 }
 
