@@ -14,8 +14,10 @@
 }
 
 .arrow-animation {
-    width: 23.6rem;
-    height: 23.5rem;
+    svg {
+        width: 25rem;
+        height: 25rem;
+    }
     opacity: 1;
 }
 
@@ -43,9 +45,5 @@
 
     .arrow-animation {
         transform: translate3d(0rem, 0rem, 0);
-        svg {
-            width: 200px;
-            height: 200px;
-        }
     }
 }

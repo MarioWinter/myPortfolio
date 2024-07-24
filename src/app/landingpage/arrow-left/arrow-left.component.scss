@@ -14,8 +14,11 @@
 }
 
 .arrow-animation {
-    width: 23.6rem;
-    height: 23.5rem;
+    svg {
+        width: 25rem;
+        height: 25rem;
+    }
+
     opacity: 1;
 }
 @media screen and (max-width: 992px) {
@@ -23,12 +26,5 @@
         padding: 0rem;
         justify-content: center;
         align-items: center;
-    }
-
-    .arrow-animation {
-        svg {
-            width: 200px;
-            height: 200px;
-        }
     }
 }
