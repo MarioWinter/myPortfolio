@@ -1,3 +1,4 @@
+import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { ContactformComponent } from "../contactform/contactform.component";
 import { TranslationService } from "../../../shared/components/translation.service";
@@ -6,7 +7,7 @@ import { MyprojectListService } from "../../../shared/components/myproject-list.
 @Component({
     selector: "app-footer",
     standalone: true,
-    imports: [ContactformComponent],
+    imports: [ContactformComponent, CommonModule],
     templateUrl: "./footer.component.html",
     styleUrl: "./footer.component.scss",
 })
