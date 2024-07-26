@@ -76,7 +76,6 @@ html {
     scrollbar-width: thin;
     scrollbar-color: $orange $cream;
     font-size: 0.625em;
-    //font-size: 0.4em;
 }
 
 body {
@@ -204,32 +203,32 @@ a {
     }
 }
 
-@media screen and (max-width: 1204px) {
-    html {
-        font-size: 0.59em;
-    }
-}
+// @media screen and (max-width: 1204px) {
+//     html {
+//         font-size: 0.59em;
+//     }
+// }
 
 @media screen and (max-width: 992px) {
     html {
-        font-size: 0.55em;
+        font-size: 0.6em;
     }
 }
 
-@media screen and (max-width: 768px) {
-    html {
-        font-size: 0.44em;
-    }
-}
+// @media screen and (max-width: 768px) {
+//     html {
+//         font-size: 0.44em;
+//     }
+// }
 
-@media screen and (max-width: 600px) {
-    html {
-        font-size: 0.35em;
-    }
-}
+// @media screen and (max-width: 600px) {
+//     html {
+//         font-size: 0.35em;
+//     }
+// }
 
-@media screen and (max-width: 480px) {
-    html {
-        font-size: 0.23em;
-    }
-}
+// @media screen and (max-width: 480px) {
+//     html {
+//         font-size: 0.23em;
+//     }
+// }

@@ -10,8 +10,10 @@
     background: $black;
     font-size: 1.6rem;
     font-family: $text-font;
-    width: 61.7rem;
-    height: $h;
+    max-width: 61.7rem;
+    max-height: $h;
+    width: 100%;
+    height: 100%;
     padding: $pud $plr;
     align-items: $ai;
     gap: $gp;
@@ -57,6 +59,7 @@
 .form-fild {
     position: relative;
     margin-bottom: 1.2rem;
+    width: 100%;
     .input-header {
         display: none;
         @include inputHeader();

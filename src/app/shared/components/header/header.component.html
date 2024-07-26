@@ -7,7 +7,7 @@
                 <button (click)="translationService.setLanguage('de')" [class.active]="translationService.currentLang === 'de'">DE</button>
             </div>
             <div class="burger-menu-box">
-                <div class="burger-menu" (click)="toggleMenu()">
+                <div class="burger-menu" (click)="toggleMenu()" (keyup.enter)="toggleMenu()" tabindex="0" role="button" aria-label="Toggle menu">
                     <div class="bar" [@topBarAnimation]="isActive ? 'close' : 'open'"></div>
                     <div class="bar" [@middleBarAnimation]="isActive ? 'close' : 'open'"></div>
                     <div class="bar" [@bottomBarAnimation]="isActive ? 'close' : 'open'"></div>
