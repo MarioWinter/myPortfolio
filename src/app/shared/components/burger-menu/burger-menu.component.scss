@@ -1,7 +1,5 @@
 @import "../../../../styles.scss";
 
-$border-width: 0.4rem;
-$initial-length: 5rem;
 $transition-duration: 0.3s;
 
 a {
@@ -12,8 +10,10 @@ a {
 
 .menu-container {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 9rem);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .item-container {
@@ -21,7 +21,7 @@ a {
     justify-content: center;
     align-items: start;
     width: 100%;
-    height: 100%;
+    height: 66vh;
 }
 
 ul {
@@ -48,14 +48,14 @@ li {
     &::before {
         left: -0.4rem;
         bottom: -0.4rem;
-        width: $border-width;
-        height: $initial-length;
+        width: 0.4rem;
+        height: 5rem;
     }
     &::after {
         left: -0.4rem;
         bottom: -0.4rem;
-        width: $initial-length;
-        height: $border-width;
+        width: 5rem;
+        height: 0.4rem;
     }
 
     &:hover:not(:active) {
@@ -72,6 +72,11 @@ li {
     }
 }
 
+.info {
+    position: relative;
+    height: 34vh;
+}
+
 .info-container {
     position: absolute;
     bottom: 0;
@@ -80,15 +85,11 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 5rem 10rem;
-    height: 43rem;
+    padding: 5rem 10rem 5rem 10rem;
+    height: 100%;
     width: 100%;
     opacity: 0;
-    background-image: url("../../../../assets/img/burger-menu/backround.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0rem 93rem;
-    animation: menuBkrdAnimation 125ms ease-in-out 50ms forwards, LeadInUpwards 125ms ease-in-out 50ms forwards;
+    animation: LeadInUpwards 125ms ease-in-out 50ms forwards;
 }
 
 .email-box {
@@ -104,20 +105,6 @@ li {
         font-weight: 300;
         line-height: 100%;
         letter-spacing: -0.0575rem;
-    }
-}
-
-.social-media {
-    display: flex;
-    justify-self: center;
-    align-items: end;
-    text-align: center;
-    gap: 4.2rem;
-    a {
-        margin: 1rem;
-        img {
-            width: 3rem;
-        }
     }
 }
 
@@ -153,6 +140,23 @@ li {
     }
 }
 
+.background-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 34vh;
+    animation-name: menuBkrdAnimation;
+    animation-duration: 125ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background: linear-gradient(4deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 59.8%, rgba(0, 0, 0, 0.8) 59.9%, rgba(0, 0, 0, 0.2) 60.1%, rgba(255, 255, 255, 0) 60.2%);
+
+    z-index: -1;
+}
+
 @keyframes borderBottomAnimation {
     from {
         left: -0.4rem;
@@ -166,7 +170,7 @@ li {
 
 @keyframes borderLeftAnimation {
     from {
-        height: $initial-length;
+        height: 5rem;
     }
     to {
         height: 0rem;
@@ -184,10 +188,10 @@ li {
 
 @keyframes menuBkrdAnimation {
     from {
-        background-position: 0rem 93rem;
+        transform: translateY(93rem);
     }
     to {
-        background-position: 0rem 0rem;
+        transform: translateY(0rem);
     }
 }
 
@@ -202,9 +206,208 @@ li {
     }
 }
 
-@media screen and (max-width: 140rem) and (max-height: 109.4rem) {
-    .item-container {
-        overflow: auto;
-        height: 63%;
+@keyframes borderBottomAnimationMobile {
+    from {
+        left: -0.4vw;
+        width: 58.4vw;
+    }
+    to {
+        left: 39vw;
+        width: 24.4vw;
+    }
+}
+
+@keyframes borderBottomAnimationLaptop {
+    from {
+        left: -0.4vw;
+        width: 50vw;
+    }
+    to {
+        left: 22vw;
+        width: 15.4vw;
+    }
+}
+
+@keyframes borderLeftAnimationMobile {
+    from {
+        height: 5vw;
+    }
+    to {
+        height: 0vw;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 940px) and (orientation: landscape), (max-height: 940px) and (orientation: landscape) {
+    .footer-header-font {
+        font-size: 5.9vw !important;
+    }
+
+    .menu-item-font {
+        font-size: 6.5vw !important;
+    }
+
+    .email {
+        font-size: 2vw !important;
+    }
+
+    .info-container {
+        padding: 1vw 10vw 2vw 10vw;
+    }
+
+    li {
+        padding: 1.6vw 3.8vw;
+        margin-bottom: 2vw;
+        max-width: 102vw;
+        &::before {
+            left: -0.4vw;
+            bottom: -0.4vw;
+            width: 0.4vw;
+            height: 5vw;
+        }
+        &::after {
+            left: -0.4vw;
+            bottom: -0.4vw;
+            width: 5vw;
+            height: 0.4vw;
+        }
+        &:hover:not(:active) {
+            &::before {
+                animation: borderLeftAnimationMobile 125ms ease forwards !important;
+            }
+            &::after {
+                animation: borderBottomAnimationLaptop 125ms ease 80ms forwards !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (orientation: portrait) {
+    .info-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 5vw 10vw 5vw 10vw;
+        height: 22vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .footer-header-font {
+        font-size: 6vw !important;
+    }
+
+    .menu-item-font {
+        font-size: 9.6vw !important;
+    }
+
+    li {
+        padding: 3.6vw 3.8vw;
+        margin-bottom: 3.9vw;
+        max-width: 102vw;
+        &::before {
+            left: -0.4vw;
+            bottom: -0.4vw;
+            width: 0.4vw;
+            height: 5vw;
+        }
+        &::after {
+            left: -0.4vw;
+            bottom: -0.4vw;
+            width: 5vw;
+            height: 0.4vw;
+        }
+        &:hover:not(:active) {
+            &::before {
+                animation: borderLeftAnimationMobile 125ms ease forwards !important;
+            }
+            &::after {
+                animation: borderBottomAnimationMobile 125ms ease 80ms forwards !important;
+            }
+        }
+    }
+
+    .email-box {
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        .email {
+            font-size: 2.3vw;
+        }
+    }
+
+    .social-media {
+        display: flex;
+        justify-self: end;
+        align-items: end;
+        text-align: center;
+        gap: 4.2vw;
+        a {
+            margin: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 630px) and (orientation: portrait) {
+    .info-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 8vw 10vw 5vw 10vw;
+        height: 22vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .menu-item-font {
+        font-size: 11.6vw !important;
+    }
+
+    .footer-header-font {
+        font-size: 7vw !important;
+    }
+
+    .email-box {
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        .email {
+            font-size: 3vw;
+        }
+    }
+
+    li {
+        padding: 3.6vw 3.8vw;
+        margin-bottom: 4.9vw;
+        max-width: 102vw;
+        &::before {
+            left: -0.4vw;
+            bottom: -0.4vw;
+            width: 0.4vw;
+            height: 5vw;
+        }
+        &::after {
+            left: -0.4vw;
+            bottom: -0.4vw;
+            width: 5vw;
+            height: 0.4vw;
+        }
+        &:hover:not(:active) {
+            &::before {
+                animation: borderLeftAnimationMobile 125ms ease forwards !important;
+            }
+            &::after {
+                animation: borderBottomAnimationMobile 125ms ease 80ms forwards !important;
+            }
+        }
     }
 }
