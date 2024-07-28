@@ -27,4 +27,37 @@
         justify-content: center;
         align-items: center;
     }
+    .arrow-animation {
+        svg {
+            width: 30vw;
+            height: 30vw;
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .arrow-animation {
+        svg {
+            width: 35vw;
+            height: 35vw;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .arrow-animation {
+        svg {
+            width: 40vw;
+            height: 40vw;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .arrow-animation {
+        svg {
+            width: 50vw;
+            height: 50vw;
+        }
+    }
 }
