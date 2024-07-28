@@ -12,7 +12,8 @@ a {
 .project-container {
     position: relative;
     width: 100%;
-    height: 46rem;
+    max-height: max-content;
+    height: 100%;
     margin-bottom: 7rem;
     &:hover {
         .black-frame-box {
@@ -44,21 +45,29 @@ a {
 }
 
 .img-view {
-    width: 50%;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
+    max-width: 60.1rem;
+    max-height: 38.1rem;
     position: relative;
+    .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1);
+    }
 }
 
 .black-frame-box {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 5%;
+    left: 4%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     z-index: 2;
-    max-width: 62rem;
-    max-height: 39.3rem;
+    max-width: 60.1rem;
+    max-height: 38.1rem;
     width: 100%;
     height: 100%;
     border: 0.4rem solid $black;
@@ -76,20 +85,12 @@ a {
 }
 
 .black-frame-box-r {
-    left: -2rem;
+    left: -4%;
     right: none;
     .arrow-box-r {
-        left: -2rem;
+        left: -4%;
         right: auto;
     }
-}
-
-.project-img {
-    max-width: 62rem;
-    max-height: 39.3rem;
-    width: 100%;
-    height: auto;
-    filter: grayscale(1);
 }
 
 .project-box {
@@ -142,22 +143,22 @@ a {
 
 @keyframes arrowAnimation {
     0% {
-        right: -3.7rem;
+        right: -5%;
         transform: scale(1) rotate(0);
     }
     100% {
-        right: -4.3rem;
+        right: -7%;
         transform: scale(1.5) rotate(-135deg);
     }
 }
 
 @keyframes arrowRightAnimation {
     0% {
-        left: -3rem;
+        left: -5%;
         transform: scale(1) rotate(0);
     }
     100% {
-        left: -4rem;
+        left: -7%;
         transform: scale(1.5) rotate(135deg);
     }
 }
@@ -275,9 +276,6 @@ a {
         }
     }
 
-    .project-container {
-        height: fit-content;
-    }
     .project-box {
         justify-content: center;
         flex-direction: column;
@@ -298,10 +296,23 @@ a {
         gap: 7rem;
     }
 
-    .disc-container {
-        padding: 0rem 2rem;
+    .img-view {
+        max-width: 60.1vw;
+        max-height: 38.1vw;
     }
-    .portfolio-counter-font {
+
+    .black-frame-box {
+        .arrow-box {
+            > svg {
+                width: 100%;
+                height: 100%;
+                max-width: 6.8vw;
+                max-height: 6.8vw;
+            }
+        }
+    }
+
+    .disc-container {
         padding: 0rem 2rem;
     }
 

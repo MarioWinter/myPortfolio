@@ -199,7 +199,7 @@ a {
         cursor: not-allowed;
         border: 0.4rem solid $dark-grey;
         opacity: 0.3;
-        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -211,11 +211,40 @@ a {
     .section-header-font {
         font-size: 7.8vw;
     }
+
+    .portfolio-counter-font {
+        font-size: 4.8vw;
+    }
+
+    .project-header-font {
+        font-size: 4.5vw;
+    }
+
+    .main-button {
+        padding: 3vw 6vw;
+        border: 0.4vw solid $black;
+        font-size: 2.3vw;
+        &:hover {
+            padding: 4vw 7vw;
+            //box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+        }
+        &:active {
+            padding: 4vw 7vw;
+        }
+    }
 }
 
 @media screen and (max-width: 690px) {
     .section-header-font {
         font-size: 9.5vw;
+    }
+
+    .portfolio-counter-font {
+        font-size: 5.8vw;
+    }
+
+    .project-header-font {
+        font-size: 5.5vw;
     }
 }
 
@@ -223,10 +252,33 @@ a {
     .section-header-font {
         font-size: 8.4vw;
     }
+
+    .portfolio-counter-font {
+        font-size: 7.8vw;
+        padding: 0vw 2vw;
+    }
+
+    .project-header-font {
+        font-size: 7.5vw;
+    }
+
+    .main-button {
+        padding: 3.8vw 8vw;
+        border: 0.7vw solid $black;
+        font-size: 3.8vw;
+    }
 }
 
 @media screen and (max-width: 350px) {
     .section-header-font {
         font-size: 7.4vw;
+    }
+
+    .portfolio-counter-font {
+        font-size: 8.8vw;
+    }
+
+    .project-header-font {
+        font-size: 7.8vw;
     }
 }
