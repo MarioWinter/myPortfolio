@@ -1,13 +1,49 @@
 .header-box {
     display: flex;
-    padding: 0rem 4.1rem 0rem 4rem;
+    padding: 0rem 4.1rem 11.4rem 4rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-shrink: 0;
     gap: 3.5rem;
-    padding-bottom: 11.4rem;
     p {
         max-width: 56.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-box {
+        padding: 0vw 4.1vw 11.4vw 4vw;
+        gap: 3.5vw;
+        p {
+            font-size: 2.3vw;
+            max-width: 70vw;
+        }
+    }
+
+    @media screen and (max-width: 690px) {
+        .header-box {
+            padding: 0vw 0vw 11.4vw 0vw;
+
+            p {
+                font-size: 3.3vw;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .header-box {
+            p {
+                font-size: 4.3vw;
+            }
+        }
+    }
+
+    @media screen and (max-width: 350px) {
+        .header-box {
+            p {
+                font-size: 5.3vw;
+            }
+        }
     }
 }

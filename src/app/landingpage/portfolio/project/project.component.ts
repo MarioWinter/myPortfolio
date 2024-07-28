@@ -15,7 +15,7 @@ export class projectComponent {
     @Input() stack: string = "";
     @Input() img: string = "";
     @Input() description: string = "";
-    @Input() description_de: string = "";
+    @Input() descriptionDe: string = "";
     @Input() github: string = "";
     @Input() link: string = "";
     @Input() allProjects: number = 0;
