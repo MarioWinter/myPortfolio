@@ -203,32 +203,30 @@ a {
     }
 }
 
-// @media screen and (max-width: 1204px) {
-//     html {
-//         font-size: 0.59em;
-//     }
-// }
-
 @media screen and (max-width: 992px) {
     html {
         font-size: 0.6em;
     }
+
+    .section-header-font {
+        font-size: 7.8vw;
+    }
 }
 
-// @media screen and (max-width: 768px) {
-//     html {
-//         font-size: 0.44em;
-//     }
-// }
+@media screen and (max-width: 690px) {
+    .section-header-font {
+        font-size: 9.5vw;
+    }
+}
 
-// @media screen and (max-width: 600px) {
-//     html {
-//         font-size: 0.35em;
-//     }
-// }
+@media screen and (max-width: 480px) {
+    .section-header-font {
+        font-size: 8.4vw;
+    }
+}
 
-// @media screen and (max-width: 480px) {
-//     html {
-//         font-size: 0.23em;
-//     }
-// }
+@media screen and (max-width: 350px) {
+    .section-header-font {
+        font-size: 7.4vw;
+    }
+}

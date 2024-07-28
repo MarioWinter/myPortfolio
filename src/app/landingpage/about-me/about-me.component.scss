@@ -57,9 +57,6 @@ h2 {
         justify-content: center;
         width: 100%;
     }
-    .section-header-font {
-        font-size: 7.8vw;
-    }
 
     .about-me-box {
         display: flex;
@@ -84,10 +81,6 @@ h2 {
 }
 
 @media screen and (max-width: 690px) {
-    .section-header-font {
-        font-size: 9.5vw;
-    }
-
     .about-me-box {
         .left-content {
             width: 80vw;
@@ -97,20 +90,10 @@ h2 {
 }
 
 @media screen and (max-width: 480px) {
-    .section-header-font {
-        font-size: 8.4vw;
-    }
-
     .about-me-box {
         .left-content {
             width: 80vw;
             font-size: 4.3vw;
         }
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .section-header-font {
-        font-size: 7.4vw;
     }
 }
