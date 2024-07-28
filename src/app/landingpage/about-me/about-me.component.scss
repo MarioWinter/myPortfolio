@@ -39,9 +39,10 @@ h2 {
 .black-frame-box {
     position: absolute;
     z-index: 2;
-    margin: 2rem 0rem 0rem 2rem;
-    width: 100%;
+    top: 5%;
+    left: 5%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
     border: 0.4rem solid $black;
     opacity: 0;
@@ -56,6 +57,9 @@ h2 {
         justify-content: center;
         width: 100%;
     }
+    .section-header-font {
+        font-size: 7.8vw;
+    }
 
     .about-me-box {
         display: flex;
@@ -63,6 +67,10 @@ h2 {
         flex-direction: column;
         align-items: center;
         gap: 7rem;
+        .left-content {
+            width: 70vw;
+            font-size: 2.3vw;
+        }
     }
 
     .profile-img-box {
@@ -72,5 +80,37 @@ h2 {
 
     .button-box {
         display: none;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .section-header-font {
+        font-size: 9.5vw;
+    }
+
+    .about-me-box {
+        .left-content {
+            width: 80vw;
+            font-size: 3.3vw;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-header-font {
+        font-size: 8.4vw;
+    }
+
+    .about-me-box {
+        .left-content {
+            width: 80vw;
+            font-size: 4.3vw;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .section-header-font {
+        font-size: 7.4vw;
     }
 }
