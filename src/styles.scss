@@ -47,6 +47,7 @@ $scroll-bar-fix: calc(auto + 3rem);
 
 .portfolio-counter-font {
     @include txt($clr: $black, $txtal: right, $ff: $title-font, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
+    width: 100%;
 }
 
 .project-header-font {
@@ -111,9 +112,7 @@ a {
     color: $black;
     cursor: pointer;
     font-family: $text-font;
-    font-size: 2.3rem;
     font-style: normal;
-    font-weight: 300;
     line-height: 100%;
     letter-spacing: -0.575px;
     &:hover {
@@ -206,6 +205,7 @@ a {
 @media screen and (max-width: 992px) {
     html {
         font-size: 0.6em;
+        overflow-y: hidden;
     }
 
     .section-header-font {
@@ -221,18 +221,18 @@ a {
     }
 
     .secondary-txt-font {
-        font-size: 2.3vw;
+        font-size: 3.4vw;
     }
 
     .main-button {
-        padding: 3vw 6vw;
-        border: 0.4vw solid $black;
-        font-size: 2.3vw;
+        padding: 2vw 5vw;
+        border: 0.5vw solid $black;
+        font-size: 2.5vw;
         &:hover {
-            padding: 4vw 7vw;
+            padding: 2vw 8vw;
         }
         &:active {
-            padding: 4vw 7vw;
+            padding: 2vw 8vw;
         }
     }
 }
@@ -251,7 +251,7 @@ a {
     }
 
     .secondary-txt-font {
-        font-size: 3.3vw;
+        font-size: 4vw;
     }
 }
 
@@ -274,9 +274,15 @@ a {
     }
 
     .main-button {
-        padding: 3.8vw 8vw;
+        padding: 3vw 7vw;
         border: 0.7vw solid $black;
-        font-size: 3.8vw;
+        font-size: 5.3vw;
+        &:hover {
+            padding: 3vw 10vw;
+        }
+        &:active {
+            padding: 3vw 10vw;
+        }
     }
 }
 

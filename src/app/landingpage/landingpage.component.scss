@@ -7,6 +7,14 @@
     width: 100%;
     .max-width {
         max-width: $max-width;
-        margin: 0 3rem;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        .max-width {
+            max-width: 95%;
+        }
     }
 }

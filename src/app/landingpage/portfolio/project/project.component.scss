@@ -126,10 +126,11 @@ a {
     height: 100%;
     opacity: 0;
     transform: translateX(-76.1rem);
-    p {
+    .disc-txt {
         margin-top: 1.5rem;
         margin-bottom: 3.5rem;
         font-size: 1.6rem;
+        max-width: 47.5rem;
     }
 }
 
@@ -139,6 +140,12 @@ a {
     align-items: center;
     justify-content: flex-start;
     gap: 5rem;
+    .button-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26rem;
+    }
 }
 
 @keyframes arrowAnimation {
@@ -204,60 +211,46 @@ a {
     .project-box {
         gap: 6rem;
     }
-    @keyframes arrowAnimation {
-        0% {
-            right: -3.7rem;
-            transform: scale(1) rotate(0);
-        }
-        100% {
-            right: -4.3rem;
-            transform: scale(1.3) rotate(-135deg);
-        }
-    }
+}
 
-    @keyframes arrowRightAnimation {
-        0% {
-            left: -3rem;
-            transform: scale(1) rotate(0);
-        }
-        100% {
-            left: -4rem;
-            transform: scale(1.3) rotate(135deg);
-        }
+@keyframes fadeInDescriptionMobile {
+    0% {
+        opacity: 0;
+        height: 0;
+        transform: translateX(0rem) translateY(-29rem);
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+        transform: translateX(0rem) translateY(0rem);
+    }
+}
+
+@keyframes fadeInRightDescriptionMobile {
+    0% {
+        opacity: 0;
+        height: 0;
+        transform: translateX(0rem) translateY(-29rem);
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+        transform: translateX(0rem) translateY(0rem);
     }
 }
 
 @media screen and (max-width: 992px) {
-    @keyframes fadeInDescriptionMobile {
-        0% {
-            opacity: 0;
-
-            transform: translateX(0rem) translateY(-29rem);
-        }
-        60% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0rem) translateY(0rem);
-        }
-    }
-
-    @keyframes fadeInRightDescriptionMobile {
-        0% {
-            opacity: 0;
-            transform: translateX(0rem) translateY(-29rem);
-        }
-        60% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0rem) translateY(0rem);
-        }
-    }
-
     .project-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         &:hover {
             .disc-box {
                 animation: none;
@@ -316,7 +309,69 @@ a {
         padding: 0rem 2rem;
     }
 
+    .disc-box {
+        height: 0;
+        .disc-txt {
+            margin-top: 1.5rem;
+            margin-bottom: 3.5rem;
+            font-size: 2.3vw;
+            max-width: 77vw;
+        }
+    }
+
     .button-container {
         justify-content: center;
+        gap: 5vw;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .disc-box {
+        .disc-txt {
+            margin-top: 1.5rem;
+            margin-bottom: 3.5rem;
+            font-size: 2.6vw;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @keyframes arrowAnimation {
+        0% {
+            right: -5%;
+            transform: scale(1) rotate(0);
+        }
+        100% {
+            right: -15%;
+            transform: scale(1.5) rotate(-135deg);
+        }
+    }
+
+    @keyframes arrowRightAnimation {
+        0% {
+            left: -5%;
+            transform: scale(1) rotate(0);
+        }
+        100% {
+            left: -15%;
+            transform: scale(1.5) rotate(135deg);
+        }
+    }
+
+    .disc-box {
+        .disc-txt {
+            margin-top: 1.5rem;
+            margin-bottom: 3.5rem;
+            font-size: 3.6vw;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .disc-box {
+        p {
+            margin-top: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
     }
 }
