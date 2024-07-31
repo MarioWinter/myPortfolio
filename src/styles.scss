@@ -205,7 +205,10 @@ a {
 @media screen and (max-width: 992px) {
     html {
         font-size: 0.6em;
-        overflow-y: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 
     .section-header-font {
