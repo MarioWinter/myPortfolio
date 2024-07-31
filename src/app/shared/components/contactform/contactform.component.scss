@@ -227,3 +227,46 @@ textarea:focus::placeholder {
     margin-bottom: 1rem;
     text-align: start;
 }
+
+@media screen and (max-width: 992px) {
+    .checkbox-wrapper {
+        gap: 1.5vw;
+        height: 3.7rem;
+    }
+
+    .form-fild {
+        max-width: 60vw;
+        textarea {
+            max-width: 61.7vw;
+            min-width: 61.7vw;
+            max-width: 60vw;
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .checkbox-wrapper {
+        label {
+            width: 3.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .checkbox-wrapper {
+        label {
+            width: 2.4vw;
+            height: 2.4vw;
+        }
+    }
+
+    .form-fild {
+        max-width: 84vw;
+        textarea {
+            max-width: 84vw;
+            min-width: 84vw;
+            max-width: 84vw;
+        }
+    }
+}

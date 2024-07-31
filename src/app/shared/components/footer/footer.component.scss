@@ -178,6 +178,16 @@ footer {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .footer-container {
+        padding: 15vw 10.4vw 0vw 10.4vw;
+    }
+
+    .secondary-txt-font {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .info-container {
         grid-template-columns: 1fr;
@@ -209,5 +219,22 @@ footer {
             justify-self: center;
             margin-top: 0rem;
         }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    footer {
+        .footer-container {
+            padding: 15vw 6.4vw 0vw 6.4vw;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 350px) {
+    .secondary-txt-font {
+        font-size: 6.3vw;
     }
 }
