@@ -6,14 +6,21 @@
     align-items: center;
     width: 100%;
     margin-top: 15rem;
-    padding: 0 5rem;
+    padding: 0 15rem;
     div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
+        height: 100%;
+        max-width: 50rem;
+        width: 100%;
     }
+}
+
+.portfolio-counter-font {
+    text-align: center;
 }
 
 h2,
@@ -24,4 +31,31 @@ h4 {
 p {
     margin: 0;
     padding: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 690px) {
+    .legal-notice {
+        margin-top: 15rem;
+        padding: 0 0rem;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            max-width: 50rem;
+            width: 100%;
+        }
+    }
+
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p {
+        font-size: 5vw;
+    }
 }
