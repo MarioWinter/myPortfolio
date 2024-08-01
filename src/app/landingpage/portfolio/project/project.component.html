@@ -5,12 +5,14 @@
         <div class="img-view">
             <img class="project-img" src="assets/img/portfolio-templates/{{ img }}" alt="El Pollo Loco" />
             <div [class.black-frame-box-r]="isRight" class="black-frame-box">
-                <div [class.arrow-box-r]="isRight" class="arrow-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
-                        <rect x="67.8823" y="33.9414" width="48" height="48" rx="24" transform="rotate(135 67.8823 33.9414)" fill="black" />
-                        <path d="M33.7026 52.1094L33.4636 16.0171" stroke="#FFFCF3" stroke-width="2" />
-                        <path d="M43.2635 42.5485L33.7026 52.1094L24.1418 42.5485" stroke="#FFFCF3" stroke-width="2" />
-                    </svg>
+                <div class="arrow-container">
+                    <div [class.arrow-box-r]="isRight" class="arrow-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
+                            <rect x="67.8823" y="33.9414" width="48" height="48" rx="24" transform="rotate(135 67.8823 33.9414)" fill="black" />
+                            <path d="M33.7026 52.1094L33.4636 16.0171" stroke="#FFFCF3" stroke-width="2" />
+                            <path d="M43.2635 42.5485L33.7026 52.1094L24.1418 42.5485" stroke="#FFFCF3" stroke-width="2" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

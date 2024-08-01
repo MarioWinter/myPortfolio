@@ -21,7 +21,6 @@ a {
         }
         .arrow-box {
             animation: arrowAnimation 125ms ease-in-out forwards;
-            transition: right;
         }
         .project-img {
             animation: greyImgAnimation 75ms ease-in-out forwards;
@@ -36,7 +35,6 @@ a {
     &:hover {
         .arrow-box-r {
             animation: arrowRightAnimation 125ms ease-in-out forwards !important;
-            transition: left !important;
         }
         .disc-box-r {
             animation: fadeInRightDescription 125ms ease-in-out forwards !important;
@@ -58,13 +56,19 @@ a {
     }
 }
 
+.arrow-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    width: 100%;
+}
+
 .black-frame-box {
     position: absolute;
     top: 5%;
     left: 4%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     z-index: 2;
     max-width: 60.1rem;
     max-height: 38.1rem;
@@ -72,27 +76,34 @@ a {
     height: 100%;
     border: 0.4rem solid $black;
     opacity: 0;
-    .arrow-box {
-        > svg {
-            width: 100%;
-            height: 100%;
-            max-width: 6.8rem;
-            max-height: 6.8rem;
-        }
-        position: absolute;
-        right: -3.7rem;
-    }
 }
 
+.arrow-box {
+    position: absolute;
+    z-index: 3;
+    right: -3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+    width: 6.8rem;
+    height: 6.8rem;
+    > svg {
+        width: 100%;
+        height: 100%;
+        max-width: 6.8rem;
+        max-height: 6.8rem;
+    }
+}
 .black-frame-box-r {
     left: -4%;
-    right: none;
-    .arrow-box-r {
-        left: -4%;
-        right: auto;
-    }
+    right: auto;
 }
 
+.arrow-box-r {
+    left: -3.5rem;
+    right: auto;
+}
 .project-box {
     display: flex;
     justify-content: space-between;
@@ -150,22 +161,18 @@ a {
 
 @keyframes arrowAnimation {
     0% {
-        right: -5%;
         transform: scale(1) rotate(0);
     }
     100% {
-        right: -7%;
         transform: scale(1.5) rotate(-135deg);
     }
 }
 
 @keyframes arrowRightAnimation {
     0% {
-        left: -5%;
         transform: scale(1) rotate(0);
     }
     100% {
-        left: -7%;
         transform: scale(1.5) rotate(135deg);
     }
 }
@@ -207,12 +214,6 @@ a {
     }
 }
 
-@media screen and (max-width: 1300px) {
-    .project-box {
-        gap: 6rem;
-    }
-}
-
 @keyframes fadeInDescriptionMobile {
     0% {
         opacity: 0;
@@ -242,6 +243,29 @@ a {
         opacity: 1;
         height: 100%;
         transform: translateX(0rem) translateY(0rem);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .project-box {
+        gap: 6rem;
+    }
+    .img-view {
+        max-width: 80.1vw;
+        max-height: 58.1vw;
+    }
+
+    .black-frame-box {
+        max-width: 80.1vw;
+        max-height: 58.1vw;
+        .arrow-box {
+            > svg {
+                width: 100%;
+                height: 100%;
+                max-width: 5vw;
+                max-height: 5vw;
+            }
+        }
     }
 }
 
@@ -290,11 +314,13 @@ a {
     }
 
     .img-view {
-        max-width: 60.1vw;
-        max-height: 38.1vw;
+        max-width: 80.1vw;
+        max-height: 58.1vw;
     }
 
     .black-frame-box {
+        max-width: 80.1vw;
+        max-height: 58.1vw;
         .arrow-box {
             > svg {
                 width: 100%;
@@ -336,28 +362,6 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-    @keyframes arrowAnimation {
-        0% {
-            right: -5%;
-            transform: scale(1) rotate(0);
-        }
-        100% {
-            right: -15%;
-            transform: scale(1.5) rotate(-135deg);
-        }
-    }
-
-    @keyframes arrowRightAnimation {
-        0% {
-            left: -5%;
-            transform: scale(1) rotate(0);
-        }
-        100% {
-            left: -15%;
-            transform: scale(1.5) rotate(135deg);
-        }
-    }
-
     .disc-box {
         .disc-txt {
             margin-top: 1.5rem;
