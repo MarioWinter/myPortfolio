@@ -244,20 +244,11 @@ textarea:focus::placeholder {
     }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 480px) {
     .checkbox-wrapper {
         label {
             width: 3.4rem;
             height: 2.4rem;
-        }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .checkbox-wrapper {
-        label {
-            width: 2.4vw;
-            height: 2.4vw;
         }
     }
 
@@ -267,6 +258,16 @@ textarea:focus::placeholder {
             max-width: 84vw;
             min-width: 84vw;
             max-width: 84vw;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .checkbox-wrapper {
+        label {
+            width: 4.4rem;
+            height: 2.4rem;
+            margin-left: 1.5vw;
         }
     }
 }
