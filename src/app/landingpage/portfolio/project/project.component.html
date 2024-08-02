@@ -21,11 +21,7 @@
                 <h2 class="project-header-font">{{ name }}</h2>
                 <h3 class="secondary-txt-font">{{ stack }}</h3>
                 <p class="disc-txt">
-                    @if (translationService.currentLang === "en") {
-                    {{ description }}
-                    } @else if (translationService.currentLang === "de") {
-                    {{ descriptionDe }}
-                    }
+                    {{ projectDesciption | translate }}
                 </p>
                 <div class="button-container">
                     <div class="button-box">

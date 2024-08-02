@@ -1,26 +1,29 @@
-import { Component, Input, inject } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { TranslationService } from "../../../core/services/translation.service";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
     selector: "app-project",
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, TranslateModule],
     templateUrl: "./project.component.html",
     styleUrl: "./project.component.scss",
 })
-export class projectComponent {
-    translationService = inject(TranslationService);
+export class projectComponent implements OnInit {
     @Input() name: string = "";
     @Input() stack: string = "";
     @Input() img: string = "";
-    @Input() description: string = "";
-    @Input() descriptionDe: string = "";
     @Input() github: string = "";
     @Input() link: string = "";
     @Input() allProjects: number = 0;
     @Input() projectNr: number = 0;
     @Input() isRight: boolean = true;
 
+    projectDesciption: string = "";
+
     constructor() {}
+
+    ngOnInit(): void {
+        this.projectDesciption = `PORTFOLIO.PROJECT${this.projectNr}.DESCRIPTION`;
+    }
 }

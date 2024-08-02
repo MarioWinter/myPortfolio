@@ -15,13 +15,13 @@
     },
     "PORTFOLIO": {
         "DESCRIPTION": "Entdecken Sie meine neuesten Entwicklungsprojekte. Probieren Sie die Projekte aus und erkunden Sie den Code, um meine Frontend-Fähigkeiten in Aktion zu sehen.",
-        "JOIN": {
+        "PROJECT1": {
             "DESCRIPTION": "Eine mit Angular entwickelte Webanwendung."
         },
-        "ELPOLLOLOCO": {
+        "PROJECT2": {
             "DESCRIPTION": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen El Pollo Loco zu kämpfen."
         },
-        "POKEMON": {
+        "PROJECT3": {
             "DESCRIPTION": "Basierend auf der PokeAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert."
         }
     },

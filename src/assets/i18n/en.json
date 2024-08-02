@@ -15,13 +15,13 @@
     },
     "PORTFOLIO": {
         "DESCRIPTION": "Discover my latest development projects. Try out the projects and explore the code to see my frontend skills in action.",
-        "JOIN": {
+        "PROJECT1": {
             "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. Developed in a team with Git version management."
         },
-        "ELPOLLOLOCO": {
+        "PROJECT2": {
             "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
         },
-        "POKEMON": {
+        "PROJECT3": {
             "DESCRIPTION": "Based on the PokeAPI a simple library that provides and catalogues pokemon information."
         }
     },
