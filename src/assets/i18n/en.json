@@ -1,12 +1,13 @@
 {
     "HERO": {
         "MAINTITLE": "Frontend Developer",
-        "SCROLL": "SCROLL DOWN"
+        "SCROLL": "SCROLL DOWN",
+        "MOBILE_TALK": "Send a Message"
     },
     "ABOUTME": {
         "ABOUTME": "About me",
-        "ABOUT_1": "My ability to combine creativity with logical thinking enables me to turn innovative ideas into high-quality web projects. As an aspiring junior web developer, I am looking for exciting challenges.",
-        "ABOUT_2": "If you think I could be a good fit for your projects, I look forward to hearing from you!",
+        "ABOUT1": "My ability to combine creativity with logical thinking enables me to turn innovative ideas into high-quality web projects. As an aspiring junior web developer, I am looking for exciting challenges.",
+        "ABOUT2": "If you think I could be a good fit for your projects, I look forward to hearing from you!",
         "TALK": "Let's talk"
     },
     "MYSKILLS": {
@@ -14,10 +15,14 @@
     },
     "PORTFOLIO": {
         "DESCRIPTION": "Discover my latest development projects. Try out the projects and explore the code to see my frontend skills in action.",
-        "PROJECT1": {
-            "NAME": "Project One",
-            "STACK": "",
-            "DESCRIPTION": "A web application built with Angular."
+        "JOIN": {
+            "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. Developed in a team with Git version management."
+        },
+        "ELPOLLOLOCO": {
+            "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+        },
+        "POKEMON": {
+            "DESCRIPTION": "Based on the PokeAPI a simple library that provides and catalogues pokemon information."
         }
     },
     "CONTACT": {

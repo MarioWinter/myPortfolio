@@ -1,4 +1,3 @@
-// src/app/core/services/json-translate-loader.service.ts
 import { Injectable, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { TranslateLoader } from "@ngx-translate/core";
@@ -11,7 +10,7 @@ interface TranslationSet {
 @Injectable({
     providedIn: "root",
 })
-export class JsonTranslateLoaderService implements TranslateLoader {
+export class TranslateLoaderService implements TranslateLoader {
     private http = inject(HttpClient);
 
     getTranslation(lang: string): Observable<TranslationSet> {

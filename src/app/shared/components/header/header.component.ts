@@ -2,12 +2,13 @@ import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { trigger, state, style, transition, animate, keyframes } from "@angular/animations";
 import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
-import { TranslationService } from "../../../core/services/translation.service";
+import { TranslateService } from "@ngx-translate/core";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
     selector: "app-header",
     standalone: true,
-    imports: [BurgerMenuComponent, CommonModule],
+    imports: [BurgerMenuComponent, CommonModule, TranslateModule],
     templateUrl: "./header.component.html",
     styleUrl: "./header.component.scss",
     animations: [
@@ -68,9 +69,9 @@ import { TranslationService } from "../../../core/services/translation.service";
     ],
 })
 export class HeaderComponent {
-    translationService = inject(TranslationService);
+    private translate = inject(TranslateService);
     isActive = false;
-    currentLang = this.translationService.currentLang;
+    currentLang = "en";
 
     toggleMenu() {
         this.isActive = !this.isActive;
@@ -97,9 +98,18 @@ export class HeaderComponent {
         };
     }
 
-    translate(key: string): string {
-        return this.translationService.getTranslation(this.currentLang, key);
+    useLanguage(language: string): void {
+        this.translate.use(language);
+        console.log(this.translate.use);
     }
+
+    // setLanguage(lang: string) {
+    //     this.currentLang = lang;
+    // }
+
+    // translate(key: string): string {
+    //     return this.translationService.getTranslation(this.currentLang, key);
+    // }
 
     active(lang: string) {
         return {
