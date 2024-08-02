@@ -1,11 +1,11 @@
 <div class="forms-container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="form-fild">
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="{{ translate('NAME') }}" required />
-            <div class="input-header">{{ translate("NAME") }}</div>
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="{{ 'CONTACT.NAME_LABEL' | translate }}" required />
+            <div class="input-header">{{ "CONTACT.NAME_LABEL" | translate }}</div>
             <div class="error-message">
                 @if (!name.valid && name.touched) {
-                <span>{{ translate("ERROR_NAME") }}</span>
+                <span>{{ "CONTACT.ERROR_NAME" | translate }}</span>
                 }
             </div>
         </div>
@@ -17,14 +17,14 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="{{ translate('MAIL') }}"
+                placeholder="{{ 'CONTACT.EMAIL_LABEL' | translate }}"
                 required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             />
-            <div class="input-header">{{ translate("MAIL") }}</div>
+            <div class="input-header">{{ "CONTACT.EMAIL_LABEL" | translate }}</div>
             <div class="error-message">
                 @if (!email.valid && email.touched) {
-                <span>{{ translate("ERROR_MAIL") }}</span>
+                <span>{{ "CONTACT.ERROR_MAIL" | translate }}</span>
                 }
             </div>
         </div>
@@ -36,14 +36,14 @@
                 [(ngModel)]="contactData.message"
                 id="subject"
                 name="subject"
-                placeholder="{{ translate('MESSAGE') }}"
+                placeholder="{{ 'CONTACT.MESSAGE_LABEL' | translate }}"
                 style="min-height: 200px"
                 required
             ></textarea>
-            <div class="input-header">{{ translate("MESSAGE") }}</div>
+            <div class="input-header">{{ "CONTACT.MESSAGE_LABEL" | translate }}</div>
             <div class="error-message">
                 @if (!message.valid && message.touched) {
-                <span>{{ translate("ERROR_MESSAGE") }}</span>
+                <span>{{ "CONTACT.ERROR_MESSAGE" | translate }}</span>
                 }
             </div>
         </div>
@@ -51,20 +51,20 @@
             <input type="checkbox" id="myCheckbox" class="custom-checkbox" [(ngModel)]="isPrivacyAccepted" name="privacyPolicy" required />
             <label for="myCheckbox"></label>
             <div>
-                {{ translate("PRIVACY_1") }} <span>{{ translate("PRIVACY_2") }}</span
-                >{{ translate("PRIVACY_3") }}
+                {{ "CONTACT.PRIVACY1" | translate }} <span>{{ "CONTACT.PRIVACY2" | translate }}</span
+                >{{ "CONTACT.PRIVACY3" | translate }}
             </div>
         </div>
         <div class="error-message">
             @if (!isPrivacyAccepted) {
-            <div>{{ translate("ERROR_PRIVACY") }}</div>
+            <div>{{ "CONTACT.ERROR_PRIVACY" | translate }}</div>
             }
         </div>
 
         <input
             class="message-btn"
             type="submit"
-            value="{{ translate('SEND') }}"
+            value="{{ 'CONTACT.SUBMIT_BUTTON' | translate }}"
             [disabled]="!isPrivacyAccepted || contactForm.invalid"
             [attr.aria-disabled]="!isPrivacyAccepted || contactForm.invalid"
         />
