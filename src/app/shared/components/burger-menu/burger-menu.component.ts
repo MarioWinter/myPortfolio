@@ -1,7 +1,7 @@
 import { Component, inject, EventEmitter, Output } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { MyprojectListService } from "../../../shared/components/myproject-list.service";
-import { TranslationService } from "../../../shared/components/translation.service";
+import { MyprojectListService } from "../../../core/services/myproject-list.service";
+import { TranslationService } from "../../../core/services/translation.service";
 
 @Component({
     selector: "app-burger-menu",

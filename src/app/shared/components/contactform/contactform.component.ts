@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
-import { TranslationService } from "../../components/translation.service";
+import { TranslationService } from "../../../core/services/translation.service";
 
 @Component({
     selector: "app-contactform",

@@ -1,6 +1,6 @@
 import { Component, inject } from "@angular/core";
-import { TranslationService } from "../../shared/components/translation.service";
-import { MyprojectListService } from "../../shared/components/myproject-list.service";
+import { TranslationService } from "../../core/services/translation.service";
+import { MyprojectListService } from "../../core/services/myproject-list.service";
 
 @Component({
     selector: "app-hero-section",

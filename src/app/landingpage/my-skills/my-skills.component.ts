@@ -1,7 +1,7 @@
 import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { SkillsService } from "../../shared/components/skills.service";
-import { TranslationService } from "../../shared/components/translation.service";
+import { SkillsService } from "../../core/services/skills.service";
+import { TranslationService } from "../../core/services/translation.service";
 
 @Component({
     selector: "app-my-skills",

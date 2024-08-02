@@ -2,7 +2,7 @@ import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { trigger, state, style, transition, animate, keyframes } from "@angular/animations";
 import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
-import { TranslationService } from "./../translation.service";
+import { TranslationService } from "../../../core/services/translation.service";
 
 @Component({
     selector: "app-header",

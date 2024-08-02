@@ -1,6 +1,6 @@
 import { Component, Input, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { TranslationService } from "../../../shared/components/translation.service";
+import { TranslationService } from "../../../core/services/translation.service";
 
 @Component({
     selector: "app-project",
