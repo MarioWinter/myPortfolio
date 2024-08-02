@@ -3,12 +3,12 @@
         <ul>
             <li>
                 <a href="#about_me" class="menu-item-font" (click)="toggleMenu()" (keyup.enter)="toggleMenu()">
-                    {{ translate("ABOUTME") }}
+                    {{ "ABOUTME.ABOUTME" | translate }}
                 </a>
             </li>
             <li>
                 <a href="#skills" class="menu-item-font" (click)="toggleMenu()" (keyup.enter)="toggleMenu()">
-                    {{ translate("SKILLS") }}
+                    {{ "MYSKILLS.SKILLS" | translate }}
                 </a>
             </li>
             <li>
@@ -19,7 +19,7 @@
     <div class="info">
         <div class="info-container">
             <div class="email-box">
-                <h2 class="footer-header-font">{{ translate("SAY_HI") }}</h2>
+                <h2 class="footer-header-font">{{ "FOOTER.TITLE" | translate }}</h2>
                 <a class="email" href="'{{ myprojectList.emailAddress }}'" target="_blank">{{ myprojectList.emailAddress }}</a>
             </div>
             <div class="social-media">
