@@ -3,8 +3,8 @@
         <a href=""><img src="assets/icons/mw-logo.svg" alt="Developer Logo" /></a>
         <div class="burger-menu-right">
             <div class="translations">
-                <button (click)="useLanguage('en')">EN</button>
-                <button (click)="useLanguage('de')">DE</button>
+                <button (click)="useLanguage('en')" [class.active]="active('en')">EN</button>
+                <button (click)="useLanguage('de')" [class.active]="active('de')">DE</button>
             </div>
             <div class="burger-menu-box">
                 <div class="burger-menu" (click)="toggleMenu()" (keyup.enter)="toggleMenu()" tabindex="0" role="button" aria-label="Toggle menu">

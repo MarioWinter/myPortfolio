@@ -69,10 +69,8 @@ import { TranslateModule } from "@ngx-translate/core";
     ],
 })
 export class HeaderComponent {
-    private translate = inject(TranslateService);
+    translate = inject(TranslateService);
     isActive = false;
-    currentLang = "en";
-
     toggleMenu() {
         this.isActive = !this.isActive;
         this.toggleBodyScroll();
@@ -100,20 +98,9 @@ export class HeaderComponent {
 
     useLanguage(language: string): void {
         this.translate.use(language);
-        console.log(this.translate.use);
     }
 
-    // setLanguage(lang: string) {
-    //     this.currentLang = lang;
-    // }
-
-    // translate(key: string): string {
-    //     return this.translationService.getTranslation(this.currentLang, key);
-    // }
-
     active(lang: string) {
-        return {
-            "border-bottom": this.currentLang === lang ? "0.2rem solid black" : "0.2rem solid transparent",
-        };
+        return this.translate.currentLang === lang ? this.translate.currentLang : this.translate.defaultLang;
     }
 }
