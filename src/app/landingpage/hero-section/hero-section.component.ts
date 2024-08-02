@@ -1,5 +1,4 @@
 import { Component, inject } from "@angular/core";
-import { TranslationService } from "../../core/services/translation.service";
 import { MyprojectListService } from "../../core/services/myproject-list.service";
 import { TranslateModule } from "@ngx-translate/core";
 
@@ -12,9 +11,4 @@ import { TranslateModule } from "@ngx-translate/core";
 })
 export class HeroSectionComponent {
     myprojectList = inject(MyprojectListService);
-    translationService = inject(TranslationService);
-
-    translate(key: string): string {
-        return this.translationService.getTranslation(this.translationService.currentLang, key);
-    }
 }
