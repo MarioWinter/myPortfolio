@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
             anchorPlacement: "center-center",
         });
         AOS.refresh();
-        let style = this.renderer.createElement("style");
+        const style = this.renderer.createElement("style");
         style.textContent = `
 				[data-aos="arrow-move-left"] {
                     transition-property: transform;
