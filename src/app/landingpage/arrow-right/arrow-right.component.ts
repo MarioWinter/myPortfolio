@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { AosDirective } from "../../directives/aos.directive";
+import { AosDirective } from "./../../shared/directives/aos.directive";
 import AOS from "aos";
 
 @Component({
