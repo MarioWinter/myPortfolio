@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { trigger, state, style, transition, animate, keyframes } from "@angular/animations";
 import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
@@ -68,17 +68,16 @@ import { TranslateModule } from "@ngx-translate/core";
         ]),
     ],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
     translate = inject(TranslateService);
     isActive = false;
-    currentLang: string = "";
     toggleMenu() {
         this.isActive = !this.isActive;
         this.toggleBodyScroll();
     }
 
-    constructor() {
-        this.translate.currentLang = this.translate.defaultLang;
+    ngOnInit() {
+        this.loadCurrentLangFromLocalStorage();
     }
 
     private toggleBodyScroll() {
@@ -102,8 +101,25 @@ export class HeaderComponent {
     }
 
     useLanguage(language: string): void {
-        this.translate.use(language);
-        console.log(this.translate.currentLang);
+        this.translate.use(language).subscribe(() => {
+            this.saveCurrentLangInLocalStorage();
+        });
+    }
+
+    saveCurrentLangInLocalStorage() {
+        localStorage.setItem("currentLang", this.translate.currentLang);
+    }
+
+    loadCurrentLangFromLocalStorage() {
+        const lang = localStorage.getItem("currentLang");
+        console.log(lang);
+        if (lang) {
+            this.translate.use(lang).subscribe(() => {
+                this.saveCurrentLangInLocalStorage();
+            });
+        } else {
+            this.useLanguage("en");
+        }
     }
 
     active(lang: string) {
