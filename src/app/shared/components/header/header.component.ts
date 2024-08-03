@@ -71,6 +71,7 @@ import { TranslateModule } from "@ngx-translate/core";
 export class HeaderComponent implements OnInit {
     translate = inject(TranslateService);
     isActive = false;
+
     toggleMenu() {
         this.isActive = !this.isActive;
         this.toggleBodyScroll();
