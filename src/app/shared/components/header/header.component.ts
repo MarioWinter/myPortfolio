@@ -71,9 +71,14 @@ import { TranslateModule } from "@ngx-translate/core";
 export class HeaderComponent {
     translate = inject(TranslateService);
     isActive = false;
+    currentLang: string = "";
     toggleMenu() {
         this.isActive = !this.isActive;
         this.toggleBodyScroll();
+    }
+
+    constructor() {
+        this.translate.currentLang = this.translate.defaultLang;
     }
 
     private toggleBodyScroll() {
@@ -98,9 +103,10 @@ export class HeaderComponent {
 
     useLanguage(language: string): void {
         this.translate.use(language);
+        console.log(this.translate.currentLang);
     }
 
     active(lang: string) {
-        return this.translate.currentLang === lang ? this.translate.currentLang : this.translate.defaultLang;
+        return this.translate.currentLang === lang ? true : false;
     }
 }
