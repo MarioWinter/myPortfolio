@@ -5,6 +5,12 @@ import { BurgerMenuComponent } from "../burger-menu/burger-menu.component";
 import { TranslateService } from "@ngx-translate/core";
 import { TranslateModule } from "@ngx-translate/core";
 
+/**
+ * @module HeaderComponent
+ * @description Represents the header component of the application.
+ * This component is responsible for navigation and language selection.
+ */
+
 @Component({
     selector: "app-header",
     standalone: true,
@@ -69,48 +75,77 @@ import { TranslateModule } from "@ngx-translate/core";
     ],
 })
 export class HeaderComponent implements OnInit {
+    /** The TranslateService for translations */
     translate = inject(TranslateService);
+
+    /** Indicates whether the menu is active (open) */
     isActive = false;
 
+    /**
+     * Initializes the component.
+     * Loads the current language from local storage.
+     */
+    ngOnInit() {
+        this.loadCurrentLangFromLocalStorage();
+    }
+
+    /**
+     * Toggles the menu and updates the body's scroll status.
+     */
     toggleMenu() {
         this.isActive = !this.isActive;
         this.toggleBodyScroll();
     }
 
-    ngOnInit() {
-        this.loadCurrentLangFromLocalStorage();
-    }
-
+    /**
+     * Enables or disables the body scroll based on the menu status.
+     * @private
+     */
     private toggleBodyScroll() {
-        if (this.isActive) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
+        document.body.style.overflow = this.isActive ? "hidden" : "";
     }
 
+    /**
+     * Determines whether the menu should be displayed.
+     * @returns An object with CSS classes for menu visibility.
+     */
     showMenu(): { [key: string]: boolean } {
         return {
             "d-none": !this.isActive,
         };
     }
 
+    /**
+     * Adjusts the position of the header based on the menu status.
+     * @returns An object with CSS styles for the header position.
+     */
     fixPosition(): { [key: string]: string } {
         return {
             "right.rem": this.isActive ? "1.1" : "0",
         };
     }
 
+    /**
+     * Changes the current language of the application.
+     * @param language The language to use.
+     */
     useLanguage(language: string): void {
         this.translate.use(language).subscribe(() => {
             this.saveCurrentLangInLocalStorage();
         });
     }
 
+    /**
+     * Saves the current language in local storage.
+     */
     saveCurrentLangInLocalStorage() {
         localStorage.setItem("currentLang", this.translate.currentLang);
     }
 
+    /**
+     * Loads the current language from local storage and applies it.
+     * If no language is stored, English is used as the default.
+     */
     loadCurrentLangFromLocalStorage() {
         const lang = localStorage.getItem("currentLang");
         console.log(lang);
@@ -123,7 +158,12 @@ export class HeaderComponent implements OnInit {
         }
     }
 
+    /**
+     * Checks if the specified language is the currently active language.
+     * @param lang The language to check.
+     * @returns True if the specified language is active, otherwise false.
+     */
     active(lang: string) {
-        return this.translate.currentLang === lang ? true : false;
+        return this.translate.currentLang === lang;
     }
 }
