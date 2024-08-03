@@ -148,7 +148,6 @@ export class HeaderComponent implements OnInit {
      */
     loadCurrentLangFromLocalStorage() {
         const lang = localStorage.getItem("currentLang");
-        console.log(lang);
         if (lang) {
             this.translate.use(lang).subscribe(() => {
                 this.saveCurrentLangInLocalStorage();
