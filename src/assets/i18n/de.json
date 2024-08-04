@@ -45,6 +45,8 @@
     },
     "IMPRINT": {
         "TITLE": "Impressum",
-        "CONTACT": "Kontakt"
+        "CONTACT": "Kontakt",
+        "PHONE": "Telefon",
+        "SOURCE": "Quelle"
     }
 }

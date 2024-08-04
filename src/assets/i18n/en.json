@@ -45,6 +45,8 @@
     },
     "IMPRINT": {
         "TITLE": "Imprint",
-        "CONTACT": "Contact"
+        "CONTACT": "Contact",
+        "PHONE": "Phone",
+        "SOURCE": "Source"
     }
 }
