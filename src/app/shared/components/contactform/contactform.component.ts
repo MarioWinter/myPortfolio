@@ -35,7 +35,7 @@ export class ContactformComponent {
     isPrivacyAccepted = false;
 
     post = {
-        endPoint: "https://mariowinnter.com/sendMail.php",
+        endPoint: "https://mariowinter.com/sendMail.php",
         body: (payload: ContactData) => JSON.stringify(payload),
         options: {
             headers: {
