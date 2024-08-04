@@ -3,6 +3,19 @@ import { Component, inject } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { TranslateModule } from "@ngx-translate/core";
 
+interface ContactData {
+    name: string;
+    email: string;
+    message: string;
+}
+
+interface PostOptions {
+    headers: {
+        "Content-Type": string;
+        responseType: string;
+    };
+}
+
 @Component({
     selector: "app-contactform",
     standalone: true,
@@ -13,34 +26,36 @@ import { TranslateModule } from "@ngx-translate/core";
 export class ContactformComponent {
     http = inject(HttpClient);
 
-    contactData = {
+    contactData: ContactData = {
         name: "",
         email: "",
         message: "",
     };
+
     isPrivacyAccepted = false;
 
     post = {
         endPoint: "https://mariowinnter.com/sendMail.php",
-        body: (payload: any) => JSON.stringify(payload),
+        body: (payload: ContactData) => JSON.stringify(payload),
         options: {
             headers: {
                 "Content-Type": "text/plain",
                 responseType: "text",
             },
-        },
+        } as PostOptions,
     };
 
-    onSubmit(ngForm: NgForm) {
+    onSubmit(ngForm: NgForm): void {
         if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted) {
-            this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+            this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options).subscribe({
                 next: (response) => {
                     ngForm.resetForm();
+                    console.info("Form submission successful", response);
                 },
                 error: (error) => {
-                    console.error(error);
+                    console.error("Form submission error", error);
                 },
-                complete: () => console.info("send post complete"),
+                complete: () => console.info("Send post complete"),
             });
         }
     }
