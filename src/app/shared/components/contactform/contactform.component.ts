@@ -19,7 +19,6 @@ export class ContactformComponent {
         message: "",
     };
     isPrivacyAccepted = false;
-    mailTest = true;
 
     post = {
         endPoint: "https://mariowinnter.com/sendMail.php",
@@ -33,7 +32,7 @@ export class ContactformComponent {
     };
 
     onSubmit(ngForm: NgForm) {
-        if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.isPrivacyAccepted) {
+        if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted) {
             this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
                 next: (response) => {
                     ngForm.resetForm();
@@ -43,9 +42,6 @@ export class ContactformComponent {
                 },
                 complete: () => console.info("send post complete"),
             });
-        } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.isPrivacyAccepted) {
-            console.log(this.contactData);
-            ngForm.resetForm();
         }
     }
 }
