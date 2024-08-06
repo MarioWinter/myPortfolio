@@ -3,13 +3,13 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-    text-decoration: none;
-    border: unset;
-    cursor: default;
+	text-decoration: none;
+	border: unset;
+	cursor: default;
 }
 
 $cream: #fffcf3;
@@ -23,312 +23,313 @@ $max-width: 144rem;
 $scroll-bar-fix: calc(auto + 3rem);
 
 @mixin txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 12.8rem, $fw: 800, $lh: 0rem, $ls: 0rem) {
-    color: $clr;
-    text-align: $txtal;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: $ff;
-    font-size: $fz;
-    font-style: normal;
-    font-weight: $fw;
-    line-height: $lh;
-    letter-spacing: $ls;
+	color: $clr;
+	text-align: $txtal;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: $ff;
+	font-size: $fz;
+	font-style: normal;
+	font-weight: $fw;
+	line-height: $lh;
+	letter-spacing: $ls;
 }
 
 .title-font {
-    @include txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 12.8rem, $fw: 800, $lh: 100%, $ls: -0.32rem);
+	@include txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 12.8rem, $fw: 800, $lh: 100%, $ls: -0.32rem);
 }
 
 .section-header-font {
-    @include txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
-    &:hover {
-        color: $orange;
-    }
+	@include txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+	&:hover {
+		color: $orange;
+	}
 }
 
 .portfolio-counter-font {
-    @include txt($clr: $black, $txtal: right, $ff: $title-font, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
-    width: 100%;
+	@include txt($clr: $black, $txtal: right, $ff: $title-font, $fz: 4.8rem, $fw: 700, $lh: 120%, $ls: 0rem);
+	width: 100%;
 }
 
 .project-header-font {
-    @include txt($clr: $black, $txtal: left, $ff: $title-font, $fz: 4.5rem, $fw: 800, $lh: 100%, $ls: 0rem);
+	@include txt($clr: $black, $txtal: left, $ff: $title-font, $fz: 4.5rem, $fw: 800, $lh: 100%, $ls: 0rem);
 }
 
 .secondary-txt-font {
-    @include txt($clr: $orange, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
-    margin-top: 1.5rem;
+	@include txt($clr: $orange, $txtal: left, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+	margin-top: 1.5rem;
 }
 
 .menu-item-font {
-    @include txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 9.6rem, $fw: 700, $lh: 100%, $ls: -0.24rem);
+	@include txt($clr: $black, $txtal: center, $ff: $title-font, $fz: 9.6rem, $fw: 700, $lh: 100%, $ls: -0.24rem);
 }
 
 .footer-header-font {
-    @include txt($clr: $cream, $txtal: left, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
+	@include txt($clr: $cream, $txtal: left, $ff: $title-font, $fz: 7.8rem, $fw: 800, $lh: 100%, $ls: 0.78rem);
 }
 
 .footer-sub-header-font {
-    @include txt($clr: $orange, $txtal: center, $ff: $text-font, $fz: 3.2rem, $fw: 700, $lh: 120%, $ls: 0rem);
+	@include txt($clr: $orange, $txtal: center, $ff: $text-font, $fz: 3.2rem, $fw: 700, $lh: 120%, $ls: 0rem);
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 20rem;
-    scrollbar-width: thin;
-    scrollbar-color: $orange $cream;
-    font-size: 0.625em;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	scroll-behavior: smooth;
+	scroll-padding-top: 20rem;
+	scrollbar-width: thin;
+	scrollbar-color: $orange $cream;
+	font-size: 0.625em;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
-    width: 100%;
-    margin: 0rem;
-    padding: 0rem;
-    background-color: $cream;
-    color: $black;
-    font-family: $text-font;
-    font-size: 2.3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
+	width: 100%;
+	height: 100vh;
+	margin: 0rem;
+	padding: 0rem;
+	background-color: $cream;
+	color: $black;
+	font-family: $text-font;
+	font-size: 2.3rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
 }
 
 h1 {
-    margin: 0rem;
+	margin: 0rem;
 }
 
 h2 {
-    margin: 0rem;
+	margin: 0rem;
 }
 
 h3 {
-    margin: 0rem;
+	margin: 0rem;
 }
 
 p {
-    margin: 0rem;
+	margin: 0rem;
 }
 
 a {
-    color: $black;
-    cursor: pointer;
-    font-family: $text-font;
-    font-style: normal;
-    line-height: 100%;
-    letter-spacing: -0.575px;
-    &:hover {
-        color: $orange;
-    }
+	color: $black;
+	cursor: pointer;
+	font-family: $text-font;
+	font-style: normal;
+	line-height: 100%;
+	letter-spacing: -0.575px;
+	&:hover {
+		color: $orange;
+	}
 }
 
 .main-button {
-    display: inline-flex;
-    padding: 2rem 6rem;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border: 0.4rem solid $black;
-    background-color: transparent;
-    @include txt($clr: $black, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
-    cursor: pointer;
-    transition: all 75ms ease-in-out;
-    &:hover {
-        padding: 2rem 8rem;
-        box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
-        font-weight: 700;
-    }
-    &:active {
-        font-weight: 400;
-        padding: 2rem 8rem;
-        box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
-        background-color: $black;
-        color: $cream;
-    }
+	display: inline-flex;
+	padding: 2rem 6rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border: 0.4rem solid $black;
+	background-color: transparent;
+	@include txt($clr: $black, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+	cursor: pointer;
+	transition: all 75ms ease-in-out;
+	&:hover {
+		padding: 2rem 8rem;
+		box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+		font-weight: 700;
+	}
+	&:active {
+		font-weight: 400;
+		padding: 2rem 8rem;
+		box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+		background-color: $black;
+		color: $cream;
+	}
 }
 
 .second-button {
-    display: inline-flex;
-    padding: 2rem 6rem;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border: 0.4rem solid $cream;
-    color: $cream;
-    background-color: transparent;
-    @include txt($clr: $cream, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
-    cursor: pointer;
-    transition: all 75ms ease-in-out;
-    &:hover {
-        padding: 2rem 8rem;
-        box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
-        font-weight: 700;
-    }
-    &:active {
-        font-weight: 400;
-        padding: 2rem 8rem;
-        box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
-        background-color: $cream;
-        color: $black;
-    }
+	display: inline-flex;
+	padding: 2rem 6rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border: 0.4rem solid $cream;
+	color: $cream;
+	background-color: transparent;
+	@include txt($clr: $cream, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+	cursor: pointer;
+	transition: all 75ms ease-in-out;
+	&:hover {
+		padding: 2rem 8rem;
+		box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+		font-weight: 700;
+	}
+	&:active {
+		font-weight: 400;
+		padding: 2rem 8rem;
+		box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+		background-color: $cream;
+		color: $black;
+	}
 }
 
 .message-btn {
-    border: 0.4rem solid $dark-grey;
-    background-color: transparent;
-    box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
-    display: flex;
-    padding: 2rem 6rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.2rem;
-    @include txt($clr: $dark-grey, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
-    cursor: pointer;
-    transition: all 75ms ease-in-out;
-    &:hover:not(:disabled) {
-        padding: 2rem 8rem;
-        font-weight: 700;
-    }
-    &:active:not(:disabled) {
-        font-weight: 400;
-        padding: 2rem 8rem;
-        background-color: $cream;
-        border: 0.4rem solid $cream;
-        color: $black;
-    }
-    &:disabled {
-        cursor: not-allowed;
-        border: 0.4rem solid $dark-grey;
-        opacity: 0.3;
-        box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
-    }
+	border: 0.4rem solid $dark-grey;
+	background-color: transparent;
+	box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+	display: flex;
+	padding: 2rem 6rem;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.2rem;
+	@include txt($clr: $dark-grey, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+	cursor: pointer;
+	transition: all 75ms ease-in-out;
+	&:hover:not(:disabled) {
+		padding: 2rem 8rem;
+		font-weight: 700;
+	}
+	&:active:not(:disabled) {
+		font-weight: 400;
+		padding: 2rem 8rem;
+		background-color: $cream;
+		border: 0.4rem solid $cream;
+		color: $black;
+	}
+	&:disabled {
+		cursor: not-allowed;
+		border: 0.4rem solid $dark-grey;
+		opacity: 0.3;
+		box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.15);
+	}
 }
 
 @media screen and (max-width: 992px) {
-    html {
-        font-size: 0.6em;
-        overflow-x: hidden;
-    }
+	html {
+		font-size: 0.6em;
+		overflow-x: hidden;
+	}
 
-    body {
-        overflow-x: hidden;
-    }
+	body {
+		overflow-x: hidden;
+	}
 
-    .section-header-font {
-        font-size: 7.8vw;
-    }
+	.section-header-font {
+		font-size: 7.8vw;
+	}
 
-    .portfolio-counter-font {
-        font-size: 4.8vw;
-    }
+	.portfolio-counter-font {
+		font-size: 4.8vw;
+	}
 
-    .project-header-font {
-        font-size: 4.5vw;
-    }
+	.project-header-font {
+		font-size: 4.5vw;
+	}
 
-    .secondary-txt-font {
-        font-size: 3.4vw;
-    }
+	.secondary-txt-font {
+		font-size: 3.4vw;
+	}
 
-    .footer-sub-header-font {
-        font-size: 3.2vw;
-    }
+	.footer-sub-header-font {
+		font-size: 3.2vw;
+	}
 
-    .main-button {
-        padding: 2vw 5vw;
-        border: 0.5vw solid $black;
-        font-size: 2.5vw;
-        &:hover {
-            padding: 2vw 8vw;
-        }
-        &:active {
-            padding: 2vw 8vw;
-        }
-    }
+	.main-button {
+		padding: 2vw 5vw;
+		border: 0.5vw solid $black;
+		font-size: 2.5vw;
+		&:hover {
+			padding: 2vw 8vw;
+		}
+		&:active {
+			padding: 2vw 8vw;
+		}
+	}
 }
 
 @media screen and (max-width: 690px) {
-    .section-header-font {
-        font-size: 7.4vw;
-    }
+	.section-header-font {
+		font-size: 7.4vw;
+	}
 
-    .portfolio-counter-font {
-        font-size: 5.8vw;
-    }
+	.portfolio-counter-font {
+		font-size: 5.8vw;
+	}
 
-    .project-header-font {
-        font-size: 5.5vw;
-    }
+	.project-header-font {
+		font-size: 5.5vw;
+	}
 
-    .secondary-txt-font {
-        font-size: 4vw;
-    }
+	.secondary-txt-font {
+		font-size: 4vw;
+	}
 
-    .footer-header-font {
-        font-size: 7.8vw;
-    }
+	.footer-header-font {
+		font-size: 7.8vw;
+	}
 
-    .footer-sub-header-font {
-        font-size: 5.2vw;
-    }
+	.footer-sub-header-font {
+		font-size: 5.2vw;
+	}
 }
 
 @media screen and (max-width: 480px) {
-    .section-header-font {
-        font-size: 7vw;
-    }
+	.section-header-font {
+		font-size: 7vw;
+	}
 
-    .portfolio-counter-font {
-        font-size: 7.8vw;
-        padding: 0vw 2vw;
-    }
+	.portfolio-counter-font {
+		font-size: 7.8vw;
+		padding: 0vw 2vw;
+	}
 
-    .project-header-font {
-        font-size: 7.5vw;
-    }
+	.project-header-font {
+		font-size: 7.5vw;
+	}
 
-    .secondary-txt-font {
-        font-size: 5.3vw;
-    }
+	.secondary-txt-font {
+		font-size: 5.3vw;
+	}
 
-    .footer-header-font {
-        font-size: 9.8vw;
-    }
+	.footer-header-font {
+		font-size: 9.8vw;
+	}
 
-    .footer-sub-header-font {
-        font-size: 7.2vw;
-    }
+	.footer-sub-header-font {
+		font-size: 7.2vw;
+	}
 
-    .main-button {
-        padding: 3vw 7vw;
-        border: 0.7vw solid $black;
-        font-size: 5.3vw;
-        &:hover {
-            padding: 3vw 10vw;
-        }
-        &:active {
-            padding: 3vw 10vw;
-        }
-    }
+	.main-button {
+		padding: 3vw 7vw;
+		border: 0.7vw solid $black;
+		font-size: 5.3vw;
+		&:hover {
+			padding: 3vw 10vw;
+		}
+		&:active {
+			padding: 3vw 10vw;
+		}
+	}
 }
 
 @media screen and (max-width: 350px) {
-    .section-header-font {
-        font-size: 6.5vw;
-    }
+	.section-header-font {
+		font-size: 6.5vw;
+	}
 
-    .portfolio-counter-font {
-        font-size: 8.8vw;
-    }
+	.portfolio-counter-font {
+		font-size: 8.8vw;
+	}
 
-    .project-header-font {
-        font-size: 7.8vw;
-    }
+	.project-header-font {
+		font-size: 7.8vw;
+	}
 
-    .footer-header-font {
-        font-size: 11.8vw;
-    }
+	.footer-header-font {
+		font-size: 11.8vw;
+	}
 
-    .footer-sub-header-font {
-        font-size: 7.2vw;
-    }
+	.footer-sub-header-font {
+		font-size: 7.2vw;
+	}
 }
