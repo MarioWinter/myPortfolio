@@ -1,262 +1,261 @@
 @import "../../../../styles.scss";
 
 @mixin textbox($pud: 1.5rem, $plr: 2.5rem, $h: 5rem, $ai: center, $gp: 1rem) {
-    display: flex;
-    color: $cream;
-    border-bottom: 0.2rem solid $cream;
-    border-left: 0.2rem solid $black;
-    border-right: 0.2rem solid $black;
-    border-top: 0.2rem solid $black;
-    background: $black;
-    font-size: 1.6rem;
-    font-family: $text-font;
-    // max-width: 61.7rem;
-    max-height: $h;
-    width: 100%;
-    height: 100%;
-    padding: $pud $plr;
-    align-items: $ai;
-    gap: $gp;
+	display: flex;
+	color: $cream;
+	border-bottom: 0.2rem solid $cream;
+	border-left: 0.2rem solid $black;
+	border-right: 0.2rem solid $black;
+	border-top: 0.2rem solid $black;
+	background: $black;
+	font-size: 1.6rem;
+	font-family: $text-font;
+	max-height: $h;
+	width: 100%;
+	height: 100%;
+	padding: $pud $plr;
+	align-items: $ai;
+	gap: $gp;
 }
 
 @mixin errorMessage() {
-    color: $red;
-    font-family: Overpass;
-    font-size: 1.2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
+	color: $red;
+	font-family: Overpass;
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
 }
 
 @mixin inputHeader() {
-    position: absolute;
-    top: -0.7rem;
-    left: 2rem;
-    padding: 0 0.5rem;
-    color: $cream;
-    font-family: Overpass;
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
-    background-color: $black;
+	position: absolute;
+	top: -0.7rem;
+	left: 2rem;
+	padding: 0 0.5rem;
+	color: $cream;
+	font-family: Overpass;
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	background-color: $black;
 }
 
 .forms-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    color: $cream;
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	color: $cream;
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .form-fild {
-    position: relative;
-    margin-bottom: 1.2rem;
-    width: 100%;
-    .input-header {
-        display: none;
-        @include inputHeader();
-    }
+	position: relative;
+	margin-bottom: 1.2rem;
+	width: 100%;
+	.input-header {
+		display: none;
+		@include inputHeader();
+	}
 }
 
 input[type="text"],
 [type="email"] {
-    @include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 5rem, $ai: center, $gp: 1rem);
-    margin-bottom: 0.8rem;
-    outline: none;
-    &:focus {
-        border: 0.2rem solid $cream;
-        & + .input-header {
-            display: block;
-        }
-    }
-    &:hover {
-        border: 0.4rem solid $cream;
-        padding: 1.3rem 2.3rem 1.3rem 2.3rem;
-    }
+	@include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 5rem, $ai: center, $gp: 1rem);
+	margin-bottom: 0.8rem;
+	outline: none;
+	&:focus {
+		border: 0.2rem solid $cream;
+		& + .input-header {
+			display: block;
+		}
+	}
+	&:hover {
+		border: 0.4rem solid $cream;
+		padding: 1.3rem 2.3rem 1.3rem 2.3rem;
+	}
 }
 
 input[type="text"],
 input[type="email"] {
-    background-repeat: no-repeat;
-    background-position: 95% center;
-    transition: background-image 125ms ease;
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	transition: background-image 125ms ease;
 
-    &:not(:placeholder-shown) {
-        &:valid {
-            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
-        }
+	&:not(:placeholder-shown) {
+		&:valid {
+			background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+		}
 
-        &:invalid {
-            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
-        }
-    }
+		&:invalid {
+			background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+		}
+	}
 
-    &:focus {
-        &:valid {
-            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
-        }
+	&:focus {
+		&:valid {
+			background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+		}
 
-        &:invalid {
-            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
-        }
-    }
+		&:invalid {
+			background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+		}
+	}
 }
 
 input[type="text"]:focus::placeholder,
 [type="email"]:focus::placeholder {
-    opacity: 0;
+	opacity: 0;
 }
 
 textarea {
-    @include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 20.2rem, $ai: flex-start, $gp: 1rem);
-    min-width: 61.7rem;
-    position: relative;
-    margin-bottom: 0.8rem;
-    outline: none;
-    &:focus {
-        border: 0.2rem solid $cream;
-        & + .input-header {
-            display: block;
-        }
-    }
-    &:hover {
-        border: 0.4rem solid $cream;
-        padding: 1.3rem 2.3rem 1.3rem 2.3rem;
-    }
+	@include textbox($pud: 1.5rem, $plr: 2.5rem, $h: 20.2rem, $ai: flex-start, $gp: 1rem);
+	min-width: 61.7rem;
+	position: relative;
+	margin-bottom: 0.8rem;
+	outline: none;
+	&:focus {
+		border: 0.2rem solid $cream;
+		& + .input-header {
+			display: block;
+		}
+	}
+	&:hover {
+		border: 0.4rem solid $cream;
+		padding: 1.3rem 2.3rem 1.3rem 2.3rem;
+	}
 }
 
 textarea {
-    background-repeat: no-repeat;
-    background-position: 95% 5%;
-    transition: background-image 125ms ease;
-    &:not(:placeholder-shown) {
-        &:valid {
-            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
-        }
+	background-repeat: no-repeat;
+	background-position: 95% 5%;
+	transition: background-image 125ms ease;
+	&:not(:placeholder-shown) {
+		&:valid {
+			background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+		}
 
-        &:invalid {
-            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
-        }
-    }
+		&:invalid {
+			background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+		}
+	}
 
-    &:focus {
-        &:valid {
-            background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
-        }
+	&:focus {
+		&:valid {
+			background-image: url("../../../../assets/icons/contact-form/check-icon.svg");
+		}
 
-        &:invalid {
-            background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
-        }
-    }
+		&:invalid {
+			background-image: url("../../../../assets/icons/contact-form/error-icon.svg");
+		}
+	}
 }
 
 textarea:focus::placeholder {
-    opacity: 0;
+	opacity: 0;
 }
 
 .checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 1.2rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	margin-bottom: 1.2rem;
 
-    div {
-        color: $cream;
-        font-family: Overpass;
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 120%;
-        margin-left: 3.2rem;
-        flex: 1;
+	div {
+		color: $cream;
+		font-family: Overpass;
+		font-size: 1.4rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		margin-left: 3.2rem;
+		flex: 1;
 
-        span {
-            color: $orange;
-            padding: 0.5rem 0.7rem;
-        }
-    }
+		span {
+			color: $orange;
+			padding: 0.5rem 0.7rem;
+		}
+	}
 
-    .custom-checkbox {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        width: 2.4rem;
-        height: 2.4rem;
-        z-index: 1;
-    }
+	.custom-checkbox {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		width: 2.4rem;
+		height: 2.4rem;
+		z-index: 1;
+	}
 
-    label {
-        width: 2.4rem;
-        height: 2.4rem;
-        display: inline-block;
-        cursor: pointer;
-        background-image: url("../../../../assets/icons/contact-form/input-default.svg");
-        background-size: cover;
-        transition: background-image 75ms ease;
-        position: absolute;
-    }
+	label {
+		width: 2.4rem;
+		height: 2.4rem;
+		display: inline-block;
+		cursor: pointer;
+		background-image: url("../../../../assets/icons/contact-form/input-default.svg");
+		background-size: cover;
+		transition: background-image 75ms ease;
+		position: absolute;
+	}
 
-    input:checked + label {
-        background-image: url("../../../../assets/icons/contact-form/input-checked.svg");
-    }
+	input:checked + label {
+		background-image: url("../../../../assets/icons/contact-form/input-checked.svg");
+	}
 }
 
 .checkbox-wrapper {
-    &:hover {
-        div {
-            span {
-                font-weight: 700;
-                padding: 0.5rem 0.459rem;
-            }
-        }
-        label {
-            background-image: url("../../../../assets/icons/contact-form/input-default-hover.svg");
-        }
-        input:checked + label {
-            background-image: url("../../../../assets/icons/contact-form/input-checked-hover.svg");
-        }
-    }
+	&:hover {
+		div {
+			span {
+				font-weight: 700;
+				padding: 0.5rem 0.459rem;
+			}
+		}
+		label {
+			background-image: url("../../../../assets/icons/contact-form/input-default-hover.svg");
+		}
+		input:checked + label {
+			background-image: url("../../../../assets/icons/contact-form/input-checked-hover.svg");
+		}
+	}
 }
 
 .error-message {
-    @include errorMessage();
-    width: 100%;
-    height: 1.439rem;
-    margin-bottom: 1rem;
-    text-align: start;
+	@include errorMessage();
+	width: 100%;
+	height: 1.439rem;
+	margin-bottom: 1rem;
+	text-align: start;
 }
 
 @media screen and (max-width: 992px) {
-    .checkbox-wrapper {
-        gap: 3vw;
-        height: 3.7rem;
-    }
+	.checkbox-wrapper {
+		gap: 3vw;
+		height: 3.7rem;
+	}
 
-    .form-fild {
-        max-width: 60vw;
-        textarea {
-            min-width: 61.7vw;
-            max-width: 60vw;
-        }
-    }
+	.form-fild {
+		max-width: 60vw;
+		textarea {
+			min-width: 61.7vw;
+			max-width: 60vw;
+		}
+	}
 }
 
 @media screen and (max-width: 480px) {
-    .form-fild {
-        max-width: 84vw;
-        textarea {
-            max-width: 84vw;
-            min-width: 84vw;
-            max-width: 84vw;
-        }
-    }
+	.form-fild {
+		max-width: 84vw;
+		textarea {
+			max-width: 84vw;
+			min-width: 84vw;
+			max-width: 84vw;
+		}
+	}
 }
