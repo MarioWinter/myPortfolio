@@ -1,122 +1,123 @@
 @import "../../../../styles.scss";
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: $cream;
-    padding: 3rem 0rem;
-    z-index: 3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $cream;
+	padding: 3rem 0rem;
+	z-index: 3;
 }
 
 app-burger-menu {
-    position: fixed;
-    top: 9rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
-    background-color: $cream;
-    z-index: 3;
+	position: fixed;
+	top: 9rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	background-color: $cream;
+	z-index: 3;
 }
 
 .navbar-container {
-    max-width: 144rem;
-    width: 100%;
-    height: 4.6rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    a {
-        display: flex;
-        align-items: center;
-        img {
-            height: 3rem;
-            background-color: $cream;
-            width: 6.6667rem;
-            cursor: pointer;
-        }
-    }
+	max-width: 144rem;
+	width: 100%;
+	height: 4.6rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	a {
+		display: flex;
+		align-items: center;
+		img {
+			height: 3rem;
+			background-color: $cream;
+			width: 6.6667rem;
+			cursor: pointer;
+		}
+	}
 }
 
 .burger-menu-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    width: 15.2rem;
-    height: 100%;
-    .translations {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        width: auto;
-        height: 100%;
-        button {
-            margin-top: 1rem;
-            padding: 1.5rem 0;
-            border-bottom: 0.2rem solid transparent;
-            background-color: transparent;
-            color: $black;
-            text-align: center;
-            font-variant-numeric: lining-nums proportional-nums;
-            font-family: $title-font;
-            font-size: 2rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 0rem;
-            letter-spacing: 0rem;
-            &:hover {
-                border-bottom: 0.2rem solid $orange;
-            }
-            &.active {
-                border-bottom: 0.2rem solid $black;
-                &:hover {
-                    border-bottom: 0.2rem solid $orange;
-                }
-            }
-            &:active {
-                border-bottom: 0.2rem solid $black;
-            }
-        }
-    }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	width: 15.2rem;
+	height: 100%;
+	.translations {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		width: auto;
+		height: 100%;
+		button {
+			margin-top: 1rem;
+			padding: 1.5rem 0;
+			border-bottom: 0.2rem solid transparent;
+			background-color: transparent;
+			color: $black;
+			text-align: center;
+			font-variant-numeric: lining-nums proportional-nums;
+			font-family: $title-font;
+			font-size: 2rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 0rem;
+			letter-spacing: 0rem;
+			cursor: pointer;
+			&:hover {
+				border-bottom: 0.2rem solid $orange;
+			}
+			&.active {
+				border-bottom: 0.2rem solid $black;
+				&:hover {
+					border-bottom: 0.2rem solid $orange;
+				}
+			}
+			&:active {
+				border-bottom: 0.2rem solid $black;
+			}
+		}
+	}
 }
 
 .burger-menu-box {
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    .burger-menu {
-        width: 4rem;
-        height: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-    }
-    .bar {
-        width: 100%;
-        height: 0.4rem;
-        background-color: $black;
-    }
+	width: 5rem;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	.burger-menu {
+		width: 4rem;
+		height: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.bar {
+		width: 100%;
+		height: 0.4rem;
+		background-color: $black;
+	}
 }
 
 .d-none {
-    display: none !important;
+	display: none !important;
 }
 
 @media (max-width: 1440px) {
-    .navbar-container {
-        width: 95%;
-    }
+	.navbar-container {
+		width: 95%;
+	}
 }
 
 @media (max-width: 992px) {
-    .navbar-container {
-        width: 100%;
-        padding: 0 10px;
-    }
+	.navbar-container {
+		width: 100%;
+		padding: 0 10px;
+	}
 }
