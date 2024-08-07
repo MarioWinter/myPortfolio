@@ -19,14 +19,13 @@ export class AppComponent implements AfterViewInit {
 	constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
 
 	ngAfterViewInit() {
-		// Verzögern Sie die AOS-Initialisierung leicht
 		setTimeout(() => {
 			AOS.init({
 				duration: 500,
 				once: true,
 				mirror: false,
 				easing: "ease-out-cubic",
-				anchorPlacement: "top-bottom", // Änderung hier
+				anchorPlacement: "top-bottom",
 			});
 			AOS.refresh();
 		}, 100);
