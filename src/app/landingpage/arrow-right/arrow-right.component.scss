@@ -1,83 +1,88 @@
 @import "../../../styles.scss";
 
 .arrow-box {
-    display: flex;
-    height: 30rem;
-    padding: 5rem 0rem 0rem 4rem;
-    justify-content: flex-start;
-    align-items: center;
+	display: flex;
+	height: 30rem;
+	padding: 5rem 0rem 0rem 4rem;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .arraow-img {
-    width: 23.6rem;
-    height: 23.5rem;
+	width: 23.6rem;
+	height: 23.5rem;
 }
 
 .arrow-animation {
-    svg {
-        width: 25rem;
-        height: 25rem;
-    }
-    opacity: 1;
+	transition-property: transform;
+	transform: translate3d(6rem, -6rem, 0);
+	&.aos-animate {
+		transform: translate3d(14rem, 0rem, 0);
+	}
+	svg {
+		width: 25rem;
+		height: 25rem;
+	}
+	opacity: 1;
 }
 
 @keyframes lineGrow {
-    0% {
-        d: path("M41.6865 41.3125L193.894 193.52");
-    }
-    45% {
-        d: path("M21.6865 21.3125L193.894 193.52");
-    }
-    55% {
-        d: path("M21.6865 21.3125L193.894 193.52");
-    }
-    100% {
-        d: path("M41.6865 41.3125L193.894 193.52");
-    }
+	0% {
+		d: path("M41.6865 41.3125L193.894 193.52");
+	}
+	45% {
+		d: path("M21.6865 21.3125L193.894 193.52");
+	}
+	55% {
+		d: path("M21.6865 21.3125L193.894 193.52");
+	}
+	100% {
+		d: path("M41.6865 41.3125L193.894 193.52");
+	}
 }
 
 @media screen and (max-width: 992px) {
-    .arrow-box {
-        padding: 0rem;
-        justify-content: center;
-        align-items: center;
-    }
+	.arrow-box {
+		padding: 0rem;
+		justify-content: center;
+		align-items: center;
+	}
 
-    .arrow-animation {
-        svg {
-            width: 30vw;
-            height: 30vw;
-        }
-    }
+	.arrow-animation {
+		svg {
+			width: 30vw;
+			height: 30vw;
+		}
+	}
 
-    .arrow-animation {
-        transform: translate3d(0rem, 0rem, 0);
-    }
+	.arrow-animation {
+		transform: translate3d(0rem, 0rem, 0);
+	}
 }
 
 @media screen and (max-width: 690px) {
-    .arrow-animation {
-        svg {
-            width: 35vw;
-            height: 35vw;
-        }
-    }
+	.arrow-animation {
+		svg {
+			width: 35vw;
+			height: 35vw;
+		}
+	}
 }
 
 @media screen and (max-width: 480px) {
-    .arrow-animation {
-        svg {
-            width: 40vw;
-            height: 40vw;
-        }
-    }
+	.arrow-animation {
+		svg {
+			width: 40vw;
+			height: 40vw;
+		}
+	}
 }
 
 @media screen and (max-width: 350px) {
-    .arrow-animation {
-        svg {
-            width: 50vw;
-            height: 50vw;
-        }
-    }
+	.arrow-animation {
+		svg {
+			width: 50vw;
+			height: 50vw;
+		}
+	}
 }
