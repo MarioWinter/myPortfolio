@@ -7,6 +7,7 @@
 	flex-direction: column;
 	margin-bottom: 16.8rem;
 	gap: 14rem;
+	width: 100%;
 }
 
 .header-box {
@@ -43,13 +44,16 @@
 	display: flex;
 	position: relative;
 	justify-content: flex-end;
+	align-items: flex-end;
 	width: 100%;
 	.link-box {
 		position: absolute;
-		left: 0;
+		left: 2rem;
 		top: 0;
-		bottom: 0;
-		transform: rotate(-90deg);
+		border: 0;
+		transform: translateY(22rem) rotate(-90deg);
+		transform-origin: left;
+		white-space: nowrap;
 	}
 }
 
@@ -179,9 +183,4 @@
 }
 
 @media screen and (max-width: 350px) {
-	.more-info-box {
-		.link-box {
-			transform: rotate(-90deg);
-		}
-	}
 }
