@@ -62,6 +62,7 @@ export class ContactformComponent {
 			});
 		}
 	}
+
 	fixPrivacyPolicyHover() {
 		return {
 			padding: this.translate.currentLang === "en" ? "0rem 0.235rem" : "0rem 0.3495rem",

@@ -17,7 +17,7 @@ export class AppComponent implements AfterViewInit {
 
 	ngAfterViewInit() {
 		console.log("Initializing AOS");
-		AOS.init({});
+		AOS.init();
 		AOS.refresh();
 		console.log("AOS initialized");
 	}

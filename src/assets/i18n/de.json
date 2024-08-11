@@ -1,52 +1,51 @@
 {
-    "HERO": {
-        "MAINTITLE": "Frontend-Entwickler",
-        "SCROLL": "SCROLL NACH UNTEN",
-        "MOBILE_TALK": "Kontakt"
-    },
-    "ABOUTME": {
-        "ABOUTME": "Über mich",
-        "ABOUT1": "Meine Fähigkeit, Kreativität mit logischem Denken zu verbinden, ermöglicht es mir, innovative Ideen in hochwertige Webprojekte umzusetzen. Als angehender Junior-Webentwickler suche ich nach spannenden Herausforderungen",
-        "ABOUT2": "Wenn Sie denken, dass ich zu Ihren Projekten passen könnte, freue ich mich auf Ihre Kontaktaufnahme!",
-        "TALK": "Kontakt"
-    },
-    "MYSKILLS": {
-        "SKILLS": "Meine Skills"
-    },
-    "PORTFOLIO": {
-        "DESCRIPTION": "Entdecken Sie meine neuesten Entwicklungsprojekte. Probieren Sie die Projekte aus und erkunden Sie den Code, um meine Frontend-Fähigkeiten in Aktion zu sehen.",
-        "PROJECT1": {
-            "DESCRIPTION": "Eine mit Angular entwickelte Webanwendung."
-        },
-        "PROJECT2": {
-            "DESCRIPTION": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen El Pollo Loco zu kämpfen."
-        },
-        "PROJECT3": {
-            "DESCRIPTION": "Basierend auf der PokeAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert."
-        }
-    },
-    "CONTACT": {
-        "NAME_LABEL": "Ihr Name",
-        "EMAIL_LABEL": "Ihre E-Mail",
-        "MESSAGE_LABEL": "Ihre Nachricht",
-        "ERROR_NAME": "Ihr Name ist erforderlich",
-        "ERROR_MAIL": "Ihre E-Mail ist erforderlich",
-        "ERROR_MESSAGE": "Ihre Nachricht ist leer",
-        "PRIVACY1": "Ich habe die",
-        "PRIVACY2": "Datenschutzerklärung",
-        "PRIVACY3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-        "ERROR_PRIVACY": "Bitte akzeptieren Sie die Datenschutzerklärung",
-        "SUBMIT_BUTTON": "Senden"
-    },
-    "FOOTER": {
-        "TITLE": "Sag Hi!",
-        "SUB": "Sie haben ein neues Projekt als Vision?",
-        "TXT": "Lassen Sie uns Ihre Ideen besprechen und sie Wirklichkeit werden lassen"
-    },
-    "IMPRINT": {
-        "TITLE": "Impressum",
-        "CONTACT": "Kontakt",
-        "PHONE": "Telefon",
-        "SOURCE": "Quelle"
-    }
+	"HERO": {
+		"MAINTITLE": "Frontend-Entwickler",
+		"SCROLL": "SCROLL NACH UNTEN",
+		"MOBILE_TALK": "Kontakt"
+	},
+	"ABOUTME": {
+		"ABOUTME": "Über mich",
+		"ABOUT1": "Meine Fähigkeit, Kreativität mit logischem Denken zu verbinden, ermöglicht es mir, innovative Ideen in hochwertige Webprojekte umzusetzen. Als angehender Junior-Webentwickler suche ich nach spannenden Herausforderungen",
+		"ABOUT2": "Wenn Sie denken, dass ich zu Ihren Projekten passen könnte, freue ich mich auf Ihre Kontaktaufnahme!",
+		"TALK": "Kontakt"
+	},
+	"MYSKILLS": {
+		"SKILLS": "Meine Skills"
+	},
+	"PORTFOLIO": {
+		"DESCRIPTION": "Entdecken Sie meine neuesten Entwicklungsprojekte. Probieren Sie die Projekte aus und erkunden Sie den Code, um meine Frontend-Fähigkeiten in Aktion zu sehen.",
+		"PROJECT1": {
+			"DESCRIPTION": "Eine mit Angular entwickelte Webanwendung."
+		},
+		"PROJECT2": {
+			"DESCRIPTION": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen El Pollo Loco zu kämpfen."
+		},
+		"PROJECT3": {
+			"DESCRIPTION": "Basierend auf der PokeAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert."
+		}
+	},
+	"CONTACT": {
+		"NAME_LABEL": "Ihr Name",
+		"EMAIL_LABEL": "Ihre E-Mail",
+		"MESSAGE_LABEL": "Ihre Nachricht",
+		"ERROR_NAME": "Ihr Name ist erforderlich",
+		"ERROR_MAIL": "Ihre E-Mail ist erforderlich",
+		"ERROR_MESSAGE": "Ihre Nachricht ist leer",
+		"PRIVACY1": "Ich habe die",
+		"PRIVACY2": "Datenschutzerklärung",
+		"PRIVACY3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+		"SUBMIT_BUTTON": "Senden"
+	},
+	"FOOTER": {
+		"TITLE": "Sag Hi!",
+		"SUB": "Sie haben ein neues Projekt als Vision?",
+		"TXT": "Lassen Sie uns Ihre Ideen besprechen und sie Wirklichkeit werden lassen"
+	},
+	"IMPRINT": {
+		"TITLE": "Impressum",
+		"CONTACT": "Kontakt",
+		"PHONE": "Telefon",
+		"SOURCE": "Quelle"
+	}
 }
