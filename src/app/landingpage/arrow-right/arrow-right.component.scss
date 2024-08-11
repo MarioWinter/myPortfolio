@@ -13,12 +13,16 @@
 	height: 23.5rem;
 }
 
+// [data-aos="arrow-move-right"] {
+// 	opacity: 1;
+// 	transition-property: transform;
+// 	transform: translate3d(6rem, -6rem, 0);
+// 	&.aos-animate {
+// 		transform: translate3d(14rem, 0rem, 0);
+// 	}
+// }
+
 .arrow-animation {
-	transition-property: transform;
-	transform: translate3d(6rem, -6rem, 0);
-	&.aos-animate {
-		transform: translate3d(14rem, 0rem, 0);
-	}
 	svg {
 		width: 25rem;
 		height: 25rem;
