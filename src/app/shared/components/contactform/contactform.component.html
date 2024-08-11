@@ -51,7 +51,10 @@
 			<input type="checkbox" id="myCheckbox" class="custom-checkbox" [(ngModel)]="isPrivacyAccepted" name="privacyPolicy" required />
 			<label for="myCheckbox"></label>
 			<div>
-				{{ "CONTACT.PRIVACY1" | translate }} <span [ngStyle]="fixPrivacyPolicyHover()">{{ "CONTACT.PRIVACY2" | translate }}</span>
+				{{ "CONTACT.PRIVACY1" | translate }}
+				<a href="privacy"
+					><span [ngStyle]="fixPrivacyPolicyHover()">{{ "CONTACT.PRIVACY2" | translate }}</span></a
+				>
 				{{ "CONTACT.PRIVACY3" | translate }}
 			</div>
 		</div>
