@@ -250,6 +250,42 @@ textarea:focus::placeholder {
 	text-align: start;
 }
 
+.success-message {
+	position: fixed;
+	top: calc(100vh - 60rem);
+	right: 0;
+	display: inline-flex;
+	padding: 2rem 3rem;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border: 0.4rem solid $succsess-green;
+	background-color: transparent;
+	@include txt($clr: $succsess-green, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
+
+	opacity: 0;
+	animation: slideInOut 3s ease-in-out forwards; /* Animation anwenden */
+}
+
+@keyframes slideInOut {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%) translateX(200%); /* Start über dem Bildschirm */
+	}
+	10% {
+		opacity: 1;
+		transform: translateY(0) translateX(-50%); /* Sichtbar am oberen Rand */
+	}
+	70% {
+		opacity: 1;
+		transform: translateY(300%) translateX(-50%); /* Wandert nach unten */
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(300%) translateX(200%); /* Ausblenden */
+	}
+}
+
 @media screen and (max-width: 992px) {
 	.checkbox-wrapper {
 		gap: 3vw;

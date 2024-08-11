@@ -36,6 +36,7 @@ export class ContactformComponent {
 	};
 
 	isPrivacyAccepted = false;
+	messageSent = false;
 
 	post = {
 		endPoint: "https://mariowinter.com/sendMail.php",
@@ -53,12 +54,15 @@ export class ContactformComponent {
 			this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options).subscribe({
 				next: (response) => {
 					ngForm.resetForm();
+					this.messageSent = true;
 					console.info("Form submission successful", response);
 				},
 				error: (error) => {
 					console.error("Form submission error", error);
 				},
-				complete: () => console.info("Send post complete"),
+				complete: () => {
+					console.info("Send post complete"), (this.messageSent = false);
+				},
 			});
 		}
 	}
@@ -67,5 +71,9 @@ export class ContactformComponent {
 		return {
 			padding: this.translate.currentLang === "en" ? "0rem 0.235rem" : "0rem 0.3495rem",
 		};
+	}
+
+	testMassage() {
+		!this.messageSent ? (this.messageSent = true) : (this.messageSent = false);
 	}
 }

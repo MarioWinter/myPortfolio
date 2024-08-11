@@ -35,7 +35,8 @@
 		"PRIVACY1": "Ich habe die",
 		"PRIVACY2": "Datenschutzerklärung",
 		"PRIVACY3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-		"SUBMIT_BUTTON": "Senden"
+		"SUBMIT_BUTTON": "Senden",
+		"SUCCESS_MESSAGE": "Nachricht gesendet"
 	},
 	"FOOTER": {
 		"TITLE": "Sag Hi!",
