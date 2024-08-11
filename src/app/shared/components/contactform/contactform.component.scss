@@ -180,9 +180,7 @@ textarea:focus::placeholder {
 
 		span {
 			color: $orange;
-			transition: all 125ms ease;
 			display: inline-block;
-			width: 15rem;
 			text-align: center;
 			&:before {
 				content: attr(data-text);
@@ -225,6 +223,7 @@ textarea:focus::placeholder {
 		div {
 			span {
 				font-weight: 700;
+				padding: 0rem 0rem !important;
 			}
 		}
 		label {
