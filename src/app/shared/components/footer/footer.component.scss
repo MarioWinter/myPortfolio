@@ -4,9 +4,12 @@ footer {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	.footer-container {
 		max-width: 144rem;
-		padding: 18rem 10.4rem 0rem 10.4rem;
+		padding: 18rem 0rem 0rem 0rem;
 		position: relative;
 		width: 100vw;
 		h2 {
@@ -178,10 +181,19 @@ footer {
 		transform: translateY(-1rem);
 	}
 }
+@media screen and (max-width: 1440px) {
+	footer {
+		.footer-container {
+			width: 95%;
+		}
+	}
+}
 
 @media screen and (max-width: 992px) {
-	.footer-container {
-		padding: 15vw 10.4vw 0vw 10.4vw;
+	footer {
+		.footer-container {
+			padding: 15vw 10.4vw 0vw 10.4vw;
+		}
 	}
 
 	.secondary-txt-font {
