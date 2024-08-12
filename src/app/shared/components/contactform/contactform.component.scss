@@ -260,7 +260,8 @@ textarea:focus::placeholder {
 	align-items: center;
 	gap: 1rem;
 	border: 0.4rem solid $succsess-green;
-	background-color: transparent;
+	background-color: rgba(76, 175, 80, 0.1);
+
 	@include txt($clr: $succsess-green, $txtal: center, $ff: $text-font, $fz: 2.3rem, $fw: 400, $lh: 120%, $ls: 0rem);
 
 	opacity: 0;
