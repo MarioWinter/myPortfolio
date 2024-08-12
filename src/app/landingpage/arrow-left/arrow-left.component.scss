@@ -14,11 +14,11 @@
 }
 
 .arrow-animation {
-	transition-property: transform;
-	transform: translate3d(6rem, -6rem, 0);
-	&.aos-animate {
-		transform: translate3d(-4rem, 4rem, 0);
-	}
+	//transition-property: transform;
+	//transform: translate3d(6rem, -6rem, 0);
+	// &.aos-animate {
+	// 	transform: translate3d(-4rem, 4rem, 0);
+	// }
 	svg {
 		width: 25rem;
 		height: 25rem;

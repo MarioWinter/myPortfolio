@@ -12,6 +12,10 @@
 	cursor: default;
 }
 
+:host {
+	display: block;
+}
+
 $cream: #fffcf3;
 $orange: #f90;
 $red: #e61c40;
@@ -74,7 +78,6 @@ $scroll-bar-fix: calc(auto + 3rem);
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 20rem;
 	overflow-x: hidden;
 	scrollbar-width: thin;
 	scrollbar-color: $orange $cream;
@@ -94,25 +97,12 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 120%;
-	overflow-x: hidden;
 }
 
-h1 {
-	margin: 0rem;
-}
-
-h2 {
-	margin: 0rem;
-}
-
-h3 {
-	margin: 0rem;
-}
-
-h4 {
-	margin: 0rem;
-}
-
+h1,
+h2,
+h3,
+h4,
 p {
 	margin: 0rem;
 }
