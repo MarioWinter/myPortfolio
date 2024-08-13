@@ -19,6 +19,12 @@
 	&.aos-animate {
 		transform: translate3d(-4rem, 4rem, 0);
 	}
+	@media screen and (max-width: 992px) {
+		transform: translate3d(10rem, -6rem, 0);
+		&.aos-animate {
+			transform: translate3d(0rem, 0rem, 0);
+		}
+	}
 }
 
 .arrow-container {
