@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div [class.disc-container-r]="isRight" class="disc-container">
-			<div [class.disc-box-r]="isRight" class="disc-box">
+			<div [class.disc-box-r]="isRight" class="disc-box" [attr.data-aos]="setFadeInDescription(isRight)">
 				<h2 class="project-header-font">{{ name }}</h2>
 				<h3 class="secondary-txt-font">{{ stack }}</h3>
 				<p class="disc-txt">

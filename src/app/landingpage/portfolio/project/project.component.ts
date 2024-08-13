@@ -30,4 +30,8 @@ export class projectComponent implements OnInit {
 	setArrowSpinDirection(isRight: boolean): string {
 		return isRight ? "spin-arrow-right" : "spin-arrow-left";
 	}
+
+	setFadeInDescription(isRight: boolean): string {
+		return isRight ? "fade-in-description-right" : "fade-in-description-left";
+	}
 }
