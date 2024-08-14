@@ -78,6 +78,7 @@ $scroll-bar-fix: calc(auto + 3rem);
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 20rem;
 	scrollbar-width: thin;
 	scrollbar-color: $orange $cream;
 	font-size: 0.625em;
