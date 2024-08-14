@@ -252,9 +252,10 @@ textarea:focus::placeholder {
 
 .success-message {
 	position: fixed;
+	z-index: 999;
 	top: calc(100vh - 60rem);
 	right: 0;
-	display: inline-flex;
+	display: done;
 	padding: 2rem 3rem;
 	justify-content: center;
 	align-items: center;

@@ -4,6 +4,7 @@ import { Component, inject } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
+import { ChangeDetectorRef } from "@angular/core";
 
 /**
  * @interface ContactData
@@ -39,6 +40,7 @@ interface PostOptions {
 	styleUrls: ["./contactform.component.scss"],
 })
 export class ContactformComponent {
+	cdr = inject(ChangeDetectorRef);
 	/**
 	 * @property {TranslateService} translate
 	 * @description Injected service for handling translations.
@@ -107,7 +109,12 @@ export class ContactformComponent {
 					console.error("Form submission error", error);
 				},
 				complete: () => {
-					console.info("Send post complete"), (this.messageSent = false);
+					this.cdr.detectChanges(); // Manuelle Änderungserkennung
+					setTimeout(() => {
+						this.messageSent = false;
+						this.cdr.detectChanges(); // Manuelle Änderungserkennung
+					}, 3000);
+					console.info("Send post complete");
 				},
 			});
 		}
@@ -122,5 +129,9 @@ export class ContactformComponent {
 		return {
 			padding: this.translate.currentLang === "en" ? "0rem 0.235rem" : "0rem 0.3495rem",
 		};
+	}
+
+	testMassage() {
+		!this.messageSent ? (this.messageSent = true) : (this.messageSent = false);
 	}
 }
