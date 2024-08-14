@@ -1,103 +1,109 @@
 @import "../../../styles.scss";
 
 h2 {
-    display: flex;
-    padding-bottom: 5.2rem;
-    width: max-content;
+	display: flex;
+	padding-bottom: 5.2rem;
+	width: max-content;
 }
 
 .about-me-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
-    .left-content {
-        display: flex;
-        flex-direction: column;
-        gap: 5.8rem;
-        width: 61rem;
-    }
+	display: flex;
+	justify-content: space-between;
+	gap: 5rem;
+	.left-content {
+		display: flex;
+		flex-direction: column;
+		gap: 5.8rem;
+		width: 61rem;
+	}
 }
 
 .button-box {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
 }
 
 .profile-img-box {
-    position: relative;
-    transform: translateY(-2rem);
-    max-width: 40rem;
-    max-height: 40rem;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+	position: relative;
+	transform: translateY(-2rem);
+	max-width: 40rem;
+	max-height: 40rem;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 .black-frame-box {
-    position: absolute;
-    z-index: 2;
-    top: 5%;
-    left: 5%;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border: 0.4rem solid $black;
-    opacity: 0;
-    &:hover {
-        opacity: 1;
-    }
+	position: absolute;
+	z-index: 2;
+	top: 5%;
+	left: 5%;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border: 0.4rem solid $black;
+	opacity: 0;
+	@media screen and (min-width: 992px) {
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 @media screen and (max-width: 992px) {
-    h2 {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
+	h2 {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
 
-    .about-me-box {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 7rem;
-        .left-content {
-            width: 70vw;
-            font-size: 2.3vw;
-        }
-    }
+	.about-me-box {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 7rem;
+		.left-content {
+			width: 70vw;
+			font-size: 2.3vw;
+		}
+	}
 
-    .profile-img-box {
-        position: relative;
-        transform: translateY(0rem);
-    }
+	.profile-img-box {
+		position: relative;
+		transform: translateY(0rem);
+	}
 
-    .button-box {
-        display: none;
-    }
+	.black-frame-box {
+		opacity: 1;
+	}
+
+	.button-box {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 690px) {
-    .about-me-box {
-        .left-content {
-            width: 80vw;
-            font-size: 3.3vw;
-        }
-    }
+	.about-me-box {
+		.left-content {
+			width: 80vw;
+			font-size: 3.3vw;
+		}
+	}
 }
 
 @media screen and (max-width: 480px) {
-    .about-me-box {
-        .left-content {
-            width: 80vw;
-            font-size: 4.3vw;
-        }
-    }
-    .profile-img-box {
-        max-width: 35rem;
-        max-height: 35rem;
-    }
+	.about-me-box {
+		.left-content {
+			width: 80vw;
+			font-size: 4.3vw;
+		}
+	}
+	.profile-img-box {
+		max-width: 80vw;
+		max-height: 80vw;
+	}
 }
