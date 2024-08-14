@@ -130,8 +130,4 @@ export class ContactformComponent {
 			padding: this.translate.currentLang === "en" ? "0rem 0.235rem" : "0rem 0.3495rem",
 		};
 	}
-
-	testMassage() {
-		!this.messageSent ? (this.messageSent = true) : (this.messageSent = false);
-	}
 }
