@@ -21,16 +21,34 @@ export class projectComponent implements OnInit {
 
 	projectDesciption: string = "";
 
-	constructor() {}
-
+	/**
+	 * @method ngOnInit
+	 * @description Lifecycle hook that is called after Angular has initialized all data-bound properties of a directive.
+	 * It sets the project description based on the project number, using an internationalization key format.
+	 * @returns {void}
+	 */
 	ngOnInit(): void {
 		this.projectDesciption = `PORTFOLIO.PROJECT${this.projectNr}.DESCRIPTION`;
 	}
 
+	/**
+	 * @method setArrowSpinDirection
+	 * @description Determines the CSS animation class for arrow spin direction based on the given boolean value.
+	 * @param {boolean} isRight - Indicates whether the arrow should spin to the right.
+	 * @returns {string} The CSS class name for the arrow spin animation.
+	 * Returns "spin-arrow-right" if `isRight` is true, otherwise "spin-arrow-left".
+	 */
 	setArrowSpinDirection(isRight: boolean): string {
 		return isRight ? "spin-arrow-right" : "spin-arrow-left";
 	}
 
+	/**
+	 * @method setFadeInDescription
+	 * @description Determines the CSS animation class for fading in the description based on the given boolean value.
+	 * @param {boolean} isRight - Indicates whether the description should fade in from the right.
+	 * @returns {string} The CSS class name for the fade-in animation.
+	 * Returns "fade-in-description-right" if `isRight` is true, otherwise "fade-in-description-left".
+	 */
 	setFadeInDescription(isRight: boolean): string {
 		return isRight ? "fade-in-description-right" : "fade-in-description-left";
 	}
