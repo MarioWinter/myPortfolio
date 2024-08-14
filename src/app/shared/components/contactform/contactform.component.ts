@@ -109,10 +109,10 @@ export class ContactformComponent {
 					console.error("Form submission error", error);
 				},
 				complete: () => {
-					this.cdr.detectChanges(); // Manuelle Änderungserkennung
+					this.cdr.detectChanges();
 					setTimeout(() => {
 						this.messageSent = false;
-						this.cdr.detectChanges(); // Manuelle Änderungserkennung
+						this.cdr.detectChanges();
 					}, 3000);
 					console.info("Send post complete");
 				},
