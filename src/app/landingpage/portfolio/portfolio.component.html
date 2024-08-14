@@ -1,18 +1,18 @@
 <div class="header-box">
-    <h2 class="section-header-font">Portfolio</h2>
-    <p>{{ "PORTFOLIO.DESCRIPTION" | translate }}</p>
+	<h2 class="section-header-font">Portfolio</h2>
+	<p>{{ "PORTFOLIO.DESCRIPTION" | translate }}</p>
 </div>
 <div>
-    @for (project of myprojectList.projectData; track project) {
-    <app-project
-        [allProjects]="myprojectList.projectData.length"
-        [projectNr]="$index + 1"
-        [name]="project.name"
-        [stack]="project.stack"
-        [img]="project.img"
-        [github]="project.github"
-        [link]="project.link"
-        [isRight]="($index + 1) % 2 === 0"
-    ></app-project>
-    }
+	@for (project of myprojectList.projectData; track project) {
+	<app-project
+		[allProjects]="myprojectList.projectData.length"
+		[projectNr]="$index + 1"
+		[name]="project.name"
+		[stack]="project.stack"
+		[img]="project.img"
+		[github]="project.github"
+		[link]="project.link"
+		[isRight]="($index + 1) % 2 === 0"
+	></app-project>
+	}
 </div>

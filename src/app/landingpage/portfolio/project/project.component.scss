@@ -110,7 +110,6 @@ a {
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	transform: translateX(-76.1rem);
 	.disc-txt {
 		margin-top: 1.5rem;
 		margin-bottom: 3.5rem;
@@ -163,15 +162,19 @@ a {
 	}
 }
 
-@media screen and (min-width: 992px) {
-	[data-aos="fade-in-description-left"] {
-		opacity: 0;
-		animation: fadeInDescription 400ms ease-in-out forwards;
+[data-aos="fade-in-description-left"] {
+	opacity: 0;
+	transform: translateX(-76.1rem);
+	&.aos-animate {
+		animation: fadeInDescription 400ms ease-in-out;
 	}
+}
 
-	[data-aos="fade-in-description-right"] {
-		opacity: 0;
-		animation: fadeInRightDescription 400ms ease-in-out forwards;
+[data-aos="fade-in-description-right"] {
+	opacity: 0;
+	transform: translateX(76.1rem);
+	&.aos-animate {
+		animation: fadeInRightDescription 400ms ease-in-out;
 	}
 }
 
