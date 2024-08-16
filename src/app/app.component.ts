@@ -17,10 +17,14 @@ export class AppComponent implements AfterViewInit {
 	public ngAfterViewInit() {
 		window.onload = () => {
 			this.initializeAOS();
+			setTimeout(() => {
+				AOS.refresh();
+			}, 100);
 		};
 	}
 
 	public initializeAOS() {
+		console.log("AOS initialized");
 		AOS.init({
 			offset: 0,
 			duration: 500,
@@ -30,6 +34,5 @@ export class AppComponent implements AfterViewInit {
 			anchorPlacement: "center-center",
 			easing: "ease-in-out",
 		});
-		AOS.refresh();
 	}
 }
