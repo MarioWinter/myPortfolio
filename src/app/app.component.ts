@@ -1,8 +1,7 @@
-import { Component, AfterViewInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { HeaderComponent } from "./shared/components/header/header.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
-import AOS from "aos";
 
 @Component({
 	selector: "app-root",
@@ -11,28 +10,6 @@ import AOS from "aos";
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
 	title = "myportfolio";
-
-	public ngAfterViewInit() {
-		window.onload = () => {
-			this.initializeAOS();
-			setTimeout(() => {
-				AOS.refresh();
-			}, 100);
-		};
-	}
-
-	public initializeAOS() {
-		console.log("AOS initialized");
-		AOS.init({
-			offset: 0,
-			duration: 500,
-			delay: 200,
-			once: true,
-			mirror: false,
-			anchorPlacement: "center-center",
-			easing: "ease-in-out",
-		});
-	}
 }

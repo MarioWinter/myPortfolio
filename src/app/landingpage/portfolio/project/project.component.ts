@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { TranslateModule } from "@ngx-translate/core";
+import { AOSDirective } from "../../../shared/directives/aos.directive";
 
 @Component({
 	selector: "app-project",
 	standalone: true,
-	imports: [CommonModule, TranslateModule],
+	imports: [CommonModule, TranslateModule, AOSDirective],
 	templateUrl: "./project.component.html",
 	styleUrl: "./project.component.scss",
 })
@@ -47,9 +48,9 @@ export class projectComponent implements OnInit {
 	 * @description Determines the CSS animation class for fading in the description based on the given boolean value.
 	 * @param {boolean} isRight - Indicates whether the description should fade in from the right.
 	 * @returns {string} The CSS class name for the fade-in animation.
-	 * Returns "fade-in-description-right" if `isRight` is true, otherwise "fade-in-description-left".
+	 * Returns "fade-left" if `isRight` is true, otherwise "fade-right".
 	 */
 	setFadeInDescription(isRight: boolean): string {
-		return isRight ? "fade-in-description-right" : "fade-in-description-left";
+		return isRight ? "fade-left" : "fade-right";
 	}
 }

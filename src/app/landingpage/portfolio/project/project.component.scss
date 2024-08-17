@@ -161,51 +161,6 @@ a {
 		filter: grayscale(0);
 	}
 }
-@media screen and (min-width: 992px) {
-	[data-aos="fade-in-description-left"] {
-		opacity: 0;
-		transform: translateX(-76.1rem);
-		&.aos-animate {
-			animation: fadeInDescription 400ms ease-in-out;
-		}
-	}
-
-	[data-aos="fade-in-description-right"] {
-		opacity: 0;
-		transform: translateX(76.1rem);
-		&.aos-animate {
-			animation: fadeInRightDescription 400ms ease-in-out;
-		}
-	}
-}
-
-@keyframes fadeInDescription {
-	0% {
-		opacity: 0;
-		transform: translateX(-76.1rem);
-	}
-	60% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0rem);
-	}
-}
-
-@keyframes fadeInRightDescription {
-	0% {
-		opacity: 0;
-		transform: translateX(76.1rem);
-	}
-	60% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0rem);
-	}
-}
 
 @media screen and (max-width: 1300px) {
 	.project-box {
