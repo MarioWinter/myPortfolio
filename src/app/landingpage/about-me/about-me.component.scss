@@ -46,11 +46,6 @@ h2 {
 	object-fit: cover;
 	border: 0.4rem solid $black;
 	opacity: 0;
-	@media screen and (min-width: 992px) {
-		&:hover {
-			opacity: 1;
-		}
-	}
 }
 
 @media screen and (max-width: 992px) {
@@ -75,10 +70,6 @@ h2 {
 	.profile-img-box {
 		position: relative;
 		transform: translateY(0rem);
-	}
-
-	.black-frame-box {
-		opacity: 1;
 	}
 
 	.button-box {
