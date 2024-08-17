@@ -1,35 +1,39 @@
 @import "../../styles.scss";
 .privacy-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
 	margin-top: 12rem;
-	max-width: 144rem;
-	padding: 0 5rem;
-}
+	padding: 0 10rem;
 
-::ng-deep h1 {
-	margin-bottom: 5rem;
-}
+	::ng-deep h1 {
+		margin-bottom: 5rem;
+	}
 
-::ng-deep h2 {
-	margin: 4rem 0rem 2rem 0rem;
-}
+	::ng-deep h2 {
+		margin: 4rem 0rem 2rem 0rem;
+	}
 
-::ng-deep h3 {
-	margin: 3rem 0rem 1rem 0rem;
-}
+	::ng-deep h3 {
+		margin: 3rem 0rem 1rem 0rem;
+	}
 
-::ng-deep h4 {
-	margin-bottom: 1rem;
-}
+	::ng-deep h4 {
+		margin-bottom: 1rem;
+	}
 
-::ng-deep p {
-	margin-bottom: 3rem;
-}
+	::ng-deep p {
+		margin-bottom: 3rem;
+	}
 
-::ng-deep ul {
-	margin-bottom: 2rem;
-	padding-left: 20rem;
-}
+	::ng-deep ul {
+		margin-bottom: 2rem;
+		padding-left: 20rem;
+	}
 
-::ng-deep li {
-	margin-bottom: 1rem;
+	::ng-deep li {
+		margin-bottom: 1rem;
+	}
 }

@@ -121,3 +121,9 @@ app-burger-menu {
 		padding: 0 10px;
 	}
 }
+
+@media (max-width: 480px) {
+	nav {
+		right: 0rem !important;
+	}
+}
